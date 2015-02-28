@@ -1,0 +1,18 @@
+<% wrap_layout :layout do %>
+  <article class="article">
+    <h1 class="article-title"><%= current_article.title %></h1>
+    <span class="post-index-date">Publicado em: <%= current_article.date.strftime('%d/%m/%Y') %></span>
+    <%= current_article.body %>
+  </article>
+
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="fernahh">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+
+  <hr>
+
+  <div class="article-contact">
+    <p>Quer trocar uma ideia sobre o texto acima? Envie um e-mail para <%= mail_to 'fernahh@gmail.com', 'fernahh@gmail.com', title: 'fernahh@gmail.com' %> e vamos conversar! :)</p>
+  </div>
+<% end %>

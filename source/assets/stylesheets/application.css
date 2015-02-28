@@ -1,0 +1,428 @@
+/*
+ *= require normalize
+ *= require prism
+ */
+
+/* ==========================================================================
+  Base elements.
+  ========================================================================== */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+
+  color: #7f7f7f;
+  font-family: "adobe-garamond-pro", sans-serif;
+  font-size: 22px;
+  line-height: 35px;
+}
+
+body.in-transition {
+  transition: transform 900ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4a4e56;
+  font-family: "PT Sans", sans-serif;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+
+  border-bottom: 1px solid #3498db;
+
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  background-color: #3498db;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+blockquote {
+  padding-left: 16px;
+  margin: 16px 48px;
+  color: #999999;
+  border-left: 2px solid #999999;
+}
+
+hr {
+  display: block;
+  width: 35%;
+  height: 1px;
+  margin-top: 48px;
+  margin-bottom: 52px;
+
+  background-color: #dddddd;
+  border: 0;
+
+  clear: both;
+}
+
+code {
+  font-size: 16px;
+}
+
+/* ==========================================================================
+  Header
+  ========================================================================== */
+
+  .header {
+    margin-bottom: 24px;
+    padding: 10px;
+
+    background-color: #c0392b;
+  }
+
+    @media all and (min-width: 620px) {
+      .header { padding: 20px; }
+    }
+
+    .header a {
+      text-decoration: none;
+
+      border: 0;
+    }
+
+      .header a:hover {
+        background-color: transparent;
+      }
+
+      .header a h1 {
+        display: inline;
+        margin: 0;
+
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 35px;
+
+        transition: color 300ms ease-in-out;
+      }
+
+        @media all and (min-width: 620px) {
+          .header a h1 {
+            font-size: 22px;
+          }
+        }
+
+      .header a h1:hover {
+        color: #ecf0f1;
+      }
+
+/* ==========================================================================
+  Navigation
+  ========================================================================== */
+
+  .navigation {
+    float: right;
+
+    display: inline-block;
+    width: 50%;
+  }
+
+    .navigation-list {
+      margin: 0;
+      padding-left: 0;
+
+      list-style-type: none;
+    }
+
+      .navigation-item {
+        text-align: right;
+      }
+
+        .navigation-link {
+          color: #ffffff;
+          font-family: "PT Sans", sans-serif;
+
+          transition: all 300ms ease-in-out;
+        }
+
+        .navigation-link:hover { color: #ecf0f1; }
+
+/* ==========================================================================
+  Helpers
+  ========================================================================== */
+
+  .clearfix:after {
+    content: ".";
+
+    display: block;
+    height: 0;
+
+    clear: both;
+    visibility: hidden;
+  }
+
+  .pull-right { float: right; }
+
+  .pull-left { float: left; }
+
+
+/* ==========================================================================
+  Container.
+  ========================================================================== */
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+/* ==========================================================================
+  Buttons
+  ========================================================================== */
+
+  .button {
+    display: inline-block;
+    width: auto;
+    padding: 0 10px;
+
+    color: #ffffff;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 34px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: #3498db;
+    border-radius: 4px;
+    border-bottom: 2px solid #2980b9;
+
+    transition: background-color 300ms ease-in-out;
+  }
+
+    .button:hover {
+      color: #ffffff;
+
+      background-color: #2980b9;
+    }
+
+
+/* ==========================================================================
+  Post index
+  ========================================================================== */
+
+  .post-index {
+    margin-bottom: 24px;
+  }
+
+    .post-index img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 4px;
+
+      border: 1px solid #e6e6e6;
+    }
+
+    .post-index-date {
+      font-family: "PT Sans", sans-serif;
+      font-size: 14px;
+    }
+
+    .post-index-title {
+      margin-top: 0;
+
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+
+      @media all and (min-width: 620px) {
+        .post-index-title {
+          font-size: 33px;
+          line-height: 35px;
+        }
+      }
+
+      .post-index-title a {
+        border: 0;
+      }
+
+        .post-index-title a:hover {
+          background-color: transparent;
+
+          color: #2980b9;
+        }
+
+    .post-index-summary {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+      @media all and (min-width: 620px) {
+        .post-index-summary {
+          font-size: 22px;
+          line-height: 35px;
+        }
+      }
+
+      .post-index-summary img { max-width: 100%; }
+
+    .post-index .button {
+      margin-bottom: 24px;
+    }
+
+/* ==========================================================================
+  Paginate
+  ========================================================================== */
+
+  .paginate {
+    font-family: "PT Sans", sans-serif;
+  }
+
+/* ==========================================================================
+  Profile
+  ========================================================================== */
+
+#profile {
+  padding: 24px 10px;
+
+  background-color: #a63125;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+  @media all and (min-width: 940px) {
+    #profile {
+      height: 100%;
+    }
+  }
+
+  .profile-picture {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+  }
+
+    @media all and (min-width: 620px) {
+      .profile-picture {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+  .profile-name {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+
+    color: #ffffff;
+    font-size: 46px;
+    line-height: 36px;
+  }
+
+    @media all and (min-width: 620px) {
+      .profile-name {
+        margin-bottom: 48px;
+
+        font-size: 94px;
+        line-height: 70px;
+      }
+    }
+
+  .profile-profession {
+    margin-bottom: 0;
+
+    color: #f0f0f0;
+    font-size: 26px;
+  }
+
+  .profile-separation {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 14px;
+    height: 44px;
+
+    border: 0;
+    background-color: transparent;
+  }
+
+    .profile-separation:after {
+      content: '...';
+
+      color: #ffffff;
+      font-size: 36px;
+      letter-spacing: 4px;
+      line-height: 34px;
+      vertical-align: middle;
+    }
+
+  .profile-description {
+    display: block;
+    width: 640px;
+    margin: 0 auto;
+
+    color: #f0f0f0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+  }
+
+    .profile-description a {
+      color: #f0f0f0;
+
+      border-color: #ffffff;
+
+      transition: color 300ms ease-in-out;
+    }
+
+    .profile-description a:hover {
+      color: #ffffff;
+
+      background-color: transparent;
+    }
+
+/* ==========================================================================
+  Article
+  ========================================================================== */
+
+  .article {}
+
+    .article-title {
+      line-height: 45px;
+    }
+
+    .article img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 4px;
+
+      border: 1px solid #e6e6e6;
+    }
+
+  .article-contact {
+    margin-bottom: 48px;
+
+    text-align: center;
+  }
+
+    .article-contact p {
+      font-family: "PT Sans", sans-serif;
+    }

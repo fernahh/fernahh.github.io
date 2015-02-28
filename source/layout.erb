@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Blog do Fernahh<%= " | " + current_article.title unless current_article.nil? %></title>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+
+    <meta property="fb:app_id" content="400798310005346">
+    <meta property="og:type" content="blog"/>
+
+    <script src="//use.typekit.net/osd5pca.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <%= stylesheet_link_tag 'application' %>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <%= partial 'partials/header' %>
+
+    <div class="container" id="main" role="main">
+      <%= yield %>
+    </div>
+
+    <%= partial 'partials/footer' %>
+  </body>
+</html>

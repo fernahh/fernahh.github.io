@@ -1,0 +1,27 @@
+---
+pageable: true
+per_page: 6
+---
+<% if paginate && num_pages > 1 %>
+  <% if prev_page %>
+    <p class="paginate"><%= link_to 'Página anterior'.html_safe, prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+  <div class="post-index">
+    <span class="post-index-date">Publicado em: <%= article.date.strftime('%d/%m/%Y') %></span>
+    <h2 class="post-index-title"><%= link_to article.title, article %></h2>
+    <div class="post-index-summary">
+      <%= article.summary %>
+    </div>
+    <%= link_to 'Continue lendo', article.url, class: 'button pull-right' %>
+    <hr class="post-index-separator" />
+  </div>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p class="paginate"><%= link_to 'Próxima página', next_page %></p>
+  <% end %>
+<% end %>
