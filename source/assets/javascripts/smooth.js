@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
       button = document.getElementById('scrollButton'),
       animateTime = 900;
 
-  console.log(button);
-
   function getPageScroll() {
     var yScroll;
 

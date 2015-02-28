@@ -81,6 +81,8 @@ code {
   font-size: 16px;
 }
 
+.fb-like.fb_iframe_widget span { height: 31px !important; }
+
 /* ==========================================================================
   Header
   ========================================================================== */
@@ -329,7 +331,7 @@ code {
 
   .profile-name {
     display: block;
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
 
     color: #ffffff;
@@ -375,7 +377,7 @@ code {
 
   .profile-description {
     display: block;
-    width: 640px;
+    max-width: 640px;
     margin: 0 auto;
 
     color: #f0f0f0;
