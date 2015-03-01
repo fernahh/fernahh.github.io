@@ -13,7 +13,7 @@ per_page: 6
     <span class="post-index-date">Publicado em: <%= article.date.strftime('%d/%m/%Y') %></span>
     <h2 class="post-index-title"><%= link_to article.title, article %></h2>
     <div class="post-index-summary">
-      <%= article.summary %>
+      <%= article.data.summary %>
     </div>
     <%= link_to 'Continue lendo', article.url, class: 'button pull-right' %>
     <hr class="post-index-separator" />

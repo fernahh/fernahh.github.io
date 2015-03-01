@@ -1,29 +1,40 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog do Fernahh<%= " | " + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <meta name="description" content="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
 
-    <meta property="fb:app_id" content="400798310005346">
-    <meta property="og:type" content="blog"/>
+    <meta property="fb:app_id" content="400798310005346" />
+    <meta property="og:type" content="<%= current_article.nil? ? "blog" : "article" %>"/>
+    <meta property="og:title" content="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"/>
+    <meta property="og:site_name" content="Blog do Fernahh"/>
+    <meta property="og:description" value="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
+
+    <meta name="twitter:card  " value="summary"/>
+    <meta name="twitter:site" value="@fernahh" />
+    <meta name="twitter:creator" value="@fernahh" />
+    <meta name="twitter:url" value="<%= current_page.url %>"/>
+    <meta name="twitter:title" value="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"/>
+    <meta name="twiter:description" value="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
 
     <script src="//use.typekit.net/osd5pca.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
 
-    <%= stylesheet_link_tag 'application' %>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "application" %>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css" />
 
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body>
-    <%= partial 'partials/header' %>
+    <%= partial "partials/header" %>
 
     <div class="container" id="main" role="main">
       <%= yield %>
     </div>
 
-    <%= partial 'partials/footer' %>
+    <%= partial "partials/footer" %>
   </body>
 </html>
