@@ -20,12 +20,9 @@
     <meta name="twitter:title" value="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"/>
     <meta name="twiter:description" value="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
 
-    <script src="//use.typekit.net/osd5pca.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
 
     <%= stylesheet_link_tag "application" %>
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css" />
-
     <%= javascript_include_tag "application" %>
   </head>
   <body>

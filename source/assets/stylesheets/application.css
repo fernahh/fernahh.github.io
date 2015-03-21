@@ -22,9 +22,9 @@ body {
   height: 100%;
 
   color: #7f7f7f;
-  font-family: "adobe-garamond-pro", sans-serif;
-  font-size: 22px;
-  line-height: 35px;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 body.in-transition {
@@ -283,8 +283,8 @@ code {
 
       @media all and (min-width: 620px) {
         .post-index-summary {
-          font-size: 22px;
-          line-height: 35px;
+          font-size: 18px;
+          line-height: 32px;
         }
       }
 
