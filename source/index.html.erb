@@ -10,7 +10,8 @@ per_page: 6
 
 <% page_articles.each_with_index do |article, i| %>
   <div class="post-index">
-    <span class="post-index-date">Publicado em: <%= article.date.strftime('%d/%m/%Y') %></span>
+    <time class="post-index-date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
+      Publicado em: <%= article.date.strftime('%d/%m/%Y') %></time>
     <h2 class="post-index-title"><%= link_to article.title, article %></h2>
     <div class="post-index-summary">
       <%= article.data.summary %>

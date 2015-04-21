@@ -1,7 +1,8 @@
 <% wrap_layout :layout do %>
-  <article class="article">
+  <article class="article" role="article">
     <h1 class="article-title"><%= current_article.title %></h1>
-    <span class="post-index-date">Publicado em: <%= current_article.date.strftime('%d/%m/%Y') %></span>
+    <time class="post-index-date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
+      Publicado em: <%= current_article.date.strftime('%d/%m/%Y') %></time>
     <%= current_article.body %>
   </article>
 

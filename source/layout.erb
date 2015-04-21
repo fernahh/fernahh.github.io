@@ -1,26 +1,26 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <title>Blog do Fernahh<%= " | " + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-    <meta name="description" content="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
+    <meta name="description" content="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>">
 
-    <meta property="fb:app_id" content="400798310005346" />
-    <meta property="og:type" content="<%= current_article.nil? ? "blog" : "article" %>"/>
-    <meta property="og:title" content="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"/>
-    <meta property="og:site_name" content="Blog do Fernahh"/>
-    <meta property="og:description" value="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
+    <meta property="fb:app_id" content="400798310005346"></meta>
+    <meta property="og:type" content="<%= current_article.nil? ? "blog" : "article" %>"></meta>
+    <meta property="og:title" content="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"></meta>
+    <meta property="og:site_name" content="Blog do Fernahh"></meta>
+    <meta property="og:description" content="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>"></meta>
 
-    <meta name="twitter:card  " value="summary"/>
-    <meta name="twitter:site" value="@fernahh" />
-    <meta name="twitter:creator" value="@fernahh" />
-    <meta name="twitter:url" value="<%= current_page.url %>"/>
-    <meta name="twitter:title" value="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"/>
-    <meta name="twiter:description" value="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>" />
+    <meta name="twitter:card  " content="summary"></meta>
+    <meta name="twitter:site" content="@fernahh"></meta>
+    <meta name="twitter:creator" content="@fernahh"></meta>
+    <meta name="twitter:url" content="<%= "http://blog.fernahh.com.br" + current_page.url %>"></meta>
+    <meta name="twitter:title" content="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"></meta>
+    <meta name="twiter:description" content="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>"></meta>
 
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Code+Pro:400,700" rel="stylesheet" type="text/css"></link>
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
@@ -28,9 +28,9 @@
   <body>
     <%= partial "partials/header" %>
 
-    <div class="container" id="main" role="main">
+    <main class="container" id="main" role="main">
       <%= yield %>
-    </div>
+    </main>
 
     <%= partial "partials/footer" %>
   </body>
