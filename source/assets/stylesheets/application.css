@@ -22,7 +22,7 @@ body {
   height: 100%;
 
   color: #7f7f7f;
-  font-family: "Source Code Pro", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 18px;
   line-height: 32px;
 }
@@ -38,7 +38,6 @@ h4,
 h5,
 h6 {
   color: #4a4e56;
-  font-family: "PT Sans", sans-serif;
 }
 
 a {
@@ -160,8 +159,6 @@ code {
         .navigation-link {
           display: inline-block;
 
-          font-family: "PT Sans", sans-serif;
-
           transition: all 300ms ease-in-out;
         }
 
@@ -214,7 +211,6 @@ code {
     padding: 0 10px;
 
     color: #ffffff;
-    font-family: "PT Sans", sans-serif;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -254,7 +250,6 @@ code {
     }
 
     .post-index-date {
-      font-family: "PT Sans", sans-serif;
       font-size: 14px;
     }
 
@@ -297,14 +292,6 @@ code {
     }
 
 /* ==========================================================================
-  Paginate
-  ========================================================================== */
-
-  .paginate {
-    font-family: "PT Sans", sans-serif;
-  }
-
-/* ==========================================================================
   Profile
   ========================================================================== */
 
@@ -344,7 +331,7 @@ code {
     margin: 0 auto;
 
     color: #4a4e56;
-    font-size: 46px;
+    font-size: 36px;
     line-height: 36px;
   }
 
@@ -352,8 +339,8 @@ code {
       .profile-name {
         margin-bottom: 48px;
 
-        font-size: 94px;
-        line-height: 70px;
+        font-size: 84px;
+        line-height: 80px;
       }
     }
 
@@ -390,7 +377,6 @@ code {
     margin: 0 auto;
 
     color: #4a4e56;
-    font-family: "Source Code Pro", sans-serif;
     font-size: 20px;
   }
 
@@ -430,7 +416,3 @@ code {
 
     text-align: center;
   }
-
-    .article-contact p {
-      font-family: "PT Sans", sans-serif;
-    }

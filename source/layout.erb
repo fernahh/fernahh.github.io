@@ -20,10 +20,7 @@
     <meta name="twitter:title" content="<%= current_article.nil? ? "Blog do Fernahh" : current_article.title %>"></meta>
     <meta name="twiter:description" content="<%= current_article.nil? ? "Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café." : current_article.data.summary %>"></meta>
 
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Code+Pro:400,700" rel="stylesheet" type="text/css"></link>
-
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
   </head>
   <body>
     <%= partial "partials/header" %>
@@ -33,5 +30,6 @@
     </main>
 
     <%= partial "partials/footer" %>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>
