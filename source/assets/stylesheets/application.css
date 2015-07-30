@@ -21,7 +21,7 @@ body {
   margin: 0;
   height: 100%;
 
-  color: #7f7f7f;
+  color: #434f56;
   font-family: "Arial", sans-serif;
   font-size: 18px;
   line-height: 32px;
@@ -316,6 +316,7 @@ code {
     height: 140px;
 
     border-radius: 50%;
+    border: 2px solid #a2a2a2;
   }
 
     @media all and (min-width: 620px) {
