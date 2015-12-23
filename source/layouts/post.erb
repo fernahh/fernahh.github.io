@@ -1,9 +1,13 @@
 <% wrap_layout :layout do %>
   <article class="article" role="article">
-    <h1 class="article-title"><%= current_article.title %></h1>
-    <time class="post-index-date" datetime="<%= current_article.date.strftime('%Y/%m/%d') %>">
-      Publicado em: <%= current_article.date.strftime('%d/%m/%Y') %></time>
-    <%= current_article.body %>
+    <header>
+      <h1 class="article-title"><%= current_article.title %></h1>
+      <time class="post-index-date" datetime="<%= current_article.date.strftime('%Y/%m/%d') %>">
+        Publicado em: <%= current_article.date.strftime('%d/%m/%Y') %></time>
+    </header>
+    <section>
+      <%= current_article.body %>
+    </section>
   </article>
 
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="fernahh">Tweet</a>

@@ -4,7 +4,7 @@ per_page: 6
 ---
 <% if paginate && num_pages > 1 %>
   <% if prev_page %>
-    <p class="paginate"><%= link_to 'Página anterior'.html_safe, prev_page %></p>
+    <p class="paginate"><%= link_to '&#8592; Página anterior'.html_safe, prev_page %></p>
   <% end %>
 <% end %>
 
@@ -16,13 +16,12 @@ per_page: 6
     <div class="post-index-summary">
       <%= article.data.summary %>
     </div>
-    <%= link_to 'Continue lendo', article.url, class: 'trailer-bottom pull-right' %>
     <hr class="post-index-separator" />
   </div>
 <% end %>
 
 <% if paginate %>
   <% if next_page %>
-    <p class="paginate"><%= link_to 'Próxima página', next_page %></p>
+    <p class="paginate pull-right"><%= link_to 'Próxima página &#8594;', next_page %></p>
   <% end %>
 <% end %>

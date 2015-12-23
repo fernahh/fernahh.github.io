@@ -22,9 +22,9 @@ body {
   height: 100%;
 
   color: #434f56;
-  font-family: "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 32px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 27px;
 }
 
 body.in-transition {
@@ -41,16 +41,14 @@ h6 {
 }
 
 a {
-  color: #3498db;
+  color: #16a085;
   text-decoration: none;
-
-  border-bottom: 1px solid #3498db;
 
   transition: all 200ms ease-in-out;
 }
 
 a:hover {
-  background-color: #3498db;
+  background-color: #16a085;
 
   color: #ffffff;
   text-decoration: none;
@@ -65,10 +63,10 @@ blockquote {
 
 hr {
   display: block;
-  width: 35%;
+  width: 45%;
   height: 1px;
-  margin-top: 48px;
-  margin-bottom: 52px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 
   background-color: #dddddd;
   border: 0;
@@ -76,17 +74,31 @@ hr {
   clear: both;
 }
 
+  @media all and (min-width: 620px) {
+    hr {
+      width: 35%;
+      margin-top: 48px;
+      margin-bottom: 52px;
+    }
+  }
+
 code {
   font-size: 16px;
 }
 
-.fb-like.fb_iframe_widget span { height: 31px !important; }
+.paginate {
+  font-size: 13px;
+}
+
+.fb-like.fb_iframe_widget span { height: 28px !important; }
 
 /* ==========================================================================
   Header
   ========================================================================== */
 
   .header {
+    max-width: 640px;
+    margin: 0 auto;
     margin-bottom: 24px;
     padding: 10px;
 
@@ -95,8 +107,8 @@ code {
 
     @media all and (min-width: 620px) {
       .header {
-        margin-bottom: 72px;
-        padding: 20px;
+        margin-bottom: 42px;
+        padding: 20px 10px;
       }
     }
 
@@ -114,7 +126,7 @@ code {
         display: inline;
         margin: 0;
 
-        color: #3498db;
+        color: #16a085;
         font-size: 20px;
         line-height: 35px;
 
@@ -128,7 +140,7 @@ code {
         }
 
       .header > a > h1:hover {
-        background-color: #3498db;
+        background-color: #16a085;
 
         color: #ffffff;
         text-decoration: none;
@@ -142,7 +154,7 @@ code {
     float: right;
 
     display: inline-block;
-    width: 50%;
+    width: 45%;
   }
 
     .navigation-list {
@@ -163,7 +175,7 @@ code {
         }
 
         .navigation-link:hover {
-          background-color: #3498db;
+          background-color: #16a085;
 
           color: #ffffff;
           text-decoration: none;
@@ -195,10 +207,11 @@ code {
   ========================================================================== */
 
   .container {
-    max-width: 700px;
+    max-width: 640px;
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
+    overflow: hidden;
   }
 
 /* ==========================================================================
@@ -218,7 +231,7 @@ code {
     text-decoration: none;
     text-transform: uppercase;
 
-    background-color: #3498db;
+    background-color: #16a085;
     border-radius: 4px;
     border-bottom: 2px solid #2980b9;
 
@@ -250,6 +263,7 @@ code {
     }
 
     .post-index-date {
+      color: #bbbbbb;
       font-size: 14px;
     }
 
@@ -262,28 +276,27 @@ code {
 
       @media all and (min-width: 620px) {
         .post-index-title {
-          font-size: 33px;
+          font-size: 30px;
           line-height: 35px;
         }
       }
 
       .post-index-title a {
         border: 0;
+
+        color: #000000;
+      }
+
+      .post-index-title a:hover {
+        color: #ffffff;
       }
 
     .post-index-summary {
       margin-bottom: 24px;
 
       font-size: 16px;
-      line-height: 24px;
+      line-height: 27px;
     }
-
-      @media all and (min-width: 620px) {
-        .post-index-summary {
-          font-size: 18px;
-          line-height: 32px;
-        }
-      }
 
       .post-index-summary img { max-width: 100%; }
 
@@ -298,17 +311,11 @@ code {
 #profile {
   padding: 24px 10px;
 
-  background-color: #ededed;
+  background-color: #34495e;
 
-  color: #4a4e56;
+  color: #ecf0f1;
   text-align: center;
 }
-
-  @media all and (min-width: 940px) {
-    #profile {
-      height: 100%;
-    }
-  }
 
   .profile-picture {
     display: inline-block;
@@ -321,8 +328,8 @@ code {
 
     @media all and (min-width: 620px) {
       .profile-picture {
-        width: 180px;
-        height: 180px;
+        width: 80px;
+        height: 80px;
       }
     }
 
@@ -330,17 +337,16 @@ code {
     display: block;
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 14px;
 
-    color: #4a4e56;
+    color: #ecf0f1;
     font-size: 36px;
     line-height: 36px;
   }
 
     @media all and (min-width: 620px) {
       .profile-name {
-        margin-bottom: 48px;
-
-        font-size: 84px;
+        font-size: 40px;
         line-height: 80px;
       }
     }
@@ -348,51 +354,56 @@ code {
   .profile-profession {
     margin-bottom: 0;
 
-    color: #4a4e56;
+    color: #ecf0f1;
     font-size: 26px;
   }
 
-  .profile-separation {
-    display: inline-block;
-    margin: 0;
-    margin-bottom: 14px;
-    height: 44px;
-
-    border: 0;
-    background-color: transparent;
-  }
-
-    .profile-separation:after {
-      content: '...';
-
-      color: #4a4e56;
-      font-size: 36px;
-      letter-spacing: 4px;
-      line-height: 34px;
-      vertical-align: middle;
-    }
-
   .profile-description {
     display: block;
-    max-width: 640px;
+    max-width: 620px;
     margin: 0 auto;
 
-    color: #4a4e56;
-    font-size: 20px;
+    color: #ecf0f1;
+    font-size: 16px;
+    line-height: 24px;
   }
 
+    @media all and (min-width: 620px) {
+      .profile-description {
+        font-size: 20px;
+      }
+    }
+
     .profile-description a {
-      color: #4a4e56;
+      color: #ecf0f1;
 
-      border-color: #4a4e56;
+      border-bottom: 1px solid #ecf0f1;
 
-      transition: color 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
     }
 
     .profile-description a:hover {
-      color: #ededed;
+      color: #ffffff;
 
-      background-color: #4a4e56;
+      background-color: #16a085;
+      border-color: #16a085;
+    }
+
+    @keyframes opacity {
+      0%   {opacity:0;}
+      50%  {opacity:1;}
+      100% {opacity:0;}
+    }
+
+    .profile-blink {
+      display: inline-block;
+      width: 2px;
+      height: 24px;
+
+      color: #16a085;
+      font-weight: bold;
+
+      animation: 800ms linear 0s normal none infinite opacity;
     }
 
 /* ==========================================================================
