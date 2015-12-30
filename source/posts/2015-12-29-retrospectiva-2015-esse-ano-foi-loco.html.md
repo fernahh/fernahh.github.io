@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Retrospectiva 2015, esse ano foi loco!
+title: "Retrospectiva 2015: esse ano foi loco!"
 summary: Retrospectivas são legais! Escrevão sobre si, por favor! É por isso que to escrevendo aqui, para compartilhar coisas legais que possam (talvez) inspirar outras pessoas em 2016.
 tags: retrospectiva, 2015
 ---
 
-Comecei escrevendo minha retrospectiva do jeito mais chato impossível. Narrando de mês em mês minhas conquistas, derrotas e surpresas. Ao chegar na descrição do mês de agosto, larguei de mão. Estava tão chato que nem eu não consegui reler.
+Comecei escrevendo minha retrospectiva do jeito mais chato impossível. Narrando de mês em mês minhas conquistas, derrotas e surpresas. Ao chegar na descrição do mês de agosto, larguei de mão. Estava tão chato que nem eu consegui reler.
 
-Comecei de novo. Nesse momento, 16h16m do dia 29 de Dezembro de 2015, estou no carro esperando minha namorada que foi se despedir dos colegas dela. O motivo da despedida é que estamos nos mudando de Canela para Joinville, Santa Catarina. É, esse ano foi *loco!*.
+Comecei de novo. Nesse momento, 16h16m do dia 29 de Dezembro de 2015, estou no carro esperando minha namorada que foi se despedir dos colegas dela. O motivo da despedida é que estamos nos mudando de Canela para Joinville, Santa Catarina. É, esse ano foi *loco!*
 
 2014 foi um ano cansado. Nem fiz retrospectiva. Mas ele começou de uma maneira boa, no dia primeiro de Dezembro comecei a trabalhar na [Orgânica Digital](http://www.organicadigital.com). Foi o início de uma trajetória massa.
 
@@ -16,9 +16,9 @@ Comecei de novo. Nesse momento, 16h16m do dia 29 de Dezembro de 2015, estou no c
 A Orgânica teve um papel mega importante no meu ano. Especialmente por dois motivos:
 
 - Acreditar que é possível **mudar o mundo**;
-- Crescer minhas *skills sociais*.
+- Melhorar minhas *skills sociais*.
 
-Eu terminei 2014 totalmente desacreditado. Falido e com a expectativa de um cenário social terrível para 2015. Nunca acreditei no capitalismo, aliás, até hoje não acredito. Porém, se você tiver inúmeros fatores favoráveis e pessoas incríveis ao teu lado, você consegue mudar o jogo. Foi isso que aprendi na Orgânica Digital. Que bom se todo mundo posso previlegiado, assim como fui.
+Eu terminei 2014 totalmente desacreditado. Falido e com a expectativa de um cenário social terrível para 2015. Nunca acreditei no capitalismo, aliás, até hoje não acredito. Porém, se você tiver inúmeros fatores favoráveis e pessoas incríveis ao teu lado, você consegue mudar o jogo. Foi isso que aprendi na Orgânica Digital. Seria bom se tudo mundo fosse previlegiado, assim como fui.
 
 No início do ano participei de projetos que ajudaram clientes a arrecadar mais e consequentemente contratar mais, pagar melhor os funcionários e assim por diante. É incrível ver que como o teu trabalho pode gerar um impacto gigante para várias pessoas. Espero que, se o mundo continuar como está, ao menos todos dêem seu melhor e possam ajudar quem precisa.
 
@@ -26,7 +26,7 @@ Um pouco depois do início do segundo semestre eu assumi um cargo para coordenar
 
 ![Equipe da Orgânica Digital](http://i.imgur.com/J7imwD6.jpg)
 
-Depois de um ano me despedi da empresa. Foi uma experiência mega rápida mas que valeu muito a pena. Espero que eu também tenha agregado para a equipe e clientes que trabalhei nesse ano.
+Depois de um ano me despedi da empresa. Foi uma experiência rápida mas que valeu muito a pena. Espero que eu também tenha agregado para a equipe e clientes que trabalhei nesse ano.
 
 ## Um ano de contribuição
 
@@ -54,9 +54,9 @@ Toda e qualquer experiência longa que temos, sempre acabamos com aquela percep�
 
 Sempre que eu falava que trabalhava como desenvolvedor front-end, as pessoas sempre me perguntavam:
 
-- Por onde começo?
-- Que livros você recomenda?
-- Que conteúdo é importante?
+- *Por onde começo?*
+- *Que livros você recomenda?*
+- *Que conteúdo é importante?*
 
 Pensando nisso, criei o Front-end Path. Ele foi um dos resultados da pesquisa que fiz em meu trabalho de conclusão. Se você quiser ver os slides da minha apresentação, pode [acessá-los no Speakerdeck](https://speakerdeck.com/fernahh/otimizacao-de-aplicacoes-web-no-lado-do-cliente-at-number-tccucs).
 
@@ -66,11 +66,11 @@ Se eu tivesse uma dica para quem está estudando ou pretende estuda é: **tire o
 
 Lá por Setembro eu tive um aumento de pressão que me assustou. Acabei _(tomando uma facada)_ indo no médico e fazendo exames. Não tive nada grave, mas foi um alerta. Estava me alimentado mal pra caramba. Logicamente, com a mesma cabecinha de ovo frito que todo jovem tem: comendo mal e achando ~de boas~, na inocência de que eu tinha feito essas escolhas. Comecei a ler bastante sobre alimentação e a lavagem [celebral](https://youtu.be/s1ARs4pevc0?t=1m44s) que a indústria alimentícia nos faz. Aos poucos estou mudando minha alimentação. É foda. Tudo nos leva e nos incentiva a comer porcaria. Indico você assistir o [That Sugar Film](http://thatsugarfilm.com/).
 
-Tentei, sem sucesso, a fazer exercícios físicos. Se _palmolive_ ano que vem eu consigo.
+Tentei, sem sucesso, fazer exercícios físicos. Se _palmolive_ ano que vem eu consigo.
 
 Mas a maior mudança em 2016, será de vida. Como comentei lá no início do texto, mês que vem irei morar em Joinville. No fim do ano recebi uma proposta do [Conta Azul](https://contaazul.com/). Aceitei. Irei trabalhar como engenheiro front-end. Terei bastante desafios pela frente, afinal, dizem por aí que é isso que nos move.
 
-De brinde, criei uma playlist com minhas músicas favoritas de 2015. Ouvi pouca música esse ano, mas o que tem de melhor, na minha opinião, tá aqui:
+Para não perder o costume, criei uma playlist com minhas músicas favoritas de 2015. Ouvi pouca música esse ano, mas o que tem de melhor, na minha opinião, tá aqui:
 
 <iframe src="https://embed.spotify.com/?uri=spotify:user:fernahh:playlist:4pKAzNXBL4vBGtq7SA6gVo" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
 
