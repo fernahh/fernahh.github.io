@@ -70,7 +70,12 @@ Tentei, sem sucesso, a fazer exercícios físicos. Se _palmolive_ ano que vem eu
 
 Mas a maior mudança em 2016, será de vida. Como comentei lá no início do texto, mês que vem irei morar em Joinville. No fim do ano recebi uma proposta do [Conta Azul](https://contaazul.com/). Aceitei. Irei trabalhar como engenheiro front-end. Terei bastante desafios pela frente, afinal, dizem por aí que é isso que nos move.
 
-Que 2016 seja massa pra todo mundo. Seja politicamente mais leve _(acho brabo)_ e incrivelmente mais desafiador.
+De brinde, criei uma playlist com minhas músicas favoritas de 2015. Ouvi pouca música esse ano, mas o que tem de melhor, na minha opinião, tá aqui:
+
+<iframe src="https://embed.spotify.com/?uri=spotify:user:fernahh:playlist:4pKAzNXBL4vBGtq7SA6gVo" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Bom,
+que 2016 seja massa pra todo mundo. Seja politicamente mais leve _(acho brabo)_ e incrivelmente mais desafiador.
 
 Feliz ano novo a todos.
 
