@@ -27,9 +27,11 @@ body {
   line-height: 27px;
 }
 
-body.in-transition {
-  transition: transform 900ms ease;
-}
+  @media all and (min-width: 900px) {
+    body {
+      padding-top: 80px;
+    }
+  }
 
 h1,
 h2,
@@ -82,8 +84,20 @@ hr {
     }
   }
 
+p > code {
+  padding: 2px;
+  background-color: #dcdbdb;
+  color: #545454;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
 code {
   font-size: 16px;
+}
+
+pre[class*="language-"] {
+  padding-bottom: 0;
 }
 
 .paginate {
@@ -98,11 +112,11 @@ code {
 
 .fernahh {
   position: relative;
-  float: left;
 
   display: block;
   height: 40px;
   width: 40px;
+  margin: 0 auto;
 }
 
 .fernahh_f {
@@ -141,10 +155,13 @@ code {
   ========================================================================== */
 
   .header {
+  top: 0;
     max-width: 310px;
     margin: 0 auto;
     margin-bottom: 24px;
     padding: 10px;
+
+    text-align: center;
 
     background-color: #ffffff;
   }
@@ -156,7 +173,14 @@ code {
       }
     }
 
-    .header a {
+    @media all and (min-width: 900px) {
+      .header {
+        position: fixed;
+        top: 0;
+      }
+    }
+
+    .header > a {
       text-decoration: none;
 
       border: 0;
@@ -166,22 +190,21 @@ code {
         background-color: transparent;
       }
 
-      .header a h1 {
+      .header > a > h1 {
         display: inline;
         margin: 0;
 
         color: #16a085;
         font-size: 14px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         line-height: 40px;
-        text-transform: uppercase;
 
         transition: color 300ms ease-in-out;
       }
 
         @media all and (min-width: 620px) {
-          .header a h1 {
-            font-size: 22px;
+          .header > a > h1 {
+            font-size: 18px;
           }
         }
 
@@ -364,7 +387,7 @@ code {
 
   .profile-description {
     display: block;
-    max-width: 620px;
+    max-width: 600px;
     margin: 0 auto;
 
     color: #ecf0f1;
