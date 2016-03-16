@@ -1,0 +1,20 @@
+.Footer {
+  margin-top: 4em;
+  padding: 3em;
+
+  background-color: darken($gray-colorB, 10%);
+
+  text-align: center;
+
+  p {
+    margin: 0;
+
+    color: darken($gray-colorB, 40%);
+    font-size: .8em;
+
+    a {
+      color: darken($gray-colorB, 45%);
+      border-color: darken($gray-colorB, 45%);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.Post_Index {
+  margin-bottom: 2em;
+
+  &__Date {
+    color: lighten($text-color, 30%);
+    font-size: .9em;
+  }
+
+  &__Title {
+    margin-top: 0;
+
+    font-size: 1.8em;
+    line-height: 1.2em;
+
+    transition: all 200ms ease-in-out;
+
+    a {
+      color: $text-color;
+
+      border: 0;
+
+      &:hover { color: $white-color; }
+    }
+  }
+
+  &____Summary {
+    margin-bottom: 1.5em;
+  }
+}

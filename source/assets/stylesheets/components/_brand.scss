@@ -1,0 +1,42 @@
+$brand-size: 48px;
+$brand-line-size: 10px;
+
+.Brand {
+  position: relative;
+
+  display: inline-block;
+  height: $brand-size;
+  width: $brand-size - 10px;
+  margin: 0 auto;
+}
+
+.Brand_f {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+
+  display: block;
+  width: 86%;
+  height: 100%;
+
+  background: translate;
+  border-top: $brand-line-size solid $adjacent-color-shadow;
+  border-left: $brand-line-size solid $adjacent-color-shadow;
+}
+
+.Brand_s {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  display: block;
+  width: 46%;
+  height: 60%;
+
+  background: transparent;
+  border-top: $brand-line-size solid $adjacent-color;
+  border-left: $brand-line-size solid $adjacent-color;
+  transform: rotate(0deg) scale(1) skew(-25deg) translate(6px);
+}

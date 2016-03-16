@@ -1,0 +1,18 @@
+<% wrap_layout :layout do %>
+  <article class="Article" role="article">
+    <header>
+      <h1 class="Article__Title"><%= current_article.title %></h1>
+      <time class="Post_Index__Date" datetime="<%= current_article.date.strftime('%Y/%m/%d') %>">
+        Publicado em: <%= current_article.date.strftime('%d/%m/%Y') %></time>
+    </header>
+    <section>
+      <%= current_article.body %>
+    </section>
+  </article>
+
+  <hr>
+
+  <div class="Article__Comments">
+    <%= partial "partials/disqus" %>
+  </div>
+<% end %>

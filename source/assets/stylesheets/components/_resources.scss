@@ -1,0 +1,71 @@
+$resource-icon-size: 60px;
+
+.Resources {
+  max-width: $medium-width - 100px;
+  margin: 0 auto;
+  padding-left: 0;
+
+  list-style-type: none;
+
+  &__Item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  p {
+    display: inline-block;
+    width: calc(100% - 70px);
+
+    font-size: .9em;
+  }
+
+  @include respond-to($mq-large) {
+    p {
+      font-size: .7em;
+    }
+  }
+}
+
+.Resources__Item__Icon {
+  display: inline-block;
+  width: $resource-icon-size;
+  height: $resource-icon-size;
+  margin-right: 20px;
+
+  background-position: center;
+  background-size: $resource-icon-size / 2;
+  background-repeat: no-repeat;
+
+  @include hide-text();
+
+  border: 2px solid;
+  border-radius: 50%;
+
+  $shadow: 7%;
+
+  &--Work {
+    border-color: darken($adjacent-color, $shadow);
+    background-color: $adjacent-color;
+    background-image: image-url("work.svg");
+  }
+
+  &--Open_Source {
+    border-color: darken($open-source-color, $shadow);
+    background-color: $open-source-color;
+    background-image: image-url("open-source.svg");
+  }
+
+  &--Blog {
+    border-color: darken($blog-color, $shadow);
+    background-color: $blog-color;
+    background-image: image-url("blog.svg");
+  }
+
+  &--Talks {
+    border-color: darken($talks-color, $shadow);
+    background-color: $talks-color;
+    background-image: image-url("talks.svg");
+  }
+}

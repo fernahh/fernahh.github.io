@@ -1,0 +1,13 @@
+{
+  "name": "fernahh.com.br",
+  "authors": [
+    "fernahh <fernahh@gmail.com>"
+  ],
+  "description": "de buenas na web",
+  "license": "MIT",
+  "homepage": "http://www.fernahh.com.br",
+  "private": true,
+  "dependencies": {
+    "normalize-css": "^3.0.3"
+  }
+}

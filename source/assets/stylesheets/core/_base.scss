@@ -1,0 +1,56 @@
+*,
+*:after, *:before {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: $adjacent-color;
+  color: $white-color;
+}
+
+::selection {
+  background: $adjacent-color;
+  color: $white-color;
+}
+
+body {
+  background: $gray-colorB;
+
+  color: $text-color;
+  font-family: $main-font;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+
+a {
+  color: $adjacent-color;
+  text-decoration: none;
+
+  border-bottom: 1px solid $adjacent-color;
+
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    color: $white-color;
+    background-color: $adjacent-color-shadow;
+  }
+}
+
+hr {
+  display: block;
+  width: 45%;
+  height: 1px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  background-color: $gray-color;
+  border: 0;
+
+  clear: both;
+
+  @include respond-to($mq-medium) {
+    width: 35%;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+  }
+}

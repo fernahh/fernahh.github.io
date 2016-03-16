@@ -1,0 +1,24 @@
+.Article {
+  max-width: $medium-width;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+
+  &__Title {
+    line-height: 1.3em;
+  }
+
+  &__Comments {
+    max-width: $medium-width;
+  }
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 4px;
+
+    border: 1px solid $gray-color;
+  }
+}

@@ -1,0 +1,40 @@
+.Header_Navigation {
+  @extend %Row;
+
+  @include respond-to($mq-medium) {
+    margin-bottom: 1em;
+  }
+
+  @include respond-to($mq-large) {
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
+}
+
+.Header {
+  margin-top: 1em;
+
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 1.4em;
+  }
+
+  h2 {
+    margin-top: 0;
+
+    font-size: 1em;
+    font-weight: normal;
+    color: $second-color;
+  }
+
+  @include respond-to($mq-medium) {
+    float: left;
+    width: 40%;
+
+    text-align: left;
+  }
+}

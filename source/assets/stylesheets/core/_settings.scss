@@ -1,0 +1,28 @@
+/*
+ * Settings.
+ */
+
+// Fonts
+$main-font: "Helvica Neue", Helvetica, sans-serif;
+
+// Colors
+$main-color: #111111;
+$second-color: #aaaaaa;
+$adjacent-color: #1abc9c;
+$adjacent-color-shadow: darken($adjacent-color, 6%);
+
+$blog-color: #fcb410;
+$open-source-color: #3f3f3f;
+$talks-color: #ec555c;
+
+$text-color: #434f56;
+$white-color: #ffffff;
+$gray-color: #dddddd;
+$gray-colorB: #fafafa;
+
+// Sizes
+$max-width: 720px;
+$medium-width: 640px;
+$main-padding: 1em;
+$mq-medium: 768px;
+$mq-large: 900px;
