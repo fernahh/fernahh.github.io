@@ -1,2 +1,0 @@
-//= require links
-//= require prism
