@@ -1,6 +1,5 @@
-build_dir = "../fernahh.github.io"
-
 task :deploy do
+  build_dir = "../fernahh.github.io"
   system "middleman build"
 
   cd build_dir do
@@ -9,4 +8,9 @@ task :deploy do
     system "git commit -m '#{message}'"
     system "git push"
   end
+end
+
+task :push do
+  system "git push"
+  system "rake deploy"
 end
