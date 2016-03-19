@@ -31,6 +31,9 @@ set :title, '@fernahh | desenvolvedor e de buenas na web'
 set :description, 'Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café.'
 
 # Build
+
+set :build_dir, '../fernahh.github.io'
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
