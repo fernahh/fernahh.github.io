@@ -9,8 +9,3 @@ task :deploy do
     system "git push"
   end
 end
-
-task :push do
-  system "git push"
-  system "rake deploy"
-end

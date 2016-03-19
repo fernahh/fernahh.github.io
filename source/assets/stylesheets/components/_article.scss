@@ -1,16 +1,13 @@
 .Article {
   max-width: $medium-width;
   margin: 0 auto;
+  margin-bottom: 4em;
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
 
   &__Title {
     line-height: 1.3em;
-  }
-
-  &__Comments {
-    max-width: $medium-width;
   }
 
   img {

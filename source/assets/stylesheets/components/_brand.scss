@@ -40,3 +40,18 @@ $brand-line-size: 10px;
   border-left: $brand-line-size solid $adjacent-color;
   transform: rotate(0deg) scale(1) skew(-25deg) translate(6px);
 }
+
+.Brand--footer {
+  margin-top: 7em;
+  margin-bottom: 3em;
+
+  text-align: center;
+
+  .Brand_f {
+    border-color: $gray-colorC;
+  }
+
+  .Brand_s {
+    border-color: lighten($gray-colorC, 10%);
+  }
+}
