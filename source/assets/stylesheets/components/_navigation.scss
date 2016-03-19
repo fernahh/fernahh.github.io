@@ -60,12 +60,7 @@
       width: 80%;
       height: 6px;
 
-      background-color: lighten($adjacent-color, 10%);
-
-      &--about { background-color: $adjacent-color; }
-      &--blog { background-color: $blog-color; }
-      &--projects { background-color: $open-source-color; }
-      &--talks { background-color: $talks-color; }
+      background-color:  $adjacent-color;
     }
   }
 }

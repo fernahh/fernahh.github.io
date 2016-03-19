@@ -34,38 +34,23 @@ $resource-icon-size: 60px;
   height: $resource-icon-size;
   margin-right: 20px;
 
+  background-color: $gray-colorC;
   background-position: center;
   background-size: $resource-icon-size / 2;
   background-repeat: no-repeat;
 
   @include hide-text();
 
-  border: 2px solid;
+  border: 0;
   border-radius: 50%;
 
   $shadow: 7%;
 
-  &--Work {
-    border-color: darken($adjacent-color, $shadow);
-    background-color: $adjacent-color;
-    background-image: image-url("work.svg");
-  }
+  &--Work {  background-image: image-url("work.svg"); }
 
-  &--Open_Source {
-    border-color: darken($open-source-color, $shadow);
-    background-color: $open-source-color;
-    background-image: image-url("open-source.svg");
-  }
+  &--Open_Source {  background-image: image-url("open-source.svg"); }
 
-  &--Blog {
-    border-color: darken($blog-color, $shadow);
-    background-color: $blog-color;
-    background-image: image-url("blog.svg");
-  }
+  &--Blog {  background-image: image-url("blog.svg"); }
 
-  &--Talks {
-    border-color: darken($talks-color, $shadow);
-    background-color: $talks-color;
-    background-image: image-url("talks.svg");
-  }
+  &--Talks {  background-image: image-url("talks.svg"); }
 }
