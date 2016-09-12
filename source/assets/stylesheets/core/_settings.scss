@@ -8,10 +8,10 @@ $main-font: 'Open Sans', sans-serif;
 // Colors
 $main-color: #111111;
 $second-color: #aaaaaa;
-$adjacent-color: #1abc9c;
+$adjacent-color: rgba(0, 0, 0, 0.8);
 $adjacent-color-shadow: darken($adjacent-color, 6%);
 
-$text-color: rgba(0, 0, 0, 0.8);
+$text-color: $adjacent-color;
 $white-color: #ffffff;
 $gray-color: #dddddd;
 $gray-colorB: #e7e7e7;
