@@ -1,34 +1,31 @@
 ---
+pageable: true
+per_page: 6
 title: "@fernahh, desenvolvedor e de buenas na web"
 ---
 
-<section class="Main">
-  <ul class="Resources">
-    <li class="Resources__Item">
-      <h2 class="Resources__Item__Icon Resources__Item__Icon--Blog">Blog</h2>
-      <p>
-        Tudo que publico na web está no <%= link_to "meu blog", "/blog",
-        title: "Link para o blog" %>. Sim, tudo. Desde opiniões pessoais até
-        posts técnicos.
-      </p>
-    </li>
-    <li class="Resources__Item">
-      <h2 class="Resources__Item__Icon Resources__Item__Icon--Open_Source">Open Source</h2>
-      <p>Sempre que possível, busco compartilhar soluções através de projetos Open Source.
-      Para dar uma conferida, você pode acessar meu <%= link_to "perfil no Github", "https://github.com/fernahh",
-      title: "Projetos no Github" %>.
-      </p>
-    </li>
-    <li class="Resources__Item">
-      <h2 class="Resources__Item__Icon Resources__Item__Icon--Talks">Talks</h2>
-      <p>Além dos posts e projetos, também busco compartilhar conhecimento através
-      de <%= link_to "palestras para a comunidade", "http://speakerdeck.com/fernahh",
-      title: "Link para talks no Speakerdeck" %>.</p>
-    </li>
-    <li class="Resources__Item">
-      <h2 class="Resources__Item__Icon Resources__Item__Icon--Work">Trabalho</h2>
-      <p>Trabalho com web desde 2010. Atualmente sou engenheiro de software na <%= link_to "ContaAzul", "http://contaazul.com",
-        title: "Site da ContaAzul" %>.</p>
-    </li>
-  </ul>
-</section>
+<main class="Article" role="main">
+  <% if paginate && num_pages > 1 %>
+    <% if prev_page %>
+      <p class="Paginate"><%= link_to '&#8592; Página anterior'.html_safe, prev_page %></p>
+    <% end %>
+  <% end %>
+
+  <% page_articles.each_with_index do |article, i| %>
+    <div class="Post_Index">
+      <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
+        Publicado em: <%= article.date.strftime('%d/%m/%Y') %></time>
+      <h2 class="Post_Index__Title"><%= link_to article.title, article %></h2>
+      <div class="Post_Index__Summary">
+        <%= article.data.summary %>
+      </div>
+      <hr class="Post_Index__Separator" />
+    </div>
+  <% end %>
+
+  <% if paginate %>
+    <% if next_page %>
+      <p class="Paginate Pull--right"><%= link_to 'Próxima página &#8594;', next_page %></p>
+    <% end %>
+  <% end %>
+</main>

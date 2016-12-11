@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link rel="canonical" href="<%= "https://fernahh.com.br" + current_page.url %>">
 
     <title><%= current_page.data.nil? ? title : "#{current_page.data.title} | fernahh.com.br" %></title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -17,7 +18,7 @@
     <meta name="twitter:card  " content="summary"></meta>
     <meta name="twitter:site" content="@fernahh"></meta>
     <meta name="twitter:creator" content="@fernahh"></meta>
-    <meta name="twitter:url" content="<%= "http://fernahh.com.br" + current_page.url %>"></meta>
+    <meta name="twitter:url" content="<%= "https://fernahh.com.br" + current_page.url %>"></meta>
     <meta name="twitter:title" content="<%= current_article.nil? ? title : "#{current_page.data.title} | @fernahh"  %>"></meta>
     <meta name="twiter:description" content="<%= current_article.nil? ? description : current_article.data.summary %>"></meta>
 
@@ -28,7 +29,6 @@
   <body class="<%= page_classes %>">
     <div class="container">
       <%= partial "partials/header" %>
-
       <%= yield %>
     </div>
 

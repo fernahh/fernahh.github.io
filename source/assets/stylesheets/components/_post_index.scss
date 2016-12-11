@@ -19,7 +19,9 @@
 
       border: 0;
 
-      &:hover { color: $white-color; }
+      @include attention() {
+        color: $white-color;
+      }
     }
   }
 

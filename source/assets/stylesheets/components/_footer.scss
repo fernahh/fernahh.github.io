@@ -16,7 +16,9 @@
       color: darken($gray-colorB, 45%);
       border-color: darken($gray-colorB, 45%);
 
-      &:hover { color: $white-color; }
+      @include attention() {
+        color: $white-color;
+      }
     }
   }
 }
