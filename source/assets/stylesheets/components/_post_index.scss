@@ -2,20 +2,24 @@
   margin-bottom: 2em;
 
   &__Date {
-    color: lighten($text-color, 30%);
-    font-size: .9em;
+    color: $gray-colorD;
+    font-family: $title-font;
+    font-size: .75em;
+    text-transform: uppercase;
   }
 
   &__Title {
     margin-top: 0;
+    margin-bottom: 20px;
 
-    font-size: 1.8em;
+    font-size: 3em;
     line-height: 1.2em;
+    letter-spacing: -1.79px;
 
     transition: all 200ms ease-in-out;
 
     a {
-      color: $text-color;
+      color: #565a5c;
 
       border: 0;
 

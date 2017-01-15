@@ -26,7 +26,7 @@ a {
   color: $adjacent-color;
   text-decoration: none;
 
-  border-bottom: 1px solid $adjacent-color;
+  border-bottom: 1px dashed $adjacent-color;
 
   transition: all 200ms ease-in-out;
 
@@ -53,4 +53,16 @@ hr {
     margin-top: 2em;
     margin-bottom: 2.5em;
   }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $title-font;
+}
+
+p > code {
+  background: #f2f2f2;
+  padding: 4px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
 }

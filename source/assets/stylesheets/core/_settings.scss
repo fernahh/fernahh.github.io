@@ -4,11 +4,12 @@
 
 // Fonts
 $main-font: 'Open Sans', sans-serif;
+$title-font: 'Montserrat', sans-serif;
 
 // Colors
 $main-color: #111111;
 $second-color: #aaaaaa;
-$adjacent-color: rgba(0, 0, 0, 0.8);
+$adjacent-color: #44484a;
 $adjacent-color-shadow: darken($adjacent-color, 6%);
 
 $text-color: $adjacent-color;
@@ -16,6 +17,7 @@ $white-color: #ffffff;
 $gray-color: #dddddd;
 $gray-colorB: #e7e7e7;
 $gray-colorC: #a0a0a0;
+$gray-colorD: #aaadad;
 
 // Sizes
 $max-width: 720px;
