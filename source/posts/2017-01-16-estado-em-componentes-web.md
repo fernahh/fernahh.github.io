@@ -34,7 +34,7 @@ increment(); // retorna 2.
 
 ### Stateless
 
-Diferentemente de algo stateful, quando temos aplicações, funções ou componentes stateless, sabemos que ele não tem informação sobre o estado. Sendo assim, o termo stateless nos diz que um determidao instrumento não muta o estado de algo, assim temos a previsiblidade de que dada uma entrada, teremos sempre a mesma saída.
+Diferentemente de algo stateful, quando temos aplicações, funções ou componentes stateless, sabemos que ele não tem informação sobre o estado. Sendo assim, o termo stateless nos diz que um determido instrumento não muta o estado de algo, assim temos a previsiblidade de que dada uma entrada, teremos sempre a mesma saída.
 
 <pre>
 <code class="language-javascript">
