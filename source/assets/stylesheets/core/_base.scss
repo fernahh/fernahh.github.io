@@ -75,3 +75,11 @@ pre.highlight {
   border-radius: 3px;
   background-color: lighten($gray-colorD, 30%);
 }
+
+blockquote {
+  padding-left: 10px;
+
+  font-style: italic;
+
+  border-left: 2px solid $gray-colorD;
+}
