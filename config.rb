@@ -9,6 +9,10 @@ activate :blog do |blog|
   blog.page_link = 'blog/{num}'
 end
 
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+activate :rouge_syntax
+
 configure :development do
   activate :livereload do
     set :host, '0.0.0.0'
