@@ -8,16 +8,14 @@ A palavra *"componente"* nunca foi tão usada na web como nos últimos meses. Na
 
 Para definir um componente, ele deve ser **auto-suficiente**, capaz de **encapsular** funcionalidades e permitir uma **API de acesso**. Pensando do ponto de vista de um seletor CSS, vamos exemplificar com um componente de botão:
 
-<pre>
-<code class="language-css">
-.Button {
-  display: block;
-  max-width: 300px;
-  background-color: black;
-  color: white;
-}
-</code>
-</pre>
+```css
+  .Button {
+    display: block;
+    max-width: 300px;
+    background-color: black;
+    color: white;
+  }
+```
 
 Levando em conta a definição literal, podemos dizer que esse componente é auto-suficiente, afinal, se usarmos somente ele teremos um estilo de botão. Porém, não temos uma API de acesso bem definida, com entrada e saída. Problemas como esse são comuns e inevitáveis com CSS puro. Eles são ainda mais frequentes quando precisamos lidar com aplicações complexas.
 
@@ -66,45 +64,40 @@ Resumidamente, podemos definir essa tecnologia como **folhas de estilo que possu
 
 Na prática, supomos um cenário com nosso mesmo componente de botão:
 
-<pre>
-<code class="language-css">
-/* components/button.css */
-.Button {
-  display: block;
-  max-width: 300px;
-  background-color: black;
-  color: white;
-}
+```css
+  /* components/button.css */
+  .Button {
+    display: block;
+    max-width: 300px;
+    background-color: black;
+    color: white;
+  }
 
-.danger {
-  background-color: red;
-}
-</code>
-</pre>
+  .danger {
+    background-color: red;
+  }
+```
 
 Para usar esse componente, precisaremos importar esse módulo em um componente JavaScript:
 
-<pre>
-<code class="language-javascript">
+
+```javascript
   /* components/button.js */
   import button from './button.css';
 
   buttonElem.outerHTML = `<button class=${button.danger}>Enviar</button>`
-</code>
-</pre>
+```
 
 Nossos *output* de CSS será como no *snippet* a seguir:
 
-<pre>
-<code class="language-css">
+```css
   .components_Button__danger__abc5436-20WEds96_Ee1ra54 {
     display: block;
     max-width: 300px;
     background-color: red;
     color: white;
   }
-</code>
-</pre>
+```
 
 Através desse breve *overview* podemos notar que há uma mudança de *workflow* na forma de desenvolvermos CSS. O nome gerado no *output* nos leva a conclusão que precisamos de `sourcemaps` para *debugging*. Além disso, você deve estar se perguntando:
 
@@ -112,26 +105,22 @@ Através desse breve *overview* podemos notar que há uma mudança de *workflow*
 
 Podemos definir regras globais com CSS Modules, através da declaração com a seguinte sintaxe:
 
-<pre>
-<code class="language-css">
+```css
   :global(.Button) {
     display: block;
     max-width: 300px;
     background-color: red;
     color: white;
   }
-</code>
-</pre>
+```
 
 Isso quer dizer que o módulo `.Button` estará disponível para todos os módulos de nossa aplicação. Além disso temos a *keyword* `composes`, que receberá um módulo. Se você já captou a ideia, deverá ter percebido que funciona parecido com o `@extend` do Sass.
 
-<pre>
-<code class="language-css">
+```css
   .Button_group {
     composes: button from '../componentes/button.css';
   }
-</code>
-</pre>
+```
 
 Além disso também podemos gerenciar dependências de componentes através de [módulos *JavaScript*](http://www.2ality.com/2014/09/es6-modules-final.html).
 

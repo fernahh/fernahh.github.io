@@ -33,19 +33,17 @@ Na prática, podemos fazer cálculos como os exemplos a seguir:
 
 A especificidade pode dar grandes dores de cabeça em projetos complexos, ainda mais quando o número de desenvolvedores é maior. Não é rara a aplicação com um grande número de uso do `!important`. Isso funciona como uma forma de quebrar a especificidade para sobrescrever uma regra.
 
-<pre>
-<code class="language-css">
-header h1 {
-  color: red;
-}
+```css
+  header h1 {
+    color: red;
+  }
 
-/* Essa regra será mais específica. */
+  /* Essa regra será mais específica. */
 
-h1 {
-  color: red !important;
-}
-</code>
-</pre>
+  h1 {
+    color: red !important;
+  }
+```
 
 Evite ao máximo usar `!important`. Os 5 minutos que você economiza fazendo uso dele podem se tornar horas no futuro. Fica a dica:
 
@@ -79,19 +77,17 @@ A palavra herança rapidamente remete ao paradigma de [Orientação a Objetos](h
 
 Assim como você herda métodos e atributos de objetos, no CSS você herda as regras de um elemento pai.
 
-<pre>
-<code class="language-css">
-/* 
- * Todo o conteúdo textual do documento
- * terá 16px de tamanho, pois herdam do
- * `body`.
- */
+```css
+  /*
+   * Todo o conteúdo textual do documento
+   * terá 16px de tamanho, pois herdam do
+   * `body`.
+   */
 
-body {
-  font-size: 16px;
-}
-</code>
-</pre>
+  body {
+    font-size: 16px;
+  }
+```
 
 É importante lembrar que nem todas as propriedades serão herdadas por elementos filho. Geralmente as propriedades que se referem ao _box-model_ (`height`, `width`, `margin`, `padding`) não aceitam herança. Caso você queira forçar a herança, pode usar o valor `inherit`. Aliás, você sabe a [diferença entre initial e inherit](http://tableless.com.br/entendendo-os-valores-initial-e-inherit-do-css/)?
 
@@ -107,88 +103,76 @@ Podemos extender _placeholders_ (`%placeholder`) e classes. Muitos autores desen
 
 Por exemplo, digamos que temos uma classe `.error` e queremos usar os estilos dela em outra classe.
 
-<pre>
-<code class="language-scss">
-.error {
-  color: red;
-}
+```scss
+  .error {
+    color: red;
+  }
 
-.icon--error {
-  @extend .error;
-}
-</code>
-</pre>
+  .icon--error {
+    @extend .error;
+  }
+```
 
 O CSS gerado será o seguinte:
 
-<pre>
-<code class="language-css">
-.error, .icon--error {
-  color: red;
-}
-</code>
-</pre>
+```css
+  .error, .icon--error {
+    color: red;
+  }
+```
 
 Ou seja, o Sass não _“copia”_ os valores, ele apenas separa o valor em uma _mesma regra_.
 Agora digamos que em outro contexto precisamos reescrever a cor de erro para um tom mais forte.
 
-<pre>
-<code class="language-scss">
-.other_context .error {
-  color: darken(red, 10%);
-}
-</code>
-</pre>
+```scss
+  .other_context .error {
+    color: darken(red, 10%);
+  }
+```
 
 Além de criar a regra para a classe `.error`, o pré-processador irá aplicar a regra para as outras _“instâncias”_ da classe:
 
-<pre>
-<code class="language-css">
-.other_context .error, .other_context .icon--error {
-  color: #cc0000;
-}
-</code>
-</pre>
+
+```css
+  .other_context .error, .other_context .icon--error {
+    color: #cc0000;
+  }
+```
 
 **Isso é péssimo**. Além de tirar o controle do desenvolvedor, isso irá gerar **código desnecessário** e prejudicar outras áreas de uma interface. Lembre-se: tome cuidado com o _bug_ dos [4095 seletores](http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx).
 
 Usando _placeholders_, o Sass irá realmente “copiar” os estilos para a classe que possui o `@extend`. Porém, se o _placeholder_ for alterado em um contexto, isso também irá gerar uma regra para as classes que o estenderam.
 
-<pre>
-<code class="language-scss">
-%error,
-.error {
-  color: red;
-}
+```scss
+  %error,
+  .error {
+    color: red;
+  }
 
-.icon--error {
-  @extend %error;
-}
+  .icon--error {
+    @extend %error;
+  }
 
-.other_context .error {
-  color: darken(red, 10%);
-}
-</code>
-</pre>
+  .other_context .error {
+    color: darken(red, 10%);
+  }
+```
 
 O output será esse:
 
+```css
+  .error {
+    color: red;
+  }
 
-<pre>
-<code class="language-css">
-.error {
-  color: red;
-}
+  .icon--error {
+    color: red;
+  }
 
-.icon--error {
-  color: red;
-}
-
-.other_context .error {
-  color: #cc0000;
-}
-</code>
-</pre>
+  .other_context .error {
+    color: #cc0000;
+  }
+```
 
 Perceba que dessa vez a instância de `.error`, a classe `.icon--error` **não herdou as regras** em outro contexto.
 
@@ -198,73 +182,65 @@ Perceba que dessa vez a instância de `.error`, a classe `.icon--error` **não h
 
 Outra forma criar herança é usando _mixins_. Com eles você pode realmente _copiar_ propriedades e valores para uma classe.
 
-<pre>
-<code class="language-scss">
-@mixin error {
-  color: red;
-}
+```scss
+  @mixin error {
+    color: red;
+  }
 
-.icon--error {
-  @include error;
-}
+  .icon--error {
+    @include error;
+  }
 
-.label--error {
-  @include error;
-}
-</code>
-</pre>
+  .label--error {
+    @include error;
+  }
+```
 
 O problema com essa abordagem é que ela não será tão performática, levando em conta que ela gerará duas regras com o mesmo código:
 
-<pre>
-<code class="language-css">
-.icon--error {
-  color: red;
-}
+```css
+  .icon--error {
+    color: red;
+  }
 
-.label--error {
-  color: red;
-}
-</code>
-</pre>
+  .label--error {
+    color: red;
+  }
+```
 
 Porém, mixins são eficientes se você precisar de parâmetros.
 
 Vamos continuar com nosso exemplo. Se precisarmos de uma cor mais forte, poderemos passar essa opção por parâmetro.
 
-<pre>
-<code class="language-scss">
-@mixin error($critical: false) {
-  @if $critical {
-    color: darken(red, 10%);
-  } @else {
-    color: red;
+```scss
+  @mixin error($critical: false) {
+    @if $critical {
+      color: darken(red, 10%);
+    } @else {
+      color: red;
+    }
   }
-}
 
-.icon--error {
-  @include error;
-}
+  .icon--error {
+    @include error;
+  }
 
-.icon--critical-error {
-  @include error($critical: true);
-}
-</code>
-</pre>
+  .icon--critical-error {
+    @include error($critical: true);
+  }
+```
 
 O Sass irá gerar o vermelho mais escuro quando passarmos o valor `true` para a variável `$critical`:
 
-<pre>
-<code class="language-css">
-.icon--error {
-  color: red;
-}
+```css
+  .icon--error {
+    color: red;
+  }
 
-.icon--critical-error {
-  color: #cc0000;
-}
-</code>
-</pre>
+  .icon--critical-error {
+    color: #cc0000;
+  }
+```
 
 ## Concatenação de classes
 
@@ -274,21 +250,19 @@ Basicamente você terá estilo padrão em uma classe e usará outras, se necess�
 
 No HTML com um elemento de botão, teríamos a classe `.button`. Se precisarmos criar um botão de sucesso, usamos a classe `.button--success` juntamente com `.button`.
 
-<pre>
-<code class="language-css">
-.button {
-  display: inline-block;
-  padding: 10px;
-  color: black;
-  background-color: white;
-}
+```css
+  .button {
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    background-color: white;
+  }
 
-.button--success {
-  color: white;
-  background-color: green;
-}
-</code>
-</pre>
+  .button--success {
+    color: white;
+    background-color: green;
+  }
+```
 
 Na minha opinião essa é a forma mais correta de usarmos herança. Sempre opte por usar _features_ nativas do CSS ao invés das mágicas do Sass.
 

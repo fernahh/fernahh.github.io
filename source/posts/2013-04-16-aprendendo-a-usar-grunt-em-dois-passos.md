@@ -13,31 +13,25 @@ O Grunt foi desenvolvido pelo [@cowboy](http://twitter.com/cowboy) com o objetiv
 
 Como todos devem saber o Grunt roda no [node.js](http://nodejs.org/), sendo assim você precisa ter ele instalado. Feito isso, caso você tenha instalado ele alguma vez, recomendo que desinstale, senão com certeza você vai ter problemas no futuro, então vai lá:
 
-<pre>
-<code class="language-bash">
+```bash
   sudo npm uninstall -g grunt
-</code>
-</pre>
+```
 
 Vamos instalar o grunt-cli, assim podemos rodar diferentes versões do Grunt em diferentes projetos, e o melhor, até simultaneamente!
 
 Agora sim, sem qualquer receio, mete ficha:
 
-<pre>
-<code class="language-bash">
+```bash
   sudo npm install -g grunt-cli
-</code>
-</pre>
+```
 
 ## Segundo passo: iniciando um projeto
 
 Há duas formas de iniciar um projeto com Grunt. A primeira é com o comando `grunt-init` passando o template que você deseja, por exemplo, um projeto para um módulo **node.js**:
 
-<pre>
-<code class="language-bash">
+```
   grunt-init node
-</code>
-</pre>
+```
 
 Depois disso ele cria um scaffolding a partir do template que você escolheu.
 
@@ -47,47 +41,43 @@ A outra forma é criar sem templates. Você precisará de um arquivo **package.j
 
 Esse json deve conter informações do seu projeto. Você pode gerar ele através do comando `npm init`. Segue abaixo um exemplo básico de um **package.json**:
 
-<pre>
-<code class="language-javascript">
-{
-  "name": "and-after",
-  "version": "1.0.0",
-  "description": "Design e Tecnologia por sua conta",
-  "keywords": ["tecnologia, desenvolvimento"],
-  "author": "And After"
-}
-</code>
-</pre>
+```javascript
+  {
+    "name": "and-after",
+    "version": "1.0.0",
+    "description": "Design e Tecnologia por sua conta",
+    "keywords": ["tecnologia, desenvolvimento"],
+    "author": "And After"
+  }
+```
 
 ### Gruntfile.js
 
 O **Gruntfile.js** é onde você vai escrever suas tarefas, carregar os plugins e as configurações da sua aplicação. Exemplo:
 
-<pre>
-<code class="language-javascript">
-module.exports = function(grunt) {
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+```javascript
+  module.exports = function(grunt) {
+    grunt.initConfig({
+      pkg: grunt.file.readJSON('package.json'),
+      uglify: {
+        options: {
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        },
+        build: {
+          src: 'src/<%= pkg.name %>.js',
+          dest: 'build/<%= pkg.name %>.min.js'
+        }
       }
-    }
-  });
+    });
 
-  // tarefas
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+    // tarefas
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // plugin
-  grunt.registerTask('default', ['uglify']);
-  };
-}
-</code>
-</pre>
+    // plugin
+    grunt.registerTask('default', ['uglify']);
+    };
+  }
+```
 
 Nesse caso eu tenho uma tarefa, `unglify`. Para rodar basta passar `grunt nomedatarefa`.
 

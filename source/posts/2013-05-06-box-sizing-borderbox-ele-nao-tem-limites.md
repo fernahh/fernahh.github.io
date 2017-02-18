@@ -18,15 +18,14 @@ Para entender melhor, [clique aqui e veja uma demonstração](http://codepen.io/
 
 Há desenvolvedores que já usam essa regra como seletor universal. Tem toda aquela discussão sobre a performance e tal, mas quem quiser usar, fica a dica:
 
-<pre>
-<code class="language-css">
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing:border-box;
-  }
-</code>
-</pre>
+
+```css
+  * {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing:border-box;
+    }
+```
 
 ## Suporte
 

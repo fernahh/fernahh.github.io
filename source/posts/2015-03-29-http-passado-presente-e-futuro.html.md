@@ -6,41 +6,40 @@ category: Development
 tags: http, http2, web, protocolo HTTP
 ---
 
-Para quem acompanha o mundo tecnológico sabe que em muito pouco tempo o que é padrão pode se tornar defasado. Mas um dos pilares da web continua igual a quase duas décadas, o HTTP. A versão atual, 1.1, já existe há 16 anos. Sim, DE-ZES-SEIS anos *(procurei no Google para saber quais eram as sílabas dessa palavra, ok)*. 
+Para quem acompanha o mundo tecnológico sabe que em muito pouco tempo o que é padrão pode se tornar defasado. Mas um dos pilares da web continua igual a quase duas décadas, o HTTP. A versão atual, 1.1, já existe há 16 anos. Sim, DE-ZES-SEIS anos *(procurei no Google para saber quais eram as sílabas dessa palavra, ok)*.
 
-Em sua representação longa, HTTP é uma abreviação para *HyperText Transfer Protocol*. Ênfase na paralavra Hyper<strong>Text</strong>. 
+Em sua representação longa, HTTP é uma abreviação para *HyperText Transfer Protocol*. Ênfase na paralavra Hyper<strong>Text</strong>.
 
 Vamos a um exemplo de uma request e response HTTP:
 
-<pre>
-<code class="language-http">
-telnet www.organicadigital.com.br 80
-Trying 107.170.169.4...
-Connected to www.organicadigital.com.br.
-Escape character is '^]'.
-GET / HTTP/1.1
-Host: www.organicadigital.com.br
 
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Status: 200 OK
-X-UA-Compatible: IE=Edge,chrome=1
-ETag: "4618f5c69dfa0ee8cb492830482c0bbe"
-Cache-Control: max-age=0, private, must-revalidate
-Set-Cookie: _organicadigital_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTRhYmFkYzczZTlkZDkwNWNlZmI0ZjljZWJjNGQ3OGI2BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW81aUF1dnlZeHBZaXpzOE9GalNyYXkvMHVudHF4SGlTQ0tmVHVxVFh6OUE9BjsARg%3D%3D--9d0b2992a517706a8c98832ca05b504c30eb9776; path=/; HttpOnly
-Date: Sat, 21 Mar 2015 19:23:51 GMT
-X-Rack-Cache: miss
-X-Request-Id: f2eb550c1f45d3ccac102908752d0724
-X-Runtime: 0.052659
-X-Powered-By: Phusion Passenger 4.0.42
-Server: nginx/1.6.0 + Phusion Passenger 4.0.42
+```http
+  telnet www.organicadigital.com.br 80
+  Trying 107.170.169.4...
+  Connected to www.organicadigital.com.br.
+  Escape character is '^]'.
+  GET / HTTP/1.1
+  Host: www.organicadigital.com.br
 
-1000
-<!DOCTYPE html>
-</code>
-</pre>
+  HTTP/1.1 200 OK
+  Content-Type: text/html; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  Status: 200 OK
+  X-UA-Compatible: IE=Edge,chrome=1
+  ETag: "4618f5c69dfa0ee8cb492830482c0bbe"
+  Cache-Control: max-age=0, private, must-revalidate
+  Set-Cookie: _organicadigital_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTRhYmFkYzczZTlkZDkwNWNlZmI0ZjljZWJjNGQ3OGI2BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW81aUF1dnlZeHBZaXpzOE9GalNyYXkvMHVudHF4SGlTQ0tmVHVxVFh6OUE9BjsARg%3D%3D--9d0b2992a517706a8c98832ca05b504c30eb9776; path=/; HttpOnly
+  Date: Sat, 21 Mar 2015 19:23:51 GMT
+  X-Rack-Cache: miss
+  X-Request-Id: f2eb550c1f45d3ccac102908752d0724
+  X-Runtime: 0.052659
+  X-Powered-By: Phusion Passenger 4.0.42
+  Server: nginx/1.6.0 + Phusion Passenger 4.0.42
+
+  1000
+  <!DOCTYPE html>
+```
 
 Só texto, certo?
 
@@ -64,22 +63,19 @@ O SPDY (leia-se *speedy*) é um protocolo criado pelo [Google](http://www.google
 
 A primeira grande mudança do HTTP 1.1 para sua segunda versão, é que ele deixa de ser texto para ser binário. Ou seja, o protocolo que foi projetado para humanos agora foi projeto para máquinas. Uma interação HTTP2 ficaria mais ou menos assim:
 
-<pre>
-<code class="language-http">
-0010101010101010101
+```http
+  0010101010101010101
 
-01010101
-010101010100
-0101010101
-01010101101
-010101010
+  01010101
+  010101010100
+  0101010101
+  01010101101
+  010101010
 
-?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?_?*f0
-?{{?un?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?
-_?*f0?{{?un,1?T?.?[mŚ?T?%??????????0
-  
-</code>
-</pre>
+  ?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?_?*f0
+  ?{{?un?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?
+  _?*f0?{{?un,1?T?.?[mŚ?T?%??????????0
+```
 
 Nesse exemplo também podemos observar que a compressão gzip é **obrigatória** no HTTP2.
 
@@ -117,7 +113,7 @@ Isso mesmo. Os servidores poderão nos dizer quando um recurso está processado 
 
 Depois de mostrar todas essas maravilhas, podemos observar que essa nova versão do protocolo é basicamente melhorias de performance. Porém, teremos alguns custos que deverão ser pagos.
 
-As boas práticas de hoje serão futuros problemas no HTTP/2. Não fará mais sentido concatenar assets, por exemplo. 
+As boas práticas de hoje serão futuros problemas no HTTP/2. Não fará mais sentido concatenar assets, por exemplo.
 
 - Por que entregar um arquivo gigante pra economizar uma request se a quantidade delas não serão mais um problema?
 - Abrir conexão de outro domínio para carregar assets não será eficiente em um protocolo que preza por "todos os ovos na mesma cesta".
@@ -137,6 +133,6 @@ Por hoje é isso.
 - [http://blog.caelum.com.br/as-fantasticas-novidades-do-http-2-0-e-do-spdy/](http://blog.caelum.com.br/as-fantasticas-novidades-do-http-2-0-e-do-spdy/)
 - [http://pt.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes7](http://pt.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes7)
 - [https://mattwilcox.net/web-development/http2-for-front-end-web-developers](https://mattwilcox.net/web-development/http2-for-front-end-web-developers)
-- [https://http2.github.io/](https://http2.github.io/) 
+- [https://http2.github.io/](https://http2.github.io/)
 
 [Texto publicado no Seeds, blog da Orgânica Digital.](http://seeds.organicadigital.com/post/115022491735/http-passado-presente-e-futuro)

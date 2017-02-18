@@ -18,37 +18,33 @@ Quando falamos de componentes, eles podem ter seus próprios estados ou somente 
 Chamamos algo de stateful quando ele possui informações sobre o estado da aplicação, além de poder modificá-lo, sabendo quais foram as mudanças no passado, presente e (as vezes) as futuras.
 Podemos exemplificar isso através de uma função impura:
 
-<pre>
-<code class="language-javascript">
-// estado.
-const position = 1;
+```javascript
+  // estado.
+  const position = 1;
 
-// função impura: tem acesso há um
-// estado que não faz parte de seu
-// escopo.
-const increment = () => position + 1;
+  // função impura: tem acesso há um
+  // estado que não faz parte de seu
+  // escopo.
+  const increment = () => position + 1;
 
-increment(); // retorna 2.
-</code>
-</pre>
+  increment(); // retorna 2.
+```
 
 ### Stateless
 
 Diferentemente de algo stateful, quando temos aplicações, funções ou componentes stateless, sabemos que ele não tem informação sobre o estado. Sendo assim, o termo stateless nos diz que um determido instrumento não muta o estado de algo, assim temos a previsiblidade de que dada uma entrada, teremos sempre a mesma saída.
 
-<pre>
-<code class="language-javascript">
-// estado.
-const position = 1;
+```javascript
+  // estado.
+  const position = 1;
 
-// função pura: ao invés de ter
-// ter acesso ao estado, ela
-// recebe o estado como parâmetro.
-const increment = p => p + 1;
+  // função pura: ao invés de ter
+  // ter acesso ao estado, ela
+  // recebe o estado como parâmetro.
+  const increment = p => p + 1;
 
-increment(); // retorna 2.
-</code>
-</pre>
+  increment(); // retorna 2.
+```
 
 ## Componentes na era pré-React
 
@@ -77,19 +73,17 @@ Essa diretiva é stateless. Porém, o controle do estado da aplicação pode ser
 
 É recomendado que quando você for escrever um componente usando uma diretiva, sempre deixe o escopo dela isolado através de um objeto literal:
 
-<pre>
-<code class="language-javascript">
-angular
-  .module('alert', [])
-  .directive('uiAlert', function() {
-    return {
-      scope: {},
-      template: '<div ng-transclude></div>',
-      transclude: true
-    };
-  });
-</code>
-</pre>
+```javascript
+  angular
+    .module('alert', [])
+    .directive('uiAlert', function() {
+      return {
+        scope: {},
+        template: '<div ng-transclude></div>',
+        transclude: true
+      };
+    });
+```
 
 Mesmo assim, você ainda pode emitir eventos ou ler informações para o `$rootScope,` acessar e mudar o estado de escopo de cima através do `$scope.$parent` . Essa liberdade existe por causa da natureza do framework, que ficou bastante conhecido pela estrutura MV* e o famoso *two-way data binding*.
 

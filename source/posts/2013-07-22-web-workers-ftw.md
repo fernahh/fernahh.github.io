@@ -33,44 +33,38 @@ Para não sair da tradição (risos), vamos à um "Hello World".
 
 Como Web Workers executam paralelamente de forma isolada ao processo principal, vamos criar um novo arquivo que receberá a "ordem" desse processo e executará sua função. No nosso exemplo, chamei de **worker.js** e possui a função abaixo:
 
-<pre>
-<code class="language-javascript">
-// recebe a mensagem do processo principal
-onmessage = function(event) {
-  var message = event.data;
-  var result = message + ' no And After!';
-  postMessage(result);
-}
-</code>
-</pre>
+```javascript
+  // recebe a mensagem do processo principal
+  onmessage = function(event) {
+    var message = event.data;
+    var result = message + ' no And After!';
+    postMessage(result);
+  }
+```
 
 Feito isso, vamos criá-lo no processo principal:
 
-<pre>
-<code class="language-javascript">
-var myWorker = new Worker('worker.js');
-</code>
-</pre>
+```javascript
+  var myWorker = new Worker('worker.js');
+```
+
 
 Para passar nossa informação, precisamos do método `postMessage()`:
 
-<pre>
-<code class="language-javascript">
-var message = 'Web Workers';
-myWorker.postMessage(message);
-</code>
-</pre>
+
+```javascript
+  var message = 'Web Workers';
+  myWorker.postMessage(message);
+```
 
 E para finalizar, precisamos receber a mensagem do Worker:
 
-<pre>
-<code class="language-javascript">
-// Recebe a mensagem do worker
-myWorker.onmessage = function(event) {
-  alert(event.data);
-};
-</code>
-</pre>
+```javascript
+  // Recebe a mensagem do worker
+  myWorker.onmessage = function(event) {
+    alert(event.data);
+  };
+```
 
 Se não quiser fazer na mão, é só baixar o [exemplo aqui](http://www.euescuto.com.br/worker-and-after.zip). Ou, você pode ver uns exemplos [nesse link](http://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted).
 
