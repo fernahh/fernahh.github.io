@@ -1,11 +1,9 @@
 task :deploy do
-  build_dir = "../fernahh.github.io"
   system "middleman build"
 
-  cd build_dir do
+  cd "./build" do
     system "git add -A"
-    message = "Last deploy on #{Time.now.utc}"
-    system "git commit -m '#{message}'"
-    system "git push"
+    system "git commit --allow-empty -m 'Updated at #{Time.now.utc}'"
+    system "git push origin gh-pages"
   end
 end
