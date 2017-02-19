@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link rel="canonical" href="https://fernahh.com.br/box-sizing-borderbox-ele-nao-tem-limites/">
+
+    <title>box sizing borderbox, ele não tem limites | fernahh.com.br</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Sigo a risca a ideia de que 80% do que aprendemos com desenvolvimento é na prática. Com box-sizing foi assim. Uma das propriedades mais legais do CSS3 que pode ser usada em todos seus projetos!"></meta>
+    <meta property="og:type" content="article"></meta>
+    <meta property="og:title" content="box sizing borderbox, ele não tem limites | @fernahh"></meta>
+    <meta property="og:site_name" content="@fernahh | desenvolvedor e de buenas na web"></meta>
+    <meta property="og:description" content="Sigo a risca a ideia de que 80% do que aprendemos com desenvolvimento é na prática. Com box-sizing foi assim. Uma das propriedades mais legais do CSS3 que pode ser usada em todos seus projetos!"></meta>
+
+    <meta name="twitter:card  " content="summary"></meta>
+    <meta name="twitter:site" content="@fernahh"></meta>
+    <meta name="twitter:creator" content="@fernahh"></meta>
+    <meta name="twitter:url" content="https://fernahh.com.br/box-sizing-borderbox-ele-nao-tem-limites/"></meta>
+    <meta name="twitter:title" content="box sizing borderbox, ele não tem limites | @fernahh"></meta>
+    <meta name="twiter:description" content="Sigo a risca a ideia de que 80% do que aprendemos com desenvolvimento é na prática. Com box-sizing foi assim. Uma das propriedades mais legais do CSS3 que pode ser usada em todos seus projetos!"></meta>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="../assets/stylesheets/application-312d7303.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="box-sizing-borderbox-ele-nao-tem-limites box-sizing-borderbox-ele-nao-tem-limites_index">
+    <div class="container">
+      <div class="Header_Navigation">
+  <header class="Header">
+    <h1>
+<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.com.br
+</a>    </h1>
+    <h2>desenvolvedor e de buenas na web.</h2>
+  </header>
+
+  <nav class="Navigation">
+  <ul class="Navigation__List">
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Quem é @fernahh?" href="/sobre">        <span class="content">Sobre </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        <span class="content">Twitter </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        <span class="content">Github </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Talks no Speakerdeck" href="http://speakerdeck.com/fernahh">        <span class="content">Talks </span><span class="underline"></span>
+</a>    </li>
+  </ul>
+</nav>
+
+</div>
+
+        <article class="Article" role="article">
+    <header>
+    <time class="Post_Index__Date" datetime="2013/05/06">
+      Publicado em: 06/05/2013</time>
+      <h1 class="Article__Title">box sizing borderbox, ele não tem limites</h1>
+    </header>
+    <section>
+      <p><img title="CSS box-sizing" alt="CSS box-sizing" src="http://andafter.org/media/images/posts/thumbs/770x300/box-sizing_770x300.jpg" /></p>
+
+<p>Mais do que nunca a onda do momento são sites responsivos. Aliás, muito mais que uma &ldquo;onda&rdquo;, ter um site responsivo, na minha opinião, é questão de obrigação. Mas bem o foco do post não é esse. O foco é que sites responsivos devem ter larguras relativas.</p>
+
+<p>Nos últimos projetos que tive passei um trabalho enorme com elementos que possuem borda, justamente pelo fato de usar larguras relativas (em %). OK, e como faz para descontar aquela borda de 1px de um elemento que tem 50% de largura? É aí que entra uma das propriedades mais legais do CSS3: <strong>box-sizing</strong>.</p>
+
+<p>Por padrão o <code>box-sizing</code> vem com <code>box-sizing: content-box</code>, o que indica que o tamanho dos elementos são definidos pelo seu conteúdo. Porém, se usarmos <code>box-sizing: border-box</code> a situação muda. Dessa forma o tamanho fica por conta da soma do conteúdo com a borda e o padding. Maravilha, né?!</p>
+
+<p>Para entender melhor, <a href="http://codepen.io/lfernahh/full/jFobG">clique aqui e veja uma demonstração</a>.</p>
+
+<p>Há desenvolvedores que já usam essa regra como seletor universal. Tem toda aquela discussão sobre a performance e tal, mas quem quiser usar, fica a dica:</p>
+<pre class="highlight css"><code>  <span class="o">*</span> <span class="p">{</span>
+      <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+      <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+      <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre>
+
+<h2>Suporte</h2>
+
+<p>Aqui vem a motivação de eu escrever esse post. No desenvolvimento do site da Mosh Creative, eu e o <a href="https://twitter.com/rodrigowillrich">@rodrigowillrich</a> peleamos para fazer isso sem usar box-sizing. Porém, depois de muito sofrimento fomos pesquisar sobre o browser support e veio a surpresa.</p>
+
+<p>Por incrível que pareça essa propriedade funciona do IE8 pra cima! Caso você precisa suportar os IE7 e IE6, pode usar esse <a href="https://github.com/Schepp/box-sizing-polyfill">polyfill</a>. Para o Firefox você ainda deve ser usar o prefixo <strong>-moz-</strong> e também deve usar <strong>-webkit-</strong> para versões do iOS4 pra baixo e para o browser do Android 2.3 pra baixo. Mais informações no <a href="http://html5please.com/">HTML5Please</a>.</p>
+
+<p>Concluindo, o <strong>box-sizing: border-box</strong>, assim como a zuera, ele não tem limites!</p>
+
+<p><a href="http://andafter.org/publicacoes/box-sizing-border-box-ele-nao-tem-limites.html">Publicado orginalmente no And After.</a></p>
+
+    </section>
+  </article>
+
+  <hr>
+
+  <div class="Brand--footer">
+    <div class="Brand">
+  <span class="Brand_f"></span>
+  <span class="Brand_s"></span>
+</div>
+
+  </div>
+
+    </div>
+
+    <footer class="Footer">
+  <p>
+    Made with <a title="Middleman website" href="https://middlemanapp.com/">Middleman</a> and host on
+    <a title="Github pages website" href="https://pages.github.com/">Github Pages</a>. This project is
+    on <a title="Project on Github" href="https://github.com/fernahh/fernahh.com.br">Github</a>.
+  </p>
+  <p>
+    Fork and use it as you wish! With exception of content, of course.
+  </p>
+</footer>
+
+    <script src="../assets/javascripts/application-56d518d4.js" type="text/javascript"></script>
+  </body>
+</html>

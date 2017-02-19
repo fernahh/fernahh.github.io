@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link rel="canonical" href="https://fernahh.com.br/afinal-como-usar-heranca-no-css/">
+
+    <title>Afinal, como usar herança no CSS? | fernahh.com.br</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Herança surgiu para ajudar desenvolvedores a escreverem mesmo e produzirem mais. Vamos ver aqui como esse conceito básico das folhas de estilo pode nos ajudar no dia-a-dia."></meta>
+    <meta property="og:type" content="article"></meta>
+    <meta property="og:title" content="Afinal, como usar herança no CSS? | @fernahh"></meta>
+    <meta property="og:site_name" content="@fernahh | desenvolvedor e de buenas na web"></meta>
+    <meta property="og:description" content="Herança surgiu para ajudar desenvolvedores a escreverem mesmo e produzirem mais. Vamos ver aqui como esse conceito básico das folhas de estilo pode nos ajudar no dia-a-dia."></meta>
+
+    <meta name="twitter:card  " content="summary"></meta>
+    <meta name="twitter:site" content="@fernahh"></meta>
+    <meta name="twitter:creator" content="@fernahh"></meta>
+    <meta name="twitter:url" content="https://fernahh.com.br/afinal-como-usar-heranca-no-css/"></meta>
+    <meta name="twitter:title" content="Afinal, como usar herança no CSS? | @fernahh"></meta>
+    <meta name="twiter:description" content="Herança surgiu para ajudar desenvolvedores a escreverem mesmo e produzirem mais. Vamos ver aqui como esse conceito básico das folhas de estilo pode nos ajudar no dia-a-dia."></meta>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="../assets/stylesheets/application-312d7303.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="afinal-como-usar-heranca-no-css afinal-como-usar-heranca-no-css_index">
+    <div class="container">
+      <div class="Header_Navigation">
+  <header class="Header">
+    <h1>
+<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.com.br
+</a>    </h1>
+    <h2>desenvolvedor e de buenas na web.</h2>
+  </header>
+
+  <nav class="Navigation">
+  <ul class="Navigation__List">
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Quem é @fernahh?" href="/sobre">        <span class="content">Sobre </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        <span class="content">Twitter </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        <span class="content">Github </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Talks no Speakerdeck" href="http://speakerdeck.com/fernahh">        <span class="content">Talks </span><span class="underline"></span>
+</a>    </li>
+  </ul>
+</nav>
+
+</div>
+
+        <article class="Article" role="article">
+    <header>
+    <time class="Post_Index__Date" datetime="2015/10/11">
+      Publicado em: 11/10/2015</time>
+      <h1 class="Article__Title">Afinal, como usar herança no CSS?</h1>
+    </header>
+    <section>
+      <p>Geralmente quando alguém começa a desenvolver interfaces web, o processo é aos trancos e barrancos. Nessa situação, iniciantes buscam aprender como se faz aquela borda arredondada ou como aplicar transparência. Por fim, acabam deixando de lado conceitos básicos de CSS. Levando isso em conta, precisamos primeiramente aprender sobre <strong>especificidade</strong> e <strong>efeito cascata</strong>. Esses dois pontos são essenciais para aprendermos como escrever folhas de estilo usando herança.</p>
+
+<h2>A especificidade de seletores</h2>
+
+<p>Um documento web possui derivadas fontes de estilo, sendo elas:</p>
+
+<ul>
+<li>a folha de CSS servida pela página;</li>
+<li>configurações setadas pelo usuário;</li>
+<li>o estilo <em>default</em> aplicado pelo <em>user agent</em> (ex: navegadores).</li>
+</ul>
+
+<p>A primeira é a mais importante. A folha de estilo pode sobrescrever as configurações do usuário, que por sua vez pode sobrescrever os estilos aplicados <em>user agent</em>.</p>
+
+<p>Apesar do CSS servido pela página web ser mais específico, é importante lembrar que o usuário tem a opção de forçar o estilo desejado por ele. Porém, isso <strong>não vale para regras</strong> que recebem <code>!important</code>.</p>
+
+<p>A <a href="http://www.w3.org/TR/css3-selectors/#specificity">W3C criou uma forma de calcular a especificidade de seletores</a>. Para entender de forma simples, basicamente distribuímos pesos diferentes as regras aplicadas:</p>
+
+<ul>
+<li>CSS inline: 1000 pontos;</li>
+<li>ID: 100 pontos;</li>
+<li>Classes, pseudo-classe e atributos: 10 pontos;</li>
+<li>Elementos: 1 ponto.</li>
+</ul>
+
+<p>Na prática, podemos fazer cálculos como os exemplos a seguir:</p>
+
+<ul>
+<li><code>p.foobar</code>: 1 classe + 1 elemento = 11 pontos.</li>
+<li><code>div#foobar .foo .bar</code>: 1 ID + 1 elemento + 3 classes = 131</li>
+</ul>
+
+<p>A especificidade pode dar grandes dores de cabeça em projetos complexos, ainda mais quando o número de desenvolvedores é maior. Não é rara a aplicação com um grande número de uso do <code>!important</code>. Isso funciona como uma forma de quebrar a especificidade para sobrescrever uma regra.</p>
+<pre class="highlight css"><code>  <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c">/* Essa regra será mais específica. */</span>
+
+  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>Evite ao máximo usar <code>!important</code>. Os 5 minutos que você economiza fazendo uso dele podem se tornar horas no futuro. Fica a dica:</p>
+
+<blockquote class="twitter-tweet" lang="pt"><p lang="en" dir="ltr">Easy way to tell how screwed you are when dealing with CSS from a legacy project:&#10;&#10;`grep -rin &lsquo;!important&rsquo; assets/sass/ | wc -l`</p>&mdash; Rafael Rinaldi (@rafaelrinaldi) <a href="https://twitter.com/rafaelrinaldi/status/586216597913739264">9 abril 2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2>Efeito cascata: o coração do CSS</h2>
+
+<p>Não é a toa que o a palavra <em>cascade</em> está no nome nas folhas de estilo. Essa técnica é utilizada para definir o estilo a um seletor mesmo em caso de conflitos.</p>
+
+<p><em>Pergunta: você sabe o que acontece quando existem duas regras para um mesmo seletor?</em></p>
+
+<p>A cascata define o peso de uma regra através das seguintes características:</p>
+
+<ul>
+<li>importância;</li>
+<li>origem;</li>
+<li>especificidade;</li>
+<li>ordem de declaração.</li>
+</ul>
+
+<p>Saber como o efeito cascata funciona irá lhe poupar boas horas de trabalho.</p>
+
+<p><em>Mas e como o navegador lida com conflitos de regras?</em> Primeiramente, ele vasculha <strong>todas as regras</strong> que se aplicam ao elemento. Como segundo passo, ele irá classificar os <strong>níveis de importância</strong> e suas <strong>origens</strong>. Depois disso, irá ocorrer um <em>match</em> das declarações com o <strong>mesmo nível de importância</strong>. Por último, se houver duas regras com o mesmo peso, a que é <strong>declarada por último</strong> ganhará.</p>
+
+<p>Você já deve ter percebido que quanto mais fácil esse processo para o navegador, mais performática será sua aplicação.</p>
+
+<p>Caso queira saber mais sobre efeito cascata e herança, <a href="http://tableless.com.br/efeito-cascata-e-especificidade-do-css/">recomendo esse post do Tableless de 2009</a>.</p>
+
+<h2>A herança</h2>
+
+<p>A palavra herança rapidamente remete ao paradigma de <a href="https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos">Orientação a Objetos</a>. Caso você acompanhe discussões sobre <em>front-end</em>, já deve saber que o termo “<em>orientação a objetos</em>” não é bem visto tratando-se de CSS.</p>
+
+<p>Assim como você herda métodos e atributos de objetos, no CSS você herda as regras de um elemento pai.</p>
+<pre class="highlight css"><code>  <span class="c">/*
+   * Todo o conteúdo textual do documento
+   * terá 16px de tamanho, pois herdam do
+   * `body`.
+   */</span>
+
+  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>É importante lembrar que nem todas as propriedades serão herdadas por elementos filho. Geralmente as propriedades que se referem ao <em>box-model</em> (<code>height</code>, <code>width</code>, <code>margin</code>, <code>padding</code>) não aceitam herança. Caso você queira forçar a herança, pode usar o valor <code>inherit</code>. Aliás, você sabe a <a href="http://tableless.com.br/entendendo-os-valores-initial-e-inherit-do-css/">diferença entre initial e inherit</a>?</p>
+
+<p>Podemos fazer um uso inteligente de herança para economizar várias linhas de código. É muito mais fácil especificar valores para elementos pais e utilizá-los em seus filhos do que especificar um por um. Se você der uma olhada em códigos de <em>frameworks</em> de CSS, irá notar que herança é fortemente usada para melhorar a manutenção do projeto.</p>
+
+<h2>Herança com Sass</h2>
+
+<p>Pré-processadores deram super poderes para desenvolvedores escreverem CSS. Em nosso contexto, <code>@extend</code> e <em>mixins</em> nos trazem benefícios, mas que devem ser usados com bastante cautela.</p>
+
+<h3>@extend</h3>
+
+<p>Podemos extender <em>placeholders</em> (<code>%placeholder</code>) e classes. Muitos autores desencorajam desenvolvedores a usarem esse recurso. O motivo é o CSS gerado.</p>
+
+<p>Por exemplo, digamos que temos uma classe <code>.error</code> e queremos usar os estilos dela em outra classe.</p>
+<pre class="highlight scss"><code>  <span class="nc">.error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="k">@extend</span> <span class="nc">.error</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>O CSS gerado será o seguinte:</p>
+<pre class="highlight css"><code>  <span class="nc">.error</span><span class="o">,</span> <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>Ou seja, o Sass não <em>“copia”</em> os valores, ele apenas separa o valor em uma <em>mesma regra</em>.
+Agora digamos que em outro contexto precisamos reescrever a cor de erro para um tom mais forte.</p>
+<pre class="highlight scss"><code>  <span class="nc">.other_context</span> <span class="nc">.error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="no">red</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>Além de criar a regra para a classe <code>.error</code>, o pré-processador irá aplicar a regra para as outras <em>“instâncias”</em> da classe:</p>
+<pre class="highlight css"><code>  <span class="nc">.other_context</span> <span class="nc">.error</span><span class="o">,</span> <span class="nc">.other_context</span> <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#cc0000</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p><strong>Isso é péssimo</strong>. Além de tirar o controle do desenvolvedor, isso irá gerar <strong>código desnecessário</strong> e prejudicar outras áreas de uma interface. Lembre-se: tome cuidado com o <em>bug</em> dos <a href="http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/10164546.aspx">4095 seletores</a>.</p>
+
+<p>Usando <em>placeholders</em>, o Sass irá realmente “copiar” os estilos para a classe que possui o <code>@extend</code>. Porém, se o <em>placeholder</em> for alterado em um contexto, isso também irá gerar uma regra para as classes que o estenderam.</p>
+<pre class="highlight scss"><code>  <span class="nv">%error</span><span class="o">,</span>
+  <span class="nc">.error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="k">@extend</span> <span class="nv">%error</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.other_context</span> <span class="nc">.error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="no">red</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>O output será esse:</p>
+<pre class="highlight css"><code>  <span class="nc">.error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.other_context</span> <span class="nc">.error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#cc0000</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>Perceba que dessa vez a instância de <code>.error</code>, a classe <code>.icon--error</code> <strong>não herdou as regras</strong> em outro contexto.</p>
+
+<p><strong>Resumindo: evite o <code>@extend</code>. Se for usar, vá de <em>placeholders</em>.</strong></p>
+
+<h3>Mixins</h3>
+
+<p>Outra forma criar herança é usando <em>mixins</em>. Com eles você pode realmente <em>copiar</em> propriedades e valores para uma classe.</p>
+<pre class="highlight scss"><code>  <span class="k">@mixin</span> <span class="nf">error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">error</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.label--error</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">error</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>O problema com essa abordagem é que ela não será tão performática, levando em conta que ela gerará duas regras com o mesmo código:</p>
+<pre class="highlight css"><code>  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.label--error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>Porém, mixins são eficientes se você precisar de parâmetros.</p>
+
+<p>Vamos continuar com nosso exemplo. Se precisarmos de uma cor mais forte, poderemos passar essa opção por parâmetro.</p>
+<pre class="highlight scss"><code>  <span class="k">@mixin</span> <span class="nf">error</span><span class="p">(</span><span class="nv">$critical</span><span class="o">:</span> <span class="bp">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@if</span> <span class="nv">$critical</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="no">red</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">error</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--critical-error</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">error</span><span class="p">(</span><span class="nv">$critical</span><span class="o">:</span> <span class="bp">true</span><span class="p">);</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>O Sass irá gerar o vermelho mais escuro quando passarmos o valor <code>true</code> para a variável <code>$critical</code>:</p>
+<pre class="highlight css"><code>  <span class="nc">.icon--error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.icon--critical-error</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#cc0000</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<h2>Concatenação de classes</h2>
+
+<p>Se você é purista e não gosta de pré-processadores ou prefere não usar as “mágicas” do Sass, você pode fazer uso da concatenação/composição de classes no HTML. O <a href="http://getbootstrap.com/">Bootstrap</a> usa essa abordagem.</p>
+
+<p>Basicamente você terá estilo padrão em uma classe e usará outras, se necessário, para alterar o layout.</p>
+
+<p>No HTML com um elemento de botão, teríamos a classe <code>.button</code>. Se precisarmos criar um botão de sucesso, usamos a classe <code>.button--success</code> juntamente com <code>.button</code>.</p>
+<pre class="highlight css"><code>  <span class="nc">.button</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.button--success</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+
+<p>Na minha opinião essa é a forma mais correta de usarmos herança. Sempre opte por usar <em>features</em> nativas do CSS ao invés das mágicas do Sass.</p>
+
+<h2>Conclusão</h2>
+
+<p>Herança é uma abordagem extremamente necessária para começar a entender o desenvolvimento de CSS escalável. Depois de entender bem o conceito, estude <a href="http://tableless.com.br/oocss-smacss-bem-dry-css-afinal-como-escrever-css/">padrões de escrita</a>. Olhe o código fonte de <em>frameworks</em> para entender a arquitetura usada.</p>
+
+<p>Nunca saia escrevendo CSS até dar certo. Entenda as regras e planeja seus passos. Pensar antes de começar sem dúvidas será mais produtivo.</p>
+
+<p><a href="http://tableless.com.br/afinal-como-usar-heranca-no-css/">Publicado originalmente no Tableless.</a></p>
+
+    </section>
+  </article>
+
+  <hr>
+
+  <div class="Brand--footer">
+    <div class="Brand">
+  <span class="Brand_f"></span>
+  <span class="Brand_s"></span>
+</div>
+
+  </div>
+
+    </div>
+
+    <footer class="Footer">
+  <p>
+    Made with <a title="Middleman website" href="https://middlemanapp.com/">Middleman</a> and host on
+    <a title="Github pages website" href="https://pages.github.com/">Github Pages</a>. This project is
+    on <a title="Project on Github" href="https://github.com/fernahh/fernahh.com.br">Github</a>.
+  </p>
+  <p>
+    Fork and use it as you wish! With exception of content, of course.
+  </p>
+</footer>
+
+    <script src="../assets/javascripts/application-56d518d4.js" type="text/javascript"></script>
+  </body>
+</html>
