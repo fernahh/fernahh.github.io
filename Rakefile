@@ -4,6 +4,6 @@ task :deploy do
   cd "./build" do
     system "git add -A"
     system "git commit --allow-empty -m 'Updated at #{Time.now.utc}'"
-    system "git push origin gh-pages"
+    system "git push origin master"
   end
 end
