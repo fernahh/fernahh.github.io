@@ -6,6 +6,11 @@
       <% end -%>
     </li>
     <li class="Navigation__List__Item">
+      <%- link_to "/talks", class: "Navigation__List__Item__Link", title: "Página com lista de palestras" do %>
+        <span class="content">Talks </span><span class="underline"></span>
+      <% end -%>
+    </li>
+    <li class="Navigation__List__Item">
       <%- link_to "https://twitter.com/fernahh", class: "Navigation__List__Item__Link", title: "Link para o Twitter" do %>
         <span class="content">Twitter </span><span class="underline"></span>
       <% end -%>
@@ -13,11 +18,6 @@
     <li class="Navigation__List__Item">
       <%- link_to "https://github.com/fernahh", class: "Navigation__List__Item__Link", title: "Projetos no Github" do %>
         <span class="content">Github </span><span class="underline"></span>
-      <% end -%>
-    </li>
-    <li class="Navigation__List__Item">
-      <%- link_to "http://speakerdeck.com/fernahh", class: "Navigation__List__Item__Link", title: "Talks no Speakerdeck" do %>
-        <span class="content">Talks </span><span class="underline"></span>
       <% end -%>
     </li>
   </ul>
