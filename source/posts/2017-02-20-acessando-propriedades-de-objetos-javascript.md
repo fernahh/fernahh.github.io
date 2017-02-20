@@ -124,7 +124,7 @@ Lenses é um conceito da Programação Funcional. De forma simplória, podemos d
   }
 ```
 
-Essa função, `lens()` irá nos retornar um objeto com função de *get* e *set*. Feito isso, podemos acessar e mudar valor de objetos sem precisar **"mutar"** nosso objeto nativo. Isso faz bastante sentido quando lidamos com imutabilidade. No exemplo abaixo, o objeto R representa o [ramba](http://ramdajs.com/).
+Essa função, `lens()` irá nos retornar um objeto com função de *get* e *set*. Feito isso, podemos acessar e mudar valor de objetos sem precisar **"mutar"** nosso objeto nativo. Isso faz bastante sentido quando lidamos com imutabilidade. No exemplo abaixo, o objeto R representa o [ramda](http://ramdajs.com/).
 
 ```javascript
   const lens = (getter, setter) => {
