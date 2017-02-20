@@ -1,8 +1,6 @@
 .Footer {
-  margin-top: 4em;
+  margin-top: 8em;
   padding: 3em;
-
-  background-color: $gray-colorB;
 
   text-align: center;
 
@@ -11,14 +9,5 @@
 
     color: darken($gray-colorB, 40%);
     font-size: .8em;
-
-    a {
-      color: darken($gray-colorB, 45%);
-      border-color: darken($gray-colorB, 45%);
-
-      @include attention() {
-        color: $white-color;
-      }
-    }
   }
 }

@@ -5,14 +5,13 @@
     color: $gray-colorD;
     font-family: $title-font;
     font-size: .75em;
-    text-transform: uppercase;
   }
 
   &__Title {
     margin-top: 0;
     margin-bottom: 20px;
 
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1.2em;
     letter-spacing: -1.79px;
 
@@ -24,7 +23,7 @@
       border: 0;
 
       @include attention() {
-        color: $white-color;
+        color: darken(#565a5c, 30%);
       }
     }
   }
