@@ -164,7 +164,7 @@
   <span class="p">}</span>
 </code></pre>
 
-<p>Essa função, <code>lens()</code> irá nos retornar um objeto com função de <em>get</em> e <em>set</em>. Feito isso, podemos acessar e mudar valor de objetos sem precisar <strong>&ldquo;mutar&rdquo;</strong> nosso objeto nativo. Isso faz bastante sentido quando lidamos com imutabilidade. No exemplo abaixo, o objeto R representa o <a href="http://ramdajs.com/">ramba</a>.</p>
+<p>Essa função, <code>lens()</code> irá nos retornar um objeto com função de <em>get</em> e <em>set</em>. Feito isso, podemos acessar e mudar valor de objetos sem precisar <strong>&ldquo;mutar&rdquo;</strong> nosso objeto nativo. Isso faz bastante sentido quando lidamos com imutabilidade. No exemplo abaixo, o objeto R representa o <a href="http://ramdajs.com/">ramda</a>.</p>
 <pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">lens</span> <span class="o">=</span> <span class="p">(</span><span class="nx">getter</span><span class="p">,</span> <span class="nx">setter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">({</span>
       <span class="na">get</span><span class="p">:</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">getter</span><span class="p">(</span><span class="nx">obj</span><span class="p">),</span>
