@@ -36,7 +36,7 @@ Usando nosso exemplo, podemos verificar se `x` existe através do operador *opti
   return obj.x?.y // undefined
 ```
 
-É bom lembrar que essa posta ainda está em *state 0*, e não é recomendada para uso.
+É bom lembrar que essa proposta ainda está em *state 0*, e não é recomendada para uso.
 
 Outras linguagens, como *Ruby* e *C#*, já possuem essa feauture. O *Ruby on Rails*, possui um método chamado `try()` , que também possui esse objetivo.
 
