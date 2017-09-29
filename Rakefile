@@ -6,5 +6,6 @@ task :deploy do
     system "git add -A"
     system "git commit --allow-empty -m 'Updated at #{Time.now.utc}'"
     system "git push origin master"
+    system "git checkout develop"
   end
 end
