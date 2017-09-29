@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){for(var t=document.getElementsByTagName("a"),e=0;e<t.length;e++)t[e].hostname!==window.location.hostname&&t[e].setAttribute("target","_blank")});
