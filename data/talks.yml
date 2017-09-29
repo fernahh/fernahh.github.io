@@ -1,4 +1,11 @@
 -
+  title: "O Ecossistema Web"
+  event: "Semana da Computação UDESC"
+  local: "Joinville, SC"
+  date: 2017-09-21
+  link: https://speakerdeck.com/fernahh/o-ecossistema-web-at-number-semanacomputacaoudesc
+  summary: "A web se tornou a principal plataforma para desenvolvermos software com experiências ricas aos usuários. Mas como chegamos até aqui e quais os rumos que as tecnologias desse ecossistema irão tomar? Nessa palestra vamos abordar a história e o futuro de diversos problemas, desafios, técnicas e ferramentas que elevaram e elevam a experiência de usuários e desenvolvedores que usam a web como plataforma de desenvolvimento de software."
+-
   title: "CSS: Computer Style Science"
   event: FrontinFloripa
   local: "Florianópolis, SC"
