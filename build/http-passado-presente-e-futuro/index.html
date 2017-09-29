@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link rel="canonical" href="https://fernahh.com.br/http-passado-presente-e-futuro/">
+
+    <title>HTTP - passado, presente e futuro | fernahh.com.br</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="O principal protocolo para desenvolvedores web irá mudar. Grandes mudanças de performance. Um pouco de história, como ele funciona atualmente e o futuro com o HTTP 2."></meta>
+    <meta property="og:type" content="article"></meta>
+    <meta property="og:title" content="HTTP - passado, presente e futuro | @fernahh"></meta>
+    <meta property="og:site_name" content="@fernahh | desenvolvedor e de buenas na web"></meta>
+    <meta property="og:description" content="O principal protocolo para desenvolvedores web irá mudar. Grandes mudanças de performance. Um pouco de história, como ele funciona atualmente e o futuro com o HTTP 2."></meta>
+
+    <meta name="twitter:card  " content="summary"></meta>
+    <meta name="twitter:site" content="@fernahh"></meta>
+    <meta name="twitter:creator" content="@fernahh"></meta>
+    <meta name="twitter:url" content="https://fernahh.com.br/http-passado-presente-e-futuro/"></meta>
+    <meta name="twitter:title" content="HTTP - passado, presente e futuro | @fernahh"></meta>
+    <meta name="twiter:description" content="O principal protocolo para desenvolvedores web irá mudar. Grandes mudanças de performance. Um pouco de história, como ele funciona atualmente e o futuro com o HTTP 2."></meta>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="../assets/stylesheets/application-3df8cdcd.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="http-passado-presente-e-futuro http-passado-presente-e-futuro_index">
+    <div class="container">
+      <div class="Header_Navigation">
+  <header class="Header">
+    <h1>
+<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.com.br
+</a>    </h1>
+    <h2>desenvolvedor e de buenas na web.</h2>
+  </header>
+
+  <nav class="Navigation">
+  <ul class="Navigation__List">
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Quem é @fernahh?" href="/sobre">        <span class="content">Sobre </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Página com lista de palestras" href="/talks">        <span class="content">Talks </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        <span class="content">Twitter </span><span class="underline"></span>
+</a>    </li>
+    <li class="Navigation__List__Item">
+<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        <span class="content">Github </span><span class="underline"></span>
+</a>    </li>
+  </ul>
+</nav>
+
+</div>
+
+        <article class="Article" role="article">
+    <header>
+    <time class="Post_Index__Date" datetime="2015/03/29">
+      Publicado em: 29/03/2015</time>
+      <h1 class="Article__Title">HTTP - passado, presente e futuro</h1>
+    </header>
+    <section>
+      <p>Para quem acompanha o mundo tecnológico sabe que em muito pouco tempo o que é padrão pode se tornar defasado. Mas um dos pilares da web continua igual a quase duas décadas, o HTTP. A versão atual, 1.1, já existe há 16 anos. Sim, DE-ZES-SEIS anos <em>(procurei no Google para saber quais eram as sílabas dessa palavra, ok)</em>.</p>
+
+<p>Em sua representação longa, HTTP é uma abreviação para <em>HyperText Transfer Protocol</em>. Ênfase na paralavra Hyper<strong>Text</strong>.</p>
+
+<p>Vamos a um exemplo de uma request e response HTTP:</p>
+<pre class="highlight http"><code><span class="err">  telnet www.organicadigital.com.br 80
+  Trying 107.170.169.4...
+  Connected to www.organicadigital.com.br.
+  Escape character is '^]'.
+  </span><span class="nf">GET</span> <span class="nn">/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="s">  Host: www.organicadigital.com.br</span>
+
+  HTTP/1.1 200 OK
+  Content-Type: text/html; charset=utf-8
+  Transfer-Encoding: chunked
+  Connection: keep-alive
+  Status: 200 OK
+  X-UA-Compatible: IE=Edge,chrome=1
+  ETag: "4618f5c69dfa0ee8cb492830482c0bbe"
+  Cache-Control: max-age=0, private, must-revalidate
+  Set-Cookie: _organicadigital_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTRhYmFkYzczZTlkZDkwNWNlZmI0ZjljZWJjNGQ3OGI2BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW81aUF1dnlZeHBZaXpzOE9GalNyYXkvMHVudHF4SGlTQ0tmVHVxVFh6OUE9BjsARg%3D%3D--9d0b2992a517706a8c98832ca05b504c30eb9776; path=/; HttpOnly
+  Date: Sat, 21 Mar 2015 19:23:51 GMT
+  X-Rack-Cache: miss
+  X-Request-Id: f2eb550c1f45d3ccac102908752d0724
+  X-Runtime: 0.052659
+  X-Powered-By: Phusion Passenger 4.0.42
+  Server: nginx/1.6.0 + Phusion Passenger 4.0.42
+
+  1000
+  &lt;!DOCTYPE html&gt;
+</code></pre>
+
+<p>Só texto, certo?</p>
+
+<p>Deixo a palavra com o criador da web, <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>:</p>
+
+<blockquote>
+<p>O hypertexto fornece uma única interface de usuário para muitas grandes classes de informações armazenadas, tais como relatórios, notas, bases de dados, documentação e sistemas online de ajuda.</p>
+</blockquote>
+
+<p>Alguém aí leu algo sobre &ldquo;imagem&rdquo;, &ldquo;vídeo&rdquo; ou &ldquo;múltiplas interfaces&rdquo;? Aí é que começam nossos problemas e gambiarras para resolve-los. Durante todo esse tempo, como homem sempre fez durante sua evolução, fomos achando soluções e nos adaptando as condições que nosso ambiente nos proporcionava. Foi assim que surgiram técnicas como <em>spriting</em> e <em>concatenating</em>. Além disso, também surgiram serviços e ferramentas como CDNs e <a href="http://www.chromium.org/spdy">SPDY</a>. Vamos dar um pouco mais de atenção para esse último.</p>
+
+<h2>Tudo começou com o SPDY</h2>
+
+<p>O SPDY (leia-se <em>speedy</em>) é um protocolo criado pelo <a href="http://www.google.com">Google</a> para conseguir ter aplicações mais performáticas. Vale lembrar que ele <strong>não é um substitudo</strong> para o HTTP, ele nada mais é que uma camada a mais ao protocolo:</p>
+
+<p><img alt="SPDY" src="http://i.imgur.com/CR2xTkD.jpg?1" /></p>
+
+<p><a href="http://www.chromium.org/spdy/spdy-whitepaper">Segundo o próprio Google</a> é possível reduzir em até 64% o tempo de carregamento de uma página usando SPDY. O mais importante desse cara, é que ele serviu de base para a <a href="http://http2.github.io/">especificação do HTTP2</a>, que iremos ver agora.</p>
+
+<h2>As novidades</h2>
+
+<h3>Compressão automática</h3>
+
+<p>A primeira grande mudança do HTTP 1.1 para sua segunda versão, é que ele deixa de ser texto para ser binário. Ou seja, o protocolo que foi projetado para humanos agora foi projeto para máquinas. Uma interação HTTP2 ficaria mais ou menos assim:</p>
+<pre class="highlight http"><code><span class="err">  0010101010101010101
+
+  01010101
+  010101010100
+  0101010101
+  01010101101
+  010101010
+
+  ?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?_?*f0
+  ?{{?un?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?
+  _?*f0?{{?un,1?T?.?[mŚ?T?%??????????0
+</span></code></pre>
+
+<p>Nesse exemplo também podemos observar que a compressão gzip é <strong>obrigatória</strong> no HTTP2.</p>
+
+<p>Como você deve ter percebido, o essa mudança irá quebrar em navegadores antigos. O fallback nesse caso deverá ser o uso HTTP2, sendo assim, de quebra ganhamos segurança.</p>
+
+<h3>Request, process, response&hellip;</h3>
+
+<p>Aprendemos a conviver com essa rotina:</p>
+
+<ul>
+<li>Pedir algo pro servidor;</li>
+<li>Esperar ele processar;</li>
+<li>Receber a resposta.</li>
+</ul>
+
+<p>Podemos dizer que esse é um dos maiores gargalos da web. Só temos direito a uma request por vez.</p>
+
+<p><img alt="HTTP/1.1" src="http://i.imgur.com/qsoGVRW.jpg?1" /></p>
+
+<p>No HTTP2 tudo vai mudar. Dê adeus à técnicas como sprite. Agora teremos <strong>requests e response PA-RA-LE-LAS!</strong> O nome dessa belezinha é <em>multiplexing</em>. Será lindo. Veja comigo no replay:</p>
+
+<p><img alt="Multiplexing" src="http://i.imgur.com/FBRkNC9.jpg?1" /></p>
+
+<h3>Priorizações de requests</h3>
+
+<p>Poderemos priorizar recursos que serão entregues ao usuário. Na prática, deixaremos de lados códigos inline que deveriam chegar na primeira response, agora teremos mais controle sobre a renderização de nossas aplicações. Saca só:</p>
+
+<p><img alt="Priorização de requests" src="http://i.imgur.com/gAPdaUR.jpg?1" /></p>
+
+<h3>O servidor também manda!</h3>
+
+<p>Isso mesmo. Os servidores poderão nos dizer quando um recurso está processado e enviar mesmo sem o cliente fizer uma request. Isso é tão óbvio que nem precisaria desenhar, mas vamos lá:</p>
+
+<p><img alt="Server Push" src="http://i.imgur.com/U7mFAbG.jpg?1" /></p>
+
+<h2>Nem tudo são flores</h2>
+
+<p>Depois de mostrar todas essas maravilhas, podemos observar que essa nova versão do protocolo é basicamente melhorias de performance. Porém, teremos alguns custos que deverão ser pagos.</p>
+
+<p>As boas práticas de hoje serão futuros problemas no HTTP/2. Não fará mais sentido concatenar assets, por exemplo.</p>
+
+<ul>
+<li>Por que entregar um arquivo gigante pra economizar uma request se a quantidade delas não serão mais um problema?</li>
+<li>Abrir conexão de outro domínio para carregar assets não será eficiente em um protocolo que preza por &ldquo;todos os ovos na mesma cesta&rdquo;.</li>
+<li>Nossos servidor serão mais exigidos.</li>
+<li>Deveremos ter HTTPS como fallback, ou seja, mais custo.</li>
+</ul>
+
+<p><strong>Bônus</strong></p>
+
+<p>Na última sexta-feira, dia 27, apresentei uma talk sobre HTTP na empresa onde trabalho, a Orgânica Digital. Basicamente é esse artigo de forma ilustrada:</p>
+
+<script async class="speakerdeck-embed" data-id="f73c06a98c284f379bdc8825613cdd5e" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>Por hoje é isso.</p>
+
+<p><strong>Referências:</strong></p>
+
+<ul>
+<li><a href="http://blog.caelum.com.br/as-fantasticas-novidades-do-http-2-0-e-do-spdy/">http://blog.caelum.com.br/as-fantasticas-novidades-do-http-2-0-e-do-spdy/</a></li>
+<li><a href="http://pt.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes7">http://pt.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes7</a></li>
+<li><a href="https://mattwilcox.net/web-development/http2-for-front-end-web-developers">https://mattwilcox.net/web-development/http2-for-front-end-web-developers</a></li>
+<li><a href="https://http2.github.io/">https://http2.github.io/</a></li>
+</ul>
+
+<p><a href="http://seeds.organicadigital.com/post/115022491735/http-passado-presente-e-futuro">Texto publicado no Seeds, blog da Orgânica Digital.</a></p>
+
+    </section>
+  </article>
+
+    </div>
+
+    <script src="../assets/javascripts/application-56d518d4.js" type="text/javascript"></script>
+  </body>
+</html>
