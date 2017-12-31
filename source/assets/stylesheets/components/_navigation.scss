@@ -1,21 +1,11 @@
 .Navigation {
-  @include respond-to($mq-medium) {
-    float: right;
-
-    width: 60%;
-    margin-top: 1em;
-  }
 }
 
 .Navigation__List {
   padding-left: 0;
 
-  text-align: center;
+  text-align: left;
   list-style-type: none;
-
-  @include respond-to($mq-medium) {
-    text-align: right;
-  }
 }
 
 .Navigation__List__Item {
@@ -29,38 +19,11 @@
     z-index: 10;
 
     color: $text-color;
-    font-size: .9em;
-    letter-spacing: -1px;
+    font-size: 1em;
+    font-weight: $w-bold;
     line-height: 2em;
     text-transform: lowercase;
 
     border: 0;
-
-    @include attention() {
-      color: darken($text-color, 10%);
-
-      background-color: transparent;
-
-      .underline { display: block; }
-    }
-
-    .content {
-      z-index: 1;
-    }
-
-    .underline {
-      content: '';
-
-      position: absolute;
-      z-index: 0;
-      left: 10px;
-      bottom: -6px;
-
-      display: none;
-      width: 80%;
-      height: 6px;
-
-      background-color:  $adjacent-color;
-    }
   }
 }
