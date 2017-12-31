@@ -1,7 +1,28 @@
-.container {
+.Container {
   max-width: $max-width;
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
   overflow: hidden;
+}
+
+.Container__flex {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to($mq-large) {
+    flex-direction: row;
+  }
+}
+
+.Container__flex__item {
+  @include respond-to($mq-large) {
+    padding-left: 8%;
+    width: 32%;
+
+    &:first-child {
+      width: 36%;
+      padding-left: 0;
+    }
+  }
 }

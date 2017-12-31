@@ -7,7 +7,7 @@
   summary: "A web se tornou a principal plataforma para desenvolvermos software com experiências ricas aos usuários. Mas como chegamos até aqui e quais os rumos que as tecnologias desse ecossistema irão tomar? Nessa palestra vamos abordar a história e o futuro de diversos problemas, desafios, técnicas e ferramentas que elevaram e elevam a experiência de usuários e desenvolvedores que usam a web como plataforma de desenvolvimento de software."
 -
   title: "CSS: Computer Style Science"
-  event: FrontinFloripa
+  event: Front In Floripa
   local: "Florianópolis, SC"
   date: 2016-11-27
   link: https://speakerdeck.com/fernahh/css-computer-style-science-at-number-frontinfloripa2016
@@ -28,21 +28,21 @@
   summary: "Se o JavaScript está em todos os lugares, obviamente ele também está no terminal. Nessa talk vamos ver como desenvolver CLIs com JavaScript usando boas práticas, como módulos e testes que irão garantir a flexibilidade e manutenção de nossas ferramentas."
 -
   title: "Componentes CSS: como desenvolver pensando em reuso"
-  event: FrontinPOA
+  event: Front In POA
   local: "Porto Alegre, RS"
   date: 2015-12-05
   link: https://speakerdeck.com/fernahh/componentes-css-como-desenvolver-pensando-em-reuso-at-number-frontinpoa2015
   summary: "Um dos principais pilares para a web emplacar como uma plataforma para se construir aplicações robustas foi o CSS. Porém, cada vez mais precisamos de aplicações dinâmicas e modularizadas. E como criar componentes encapsulados em uma linguagem onde tudo é global? Nessa talk iremos ver paradigmas e aprender como desenvolver CSS escalável em tempos de módulos JavaScript, HTTP/2 e Web Components."
 -
   title: Don't Repeat Yourself, front-ender!
-  event: TDCPoA
+  event: The Developers Conference Porto Alegre
   local: "Porto Alegre, RS"
   date: 2015-09-26
   link: https://speakerdeck.com/fernahh/dont-repeat-yourself-front-ender-at-number-tdcpoa2015
   summary: "A web é uma das principais plataformas de desenvolvimento de aplicações. Hoje (quase) tudo está conectado na internet. Apps cada vez mais dinâmicas aumentaram a complexidade do desenvolvimento de interfaces web. Em consequência desse crescimento, surgiram metodologias e ferramentas para repetir menos código, modularizar e criar componentes para a web. No passado trabalhamos com iframes e no futuro talvez teremos web components funcionando em todos os browsers. Mas e hoje, como podemos aplicar a filosofia DRY?"
 -
   title: HTTP - Passado, presente e o futuro
-  event: FISL16
+  event: 16º Fórum Internacional de Software Livre
   local: "Porto Alegre, RS"
   date: 2015-07-11
   link: https://speakerdeck.com/fernahh/http-passado-presente-e-o-futuro-at-number-fisl16

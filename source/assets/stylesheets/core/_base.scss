@@ -28,10 +28,9 @@ a {
 
   border-bottom: 1px dashed $adjacent-color;
 
-  transition: all 200ms ease-in-out;
-
   &:hover {
-    color: darken($adjacent-color, 30%);
+    color: $link-color;
+    border-color: $link-color;
   }
 }
 
@@ -57,7 +56,7 @@ hr {
 h1, h2, h3,
 h4, h5, h6 {
   font-family: $title-font;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 p > code {

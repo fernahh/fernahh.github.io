@@ -1,33 +1,42 @@
 ---
-pageable: true
-per_page: 6
 title: "@fernahh, desenvolvedor e de buenas na web"
 ---
 
-<main class="Article" role="main">
-  <% if paginate && num_pages > 1 %>
-    <% if prev_page %>
-      <p class="Paginate"><%= link_to '&#8592; Página anterior'.html_safe, prev_page %></p>
-    <% end %>
-  <% end %>
+<main role="main">
+  <%= partial "partials/description" %>
+  <div class="Container__flex">
+    <section class="Container__flex__item">
+      <h1>Artigos</h1>
+      <% page_articles.each do |article| %>
+        <div class="Post_Index">
+          <h2 class="Post_Index__Title"><%= link_to article.title, article %></h2>
+          <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
+            <%= article.date.strftime('%b %d %Y') %></time>
+        </div>
+      <% end %>
+    </section>
 
-  <% page_articles.each_with_index do |article, i| %>
-    <div class="Post_Index">
-      <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
-        Publicado em: <%= article.date.strftime('%d/%m/%Y') %></time>
-      <h2 class="Post_Index__Title"><%= link_to article.title, article %></h2>
-      <div class="Post_Index__Summary">
-        <%= article.data.summary %>
-      </div>
-      <hr class="Post_Index__Separator" />
-    </div>
-  <% end %>
+    <section class="Container__flex__item">
+      <h1>Palestras</h1>
+      <% data.talks.each do |talk| %>
+        <div class="Post_Index">
+          <h2 class="Post_Index__Title"><%= link_to talk.title, talk.link %></h2>
+          <time class="Post_Index__Date" datetime="<%= talk.date.strftime('%Y/%m/%d') %>">
+            <%= talk.event %>, <%= talk.date.strftime('%b %Y') %>
+        </div>
+      <% end %>
+    </section>
 
-  <% if paginate %>
-    <% if next_page %>
-      <p class="Paginate Pull--right"><%= link_to 'Próxima página &#8594;', next_page %></p>
-    <% end %>
-  <% end %>
+    <section class="Container__flex__item">
+      <h1>Projetos</h1>
+      <% data.projects.each do |project| %>
+        <div class="Post_Index">
+          <h2 class="Post_Index__Title"><%= link_to project.title, project.link %></h2>
+          <p class="Post_Index__Date"><%= project.description %></p>
+        </div>
+      <% end %>
+    </section>
+  </div>
 
   <%= partial "partials/footer" %>
 </main>

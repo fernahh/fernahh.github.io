@@ -1,0 +1,28 @@
+-
+  title: "changelog meetup"
+  description: "Grupo voltado para fomentar a comunidade de desenvolvedores de Joinville."
+  link: https://meetup.com/changelog
+-
+  title: "creditcard.js"
+  description: "Biblioteca para validação de dados de cartão de crédito."
+  link: http://contaazul.github.io/creditcard.js/
+-
+  title: "getmeetup"
+  description: "Um microserviço minúsculo para pegar dados de um grupo do meetup.com"
+  link: "https://github.com/changelogmeetup/getmeetup"
+-
+  title: "imdbtr"
+  description: "Ferramenta que permite buscar informações do IMDb no terminal."
+  link: https://github.com/fernahh/imdbtr/
+-
+  title: "try.js"
+  description: "Uma implementação em JavaScript do método try() do Rails"
+  link: "https://github.com/fernahh/try.js"
+-
+  title: "frontendpath"
+  description: "Uma guia para pessoas que querem começar a aprender sobre desenvolvimento front-end."
+  link: https://fernahh.com.br/frontendpath/
+-
+  title: "cli.js boilerplate"
+  description: "Um boilerplate para criar ferramentas de linha de comando com JavaScript."
+  link: https://fernahh.com.br/clijs-boilerplate/

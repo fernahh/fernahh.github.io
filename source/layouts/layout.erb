@@ -27,10 +27,9 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <div class="container">
+    <div class="Container">
       <%= partial "partials/header" %>
-      <%= partial "partials/description" %>
-      <%#= yield %>
+      <%= yield %>
     </div>
 
     <%= javascript_include_tag "application" %>
