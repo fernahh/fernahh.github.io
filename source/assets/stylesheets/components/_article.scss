@@ -22,18 +22,4 @@
 
     border: 1px solid $gray-color;
   }
-
-  a {
-    color: #4492ff;
-    text-decoration: none;
-
-    border-bottom: 1px dashed #4492ff;
-
-    transition: all 200ms ease-in-out;
-
-    &:hover {
-      color: darken(#4492ff, 30%);
-      background: none;
-    }
-  }
 }

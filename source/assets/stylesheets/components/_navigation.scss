@@ -28,7 +28,7 @@
     position: relative;
     z-index: 10;
 
-    color: $second-color;
+    color: $text-color;
     font-size: .9em;
     letter-spacing: -1px;
     line-height: 2em;
@@ -37,7 +37,7 @@
     border: 0;
 
     @include attention() {
-      color: darken($second-color, 10%);
+      color: darken($text-color, 10%);
 
       background-color: transparent;
 

@@ -7,19 +7,14 @@ $main-font: 'Open Sans', sans-serif;
 $title-font: $main-font;
 
 // Colors
-$main-color: #111111;
-$second-color: #aaaaaa;
-$adjacent-color: #44484a;
-$adjacent-color-shadow: darken($adjacent-color, 6%);
+$adjacent-color: #fa2b86;
+$text-color: #44484a;
+$link-color: $adjacent-color;
 
-$text-color: $adjacent-color;
+$black-color: #000000;
 $white-color: #ffffff;
-$gray-color: #dddddd;
-$gray-colorB: #e7e7e7;
-$gray-colorC: #a0a0a0;
-$gray-colorD: #8c8c8c;
-
-$link-color: #5694f1;
+$gray-color: #e7e7e7;
+$gray-colorB: #8c8c8c;
 
 // Sizes
 $max-width: 1400px;
