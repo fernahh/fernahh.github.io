@@ -26,8 +26,8 @@ set :images_dir, 'assets/images'
 
 activate :directory_indexes
 
-set :title, '@fernahh | desenvolvedor e de buenas na web'
-set :description, 'Coisas que eu, @fernahh, quero que todos saibam, seja sobre música, código, política ou café.'
+set :title, 'fernahh.com.br | desenvolvedor e de buenas na web'
+set :description, 'Coisas que eu, Luiz Fernando Rodrigues (fernahh), quero que todos saibam, seja sobre música, código, política ou qualquer outro tópico.'
 
 set :build_dir, './build'
 
