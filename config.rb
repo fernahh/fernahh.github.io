@@ -1,3 +1,5 @@
+activate :i18n, :mount_at_root => :pt_br
+
 activate :blog do |blog|
   blog.permalink = '{title}'
   blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
