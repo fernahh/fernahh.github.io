@@ -7,7 +7,7 @@
   text-transform: lowercase;
 
   @include respond-to($mq-medium) {
-    max-width: 800px;
+    max-width: 750px;
     font-size: 1.8em;
   }
 }
