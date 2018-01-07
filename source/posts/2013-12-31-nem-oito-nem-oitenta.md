@@ -2,8 +2,7 @@
 layout: post
 title: Nem oito, nem oitenta
 summary: Prometi pra mim mesmo que iria escrever um post por mês. Não que seja para cumprir tabela, mas o assunto mais coerente nessa data seria falar o que fiz esse ano.
-category: artigos
-tags: retrospectiva, 2013, 2014
+category: "Outros"
 ---
 
 Há boas chances de quem viu esse post rolar em alguma timeline e sabendo que trata-se de uma retrospectiva, logo vai pensar *“eita, que achado escrever sobre ele mesmo”*. À esses eu digo: o blog é meu e acharia legal se todos escrevessem sua própria retrospectiva além daquela merdica que o Facebrooklyn faz. Gosto muito de ler coisas inspiradoras e é isso que vou tentar fazer aqui.

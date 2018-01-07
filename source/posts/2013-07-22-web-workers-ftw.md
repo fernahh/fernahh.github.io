@@ -2,8 +2,7 @@
 layout: post
 title: Web Workers FTW!
 summary: Como todos sabemos, paralelismo sempre foi um problema quando estamos falando de JavaScript. Porém, com a Web Workers API a situação muda. Vamos conhecer essa oitava maravilha do mundo!
-category: front-end
-tags: javascript, html5
+category: "Front-end"
 ---
 ![Web Workers FTW!](http://andafter.org/media/images/posts/thumbs/770x300/webworkers_770x300.jpg)
 

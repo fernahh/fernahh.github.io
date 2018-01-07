@@ -2,8 +2,7 @@
 layout: post
 title: Não viva em vão
 summary: Apenas um relato de como decidi fazer o que gosto e porque você também deve fazer isso.
-category: artigos
-tags: mosh creative, sonhos, empreender, Nathalie Trutmann
+category: "Outros"
 ---
 
 Há dias estou para escrever sobre um dos maiores passos que dei na minha: deixei de ser empregado para ter meu próprio negócio. Escolhi hoje, dia do trabalhador.

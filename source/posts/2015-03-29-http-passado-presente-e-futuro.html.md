@@ -2,8 +2,7 @@
 layout: post
 title: HTTP - passado, presente e futuro
 summary: O principal protocolo para desenvolvedores web irá mudar. Grandes mudanças de performance. Um pouco de história, como ele funciona atualmente e o futuro com o HTTP 2.
-category: Development
-tags: http, http2, web, protocolo HTTP
+category: Software
 ---
 
 Para quem acompanha o mundo tecnológico sabe que em muito pouco tempo o que é padrão pode se tornar defasado. Mas um dos pilares da web continua igual a quase duas décadas, o HTTP. A versão atual, 1.1, já existe há 16 anos. Sim, DE-ZES-SEIS anos *(procurei no Google para saber quais eram as sílabas dessa palavra, ok)*.

@@ -2,6 +2,7 @@
 layout: post
 title: "Componentes CSS: como desenvolver pensando em reuso"
 summary: Cada vez mais precisamos de aplicações dinâmicas e modularizadas. E como criar componentes encapsulados em uma linguagem onde tudo é global? Veremos aqui paradigmas e aprender como desenvolver CSS escalável em tempos de módulos JavaScript e Web Components.
+category: "CSS"
 ---
 
 A palavra *"componente"* nunca foi tão usada na web como nos últimos meses. Na era de bem-sucedidos *frameworks* e bibliotecas como [React](https://facebook.github.io/react/) e [Angular2](https://angular.io/), que se baseiam nesse conceito, é cada vez mais necessário investir tempo em como arquitetar nosso CSS. A velha e boa técnica de *dividir para conquistar* mais do que nunca nos é uma boa opção.

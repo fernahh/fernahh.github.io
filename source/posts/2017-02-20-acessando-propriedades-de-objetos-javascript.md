@@ -2,6 +2,7 @@
 layout: post
 title: "Acessando propriedades de objetos JavaScript"
 summary: Como garantir que uma propriedade de um objeto estará definida quando você precisar dela? Esse artigo mostra as várias formas de fazer isso, através condicionais, bibliotecas e conceitos de programação funcional.
+category: "Front-end"
 ---
 
 O JavaScript, como várias linguagens, funciona com um único fluxo de execução. Isso quer dizer que dadas as instruções, elas serão executadas em ordem e de forma contínua. Caso algo quebre no meio do caminho, a execução é interrompida. Isso pode nos ocasionar momentos desastrosos. No browser, a execução do JavaScript é compartilhada com a renderização do layout.

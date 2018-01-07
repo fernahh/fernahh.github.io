@@ -2,7 +2,7 @@
 layout: post
 title: Um caminho correto para o desenvolvimento front-end
 summary: Apresentação do guia colaborativo que criei para ajudar iniciantes no desenvolvimento web.
-tags: web, semântica, front-end path, javascript, guia, css
+category: "Front-end"
 ---
 
 Desde que comecei a trabalhar com desenvolvimento web, pessoas que se interessam pela área me perguntam *"quero ser desenvolvedor web, por onde começo?"* A primera resposta é fácil: **comece por algorítmos**. A segunda resposta não é difícil, mas é longa. 

@@ -2,8 +2,7 @@
 layout: post
 title: Tem que dar tempo pra música
 summary: Aos poucos diversos tipos de manifestações culturais estão mudando devido a inovação tecnológica. Com a forma que curtimos música não é diferente. Explico aqui como era e porque devemos dar tempo pra música.
-category: artigos
-tags: música, discos, vinil, vespas mandarinas, animal nacional, no talo
+category: "Outros"
 ---
 
 O título desse post foi uma frase que o meu companheiro de podcast, [Jan Clebsh](https://www.facebook.com/janclebsch), falou no último episódio do No Talo ([quem quiser ouvir, clica aqui](http://www.mixcloud.com/notalo/no-talo-epis%C3%B3dio-6-artista-desconhecido/)). Pura verdade.

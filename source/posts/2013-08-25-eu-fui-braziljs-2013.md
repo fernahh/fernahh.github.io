@@ -2,8 +2,7 @@
 layout: post
 title: Eu fui no BrazilJS 2013
 summary: Na última semana estive na maior conferência de JavaScript do universo, o BrazilJS Conf 2013. Um resumo do que vi nesse que foi o melhor evento técnico que já fui.
-category: desenvolvimento
-tags: braziljs, 2013, javascript
+category: "Front-end"
 ---
 
 

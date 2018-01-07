@@ -2,6 +2,7 @@
 layout: post
 title: "Tava certa"
 summary: Um texto curtinho sobre todas as vezes que minha mãe desafiou minhas visões agnósticas da vida e sempre esteve certa.
+category: "Crônicas"
 ---
 
 A diferença de idade entre eu e minha mãe é de mais ou menos quinze anos. Por esse motivo, comparado-a com as mães de meus colegas de aula, ela era considerada uma “mãe jovem”, característica do qual ela sempre refugou.

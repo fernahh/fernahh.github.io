@@ -2,8 +2,7 @@
 layout: post
 title: box sizing borderbox, ele não tem limites
 summary: Sigo a risca a ideia de que 80% do que aprendemos com desenvolvimento é na prática. Com box-sizing foi assim. Uma das propriedades mais legais do CSS3 que pode ser usada em todos seus projetos!
-category: front-end
-tags: css3, box-sizing
+category: "CSS"
 ---
 
 ![CSS box-sizing](http://andafter.org/media/images/posts/thumbs/770x300/box-sizing_770x300.jpg "CSS box-sizing")

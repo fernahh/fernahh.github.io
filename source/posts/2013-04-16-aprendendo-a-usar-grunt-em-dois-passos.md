@@ -2,8 +2,7 @@
 layout: post
 title: Aprendendo a usar Grunt em dois passos
 summary: Grunt já uma ferramenta mundialmente conhecida pela comunidade de desenvolvedores. Mesmo assim, conversando com colegas percebo que a maioria só conhece e não usa. Meu objetivo com esse post é intermediar o primeiro contato para que em poucos passos você já possa utilizá-lo sem complicações :)
-category: front-end
-tags: grunt, javascript, produtividade
+category: "JavaScript"
 ---
 O Grunt foi desenvolvido pelo [@cowboy](http://twitter.com/cowboy) com o objetivo de automatizar tarefas para desenvolvedores. Com ele é possí­vel minificar, concatenar, automatizar deploy e outras pencas de funcionalidades que são realizadas com o Grunt através da penca de plugins que já existem para essa ferramenta.
 

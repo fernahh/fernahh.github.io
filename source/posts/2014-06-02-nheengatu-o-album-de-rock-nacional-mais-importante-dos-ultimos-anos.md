@@ -2,8 +2,7 @@
 layout: post
 title: Nheengatu, o álbum de rock nacional mais importante dos últimos anos
 summary: Como os Titãs chutaram o rock bunda-mole que tomou conta do Brasil.
-category: Artigos
-tags: titas, nheengatu
+category: "Críticas"
 ---
 
 Primeira coisa que tenho pra falar: isso não é uma resenha. Eu não sou jornalista. Apenas gosto de ouvir música. [Ouvir no sentido antigo da palavra](http://blog.fernahh.com.br/tem-que-dar-tempo-pra-musica.html). Não acho que o Nheengatu é o melhor álbum do rock nacional da história, mas é o mais importante dos anos 2000 pra cá.

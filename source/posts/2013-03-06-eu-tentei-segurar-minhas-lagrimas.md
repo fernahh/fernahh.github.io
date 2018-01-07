@@ -2,8 +2,7 @@
 layout: post
 title: Eu tentei segurar minhas lágrimas
 summary: Algumas palavras sobre o maior ídolo da minha vida. Não me importo se você não gosta do Chorão, mas desejo que tenha um ídolo tão legal e inspirador quanto o meu.
-category: Artigos
-tags: chorão, charlie brown
+category: "Outros"
 ---
 
 06:44 da manhã, recebi a pior ligação da minha vida. Era minha mãe ligando.

@@ -2,7 +2,7 @@
 layout: post
 title: "Retrospectiva 2015: esse ano foi loco!"
 summary: Retrospectivas são legais! Escrevão sobre si, por favor! É por isso que to escrevendo aqui, para compartilhar coisas legais que possam (talvez) inspirar outras pessoas em 2016.
-tags: retrospectiva, 2015
+category: "Outros"
 ---
 
 Comecei escrevendo minha retrospectiva do jeito mais chato impossível. Narrando de mês em mês minhas conquistas, derrotas e surpresas. Ao chegar na descrição do mês de agosto, larguei de mão. Estava tão chato que nem eu consegui reler.

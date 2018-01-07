@@ -2,6 +2,7 @@
 layout: post
 title: "Como aprender web frameworks"
 summary: Tradução do artigo How to learn web frameworks, que fala sobre a "pressão" do mercado em busca de desenvolvedores júnior que sejam especialistas em web frameworks, como React, Angular e Rails.
+category: "Software"
 ---
 
 Eu converso com desenvolvedores que estão começando. Também converso com recrutadores. Os primeiros sentem muita pressão dos segundos para entrar no mercado dominando algum framework específico. React, Rails, o que for. Em primeiro lugar, recrutadores não devem colocar essa pressão, porque bons desenvolvedores podem aprender e bons recrutadores podem inspirá-los a isso. É irracional esperar que desenvolvedores que estão iniciando suas carreiras saibam frameworks que resolvem problemas que eles ainda não conhecem. Eles vão ter muitas dificuldades a cada passo do aprendizado e mesmo assim nunca irão aprender de verdade.

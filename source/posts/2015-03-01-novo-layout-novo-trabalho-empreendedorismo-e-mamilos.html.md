@@ -2,8 +2,7 @@
 layout: post
 title: Novo layout, novo trabalho, empreendedorismo e mamilos
 summary: Um resumo do segundo semestre de 2014. Foi uma metade de ano difícil, mas consegui. Passei as férias (janeiro e fevereiro) organizando minha vida e agora me sinto confortável para voltar a escrever.
-tags: faculdade, vida, empreendedorismo
-category: Personal
+category: Outros
 ---
 
 Esse texto não tem nada demais. É no máximo um desabafo. Sou desses que gosta de escrever ao invés de sair discutindo com todo mundo.

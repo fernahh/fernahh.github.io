@@ -2,8 +2,7 @@
 layout: post
 title: Primavera
 summary: Primeiro post do blog onde eu explico porquê eu decidi fazer, o que vai rolar e um recado para os haters, tanto programadores quanto designers.
-category: Personal
-tags: blog, fernahh
+category: Outros
 ---
 
 

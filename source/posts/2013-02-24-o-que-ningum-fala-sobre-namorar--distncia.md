@@ -2,8 +2,7 @@
 layout: post
 title: O que ninguém fala sobre namorar à distância
 summary: Quase tudo o que porra da distância me ensinou sobre a vida. Vejo muito gente reclamar e achar isso praticamente impossível, escrevo isso para provar o contrário.
-category: Artigos
-tags: namoro, distância, relacionamentos
+category: Crônicas
 ---
 
 Estou namorando à distância há quase três anos, que coincidem com o tempo que saí da minha cidade natal. Estranho? Isso mesmo. Achei a mulher da minha vida quando queria ficar longe do lugar onde sempre vivi.

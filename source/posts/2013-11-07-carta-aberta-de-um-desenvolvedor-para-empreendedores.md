@@ -2,8 +2,7 @@
 layout: post
 title: Carta aberta de um desenvolvedor para empreendedores
 summary: Trabalho com web há três anos. Nessa trinca já participei de inúmeros projetos, uns legais, outros medianos e vários horríveis. O que vou relatar nessa carta são atitudes e decisões que me incomodam como desenvolvedor. O intuito é que vocês, empreendedores, enxergam o outro lado da moeda.
-category: artigos
-tags: empreendedorismo, startup
+category: Software
 ---
 
 ![Carta aberta de um desenvolvedor para empreendedores](http://andafter.org/media/images/posts/thumbs/770x300/carta_770x300.jpg)

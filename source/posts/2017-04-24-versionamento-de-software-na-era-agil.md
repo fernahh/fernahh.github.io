@@ -2,6 +2,7 @@
 layout: post
 title: "Versionamento de software na Era Ágil"
 summary: Muito já se falou sobre como planejar e desenvolver projetos usando métodos ágeis, mas quase nunca vamos como fazer a entrega contínua de software distribuídos. Esse post fala sobre como versionar software na era ágil.
+category: "Software"
 ---
 
 O [movimento ágil](http://www.manifestoagil.com.br/) já é realidade no desenvolvimento de software há um bom tempo. Cada vez mais empresas se adaptam a metodologias ágeis e procuram desenvolvedores com experiências nesse aspecto.

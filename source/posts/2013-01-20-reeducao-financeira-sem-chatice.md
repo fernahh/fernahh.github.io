@@ -3,7 +3,6 @@ layout: post
 title: Reeducação financeira sem chatice
 summary: Nos últimos meses venho me regrando financeiramente. Noto que muitos amigos e conhecidos ainda tem problemas com dinheiro. Pensando nisso, resolvi alcançar mais gente e compartilhar o que aprendi para fazer meu dinheiro render mais.
 category: Dinheiro
-tags: dinheiro, planejamento financeiro, dicas
 ---
 
 Somos criados para ser crianças eternas. O sistema faz a maioria se comportar como criança.

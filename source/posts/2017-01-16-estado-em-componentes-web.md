@@ -2,6 +2,7 @@
 layout: post
 title: "Estado em componentes web"
 summary: Antes de querer frameworks como React e Angular2, você precisa aprender sobre estado de componentes. Esse artigo busca mostrar a evolução desse paradigma e mostrando o que são stateful e stateless components.
+category: "Front-end"
 ---
 Nunca se falou tanto em componentes para a web como no último ano. O [React](https://facebook.github.io/react/), biblioteca que tem como objetivo facilitar o desenvolvimento de aplicações com componentes, se tornou líder de mercado. Outros frameworks surgiram com a mesma finalidade, e até mesmo a versão [1.x do AngularJS](https://docs.angularjs.org/guide/component) dá suporte ao padrão de desenvolvimento baseado em componentes.
 

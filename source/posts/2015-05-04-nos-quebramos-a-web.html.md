@@ -2,7 +2,7 @@
 layout: post
 title: Nós quebramos a web
 summary: É sempre difícil apontar o erro de alguém. Ainda mais para pessoas que não aceitam críticas. Porém, é preciso olhar para nós mesmos para corrigir nossos problemas.
-tags: web, progressive enhancement
+category: "Front-end"
 ---
 
 Depois das grandes evoluções que tivemos na web (HTML5, CSS3 e novas APIs JavaScript), junto vieram alguns problemas, aquela história de *"Com grandes poderes vem grandes responsabilidades"*. As novas features da Open Web são fantásticas. Lembro-me bem quando nós eramos cautelosos no usar certos recursos com medo de não conseguir entregar o conteúdo ao usuário. No fim, surgiram (e surgem) *polyfills* e n maneiras de darmos *fallback* ao usuário com menos recursos. Sendo assim, conseguimos entregar um conteúdo rico para usuários com recursos modernos, e o conteúdo com uma experiência mais simples à usuários com recursos simples.

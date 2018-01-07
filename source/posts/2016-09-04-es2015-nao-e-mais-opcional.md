@@ -2,6 +2,7 @@
 layout: post
 title: "ES2015 não é mais opcional"
 summary: Apesar de parecer muito tempo do release oficial do ES2015, a uso do padrão não é absoluto. Esse artigo busca mostrar os principais valores e razões para adotarmos de vez a versão oficial do JavaScript.
+category: "JavaScript"
 ---
 
 Setembro de 2016. Há pouco mais de um ano saiu o [release oficial da 6ª edição do ECMAScript](http://www.ecma-international.org/ecma-262/6.0/index.html) (ou
