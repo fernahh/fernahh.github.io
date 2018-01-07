@@ -12,9 +12,13 @@
   &__Title {
     margin-top: 0;
 
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: -1.79px;
     line-height: 1.1em;
+
+    @include respond-to($mq-medium) {
+      font-size: 3em;
+    }
   }
 
   img {

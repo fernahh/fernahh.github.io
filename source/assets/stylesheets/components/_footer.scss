@@ -1,5 +1,5 @@
 .Footer {
-  margin-top: 8em;
+  margin-top: 4em;
 
   text-align: center;
 
@@ -8,5 +8,9 @@
 
     color: darken($gray-color, 40%);
     font-size: .8em;
+  }
+
+  @include respond-to($mq-medium) {
+    margin-top: 8em;
   }
 }

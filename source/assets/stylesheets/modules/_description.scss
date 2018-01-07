@@ -1,5 +1,5 @@
 .Description {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 
   font-size: 1.5em;
   font-weight: $w-light;
@@ -8,6 +8,8 @@
 
   @include respond-to($mq-medium) {
     max-width: 750px;
+    margin-bottom: 4em;
+    
     font-size: 1.8em;
   }
 }
