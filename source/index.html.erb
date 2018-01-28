@@ -8,9 +8,9 @@
         <div class="Post_Index">
           <h2 class="Post_Index__Title">
             <% if article.data.external_url %>
-              <%= link_to article.title, article.data.external_url %>
+              <%= link_to article.title, article.data.external_url, class: "Post_Index__Title__Link" %>
             <% else %>
-              <%= link_to article.title, article %>
+              <%= link_to article.title, article, class: "Post_Index__Title__Link" %>
             <% end -%>
           </h2>
           <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">

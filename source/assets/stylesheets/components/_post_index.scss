@@ -19,7 +19,8 @@
     font-weight: $w-normal;
     line-height: 1.2em;
 
-    a {
+    a,
+    .Post_Index__Title__Link {
       color: $black-color;
 
       border: 0;
@@ -27,6 +28,19 @@
       @include attention() {
         color: $link-color;
       }
+    }
+
+    .Post_Index__Title__Link[target="_blank"]:after {
+      content: "";
+
+      display: inline-block;
+      width: 14px;
+      height: 20px;
+      margin-left: 4px;
+
+      background-image: image-url("blank.svg");
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 }
