@@ -6,7 +6,13 @@
       <h1 class="lowercase">Artigos</h1>
       <% page_articles.each do |article| %>
         <div class="Post_Index">
-          <h2 class="Post_Index__Title"><%= link_to article.title, article %></h2>
+          <h2 class="Post_Index__Title">
+            <% if article.data.external_url %>
+              <%= link_to article.title, article.data.external_url %>
+            <% else %>
+              <%= link_to article.title, article %>
+            <% end -%>
+          </h2>
           <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
             <span><%= article.data.category %></span>, <%= I18n.l(article.date, format: '%b %Y') %>
           </time>
