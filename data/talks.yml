@@ -1,4 +1,11 @@
 -
+  title: "Do jQuery aos microfrontends: os desafios de manter uma aplicação web"
+  event: "JS Experience"
+  local: "São Paulo, SP"
+  date: 2018-07-05
+  link: https://speakerdeck.com/fernahh/do-jquery-aos-microfrontends-os-desafios-de-manter-uma-aplicacao-web
+  summary: "Desde o princípio temos ferramentas populares no mercado que geram código para interfaces de produtos web, porém, sabemos que na realidade a presença humana ainda é necessária para manter um nível de excelência nas interações. Nessa palestra vamos ver como times multidisciplinares estão se organizando, quais ferramentas são utilizadas para entregar valor em um tempo menor sem perder qualidade e como o Machine Learning promete revolucionar o design em código."
+-
   title: "Automatização no desenvolvimento de interfaces web"
   event: "Agile Trends"
   local: "São Paulo, SP"
