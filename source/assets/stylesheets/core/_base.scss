@@ -26,6 +26,8 @@ a {
 
 h1, h2, h3,
 h4, h5, h6 {
+  margin: 1.8em 0 .5em;
+
   color: $black-color;
   font-family: $title-font;
   font-weight: $w-bold;
@@ -33,6 +35,8 @@ h4, h5, h6 {
 
 p > code,
 pre.highlight {
+  font-size: .8em;
+
   background-color: lighten($gray-color, 5%);
   border: 1px solid darken($gray-color, 2%);
   border-radius: 3px;

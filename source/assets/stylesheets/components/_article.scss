@@ -7,18 +7,14 @@
   overflow: hidden;
 
   font-size: 1.2em;
-  line-height: 1.6em;
+  line-height: 1.7em;
 
   &__Title {
-    margin-top: 0;
+    margin-top: .2em;
 
     font-size: 2em;
     letter-spacing: -1.79px;
     line-height: 1.1em;
-
-    @include respond-to($mq-medium) {
-      font-size: 3em;
-    }
   }
 
   img {
