@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/box-sizing-borderbox-ele-nao-tem-limites/"></meta>
     <meta name="twitter:title" content="box sizing borderbox, ele não tem limites | fernahh."></meta>
     <meta name="twiter:description" content="Sigo a risca a ideia de que 80% do que aprendemos com desenvolvimento é na prática. Com box-sizing foi assim. Uma das propriedades mais legais do CSS3 que pode ser usada em todos seus projetos!"></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="box-sizing-borderbox-ele-nao-tem-limites box-sizing-borderbox-ele-nao-tem-limites_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -54,13 +56,12 @@
 <p>Para entender melhor, <a href="http://codepen.io/lfernahh/full/jFobG">clique aqui e veja uma demonstração</a>.</p>
 
 <p>Há desenvolvedores que já usam essa regra como seletor universal. Tem toda aquela discussão sobre a performance e tal, mas quem quiser usar, fica a dica:</p>
-<pre class="highlight css"><code>  <span class="o">*</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight css"><code>  <span class="o">*</span> <span class="p">{</span>
       <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
       <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
       <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
     <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <h2>Suporte</h2>
 
 <p>Aqui vem a motivação de eu escrever esse post. No desenvolvimento do site da Mosh Creative, eu e o <a href="https://twitter.com/rodrigowillrich">@rodrigowillrich</a> peleamos para fazer isso sem usar box-sizing. Porém, depois de muito sofrimento fomos pesquisar sobre o browser support e veio a surpresa.</p>
@@ -79,13 +80,13 @@
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>

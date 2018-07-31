@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/estado-em-componentes-web/"></meta>
     <meta name="twitter:title" content="Estado em componentes web | fernahh."></meta>
     <meta name="twiter:description" content="Antes de querer frameworks como React e Angular2, você precisa aprender sobre estado de componentes. Esse artigo busca mostrar a evolução desse paradigma e mostrando o que são stateful e stateless components."></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="estado-em-componentes-web estado-em-componentes-web_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -57,31 +59,29 @@
 
 <p>Chamamos algo de stateful quando ele possui informações sobre o estado da aplicação, além de poder modificá-lo, sabendo quais foram as mudanças no passado, presente e (as vezes) as futuras.
 Podemos exemplificar isso através de uma função impura:</p>
-<pre class="highlight javascript"><code>  <span class="c1">// estado.</span>
-  <span class="kr">const</span> <span class="nx">position</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="c1">// estado.</span>
+  <span class="kd">const</span> <span class="nx">position</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
   <span class="c1">// função impura: tem acesso há um</span>
   <span class="c1">// estado que não faz parte de seu</span>
   <span class="c1">// escopo.</span>
-  <span class="kr">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">position</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">position</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 
   <span class="nx">increment</span><span class="p">();</span> <span class="c1">// retorna 2.</span>
-</code></pre>
-
+</code></pre></div>
 <h3>Stateless</h3>
 
 <p>Diferentemente de algo stateful, quando temos aplicações, funções ou componentes stateless, sabemos que ele não tem informação sobre o estado. Sendo assim, o termo stateless nos diz que um determido instrumento não muta o estado de algo, assim temos a previsiblidade de que dada uma entrada, teremos sempre a mesma saída.</p>
-<pre class="highlight javascript"><code>  <span class="c1">// estado.</span>
-  <span class="kr">const</span> <span class="nx">position</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="c1">// estado.</span>
+  <span class="kd">const</span> <span class="nx">position</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
   <span class="c1">// função pura: ao invés de ter</span>
   <span class="c1">// ter acesso ao estado, ela</span>
   <span class="c1">// recebe o estado como parâmetro.</span>
-  <span class="kr">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">p</span> <span class="o">=&gt;</span> <span class="nx">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">p</span> <span class="o">=&gt;</span> <span class="nx">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 
   <span class="nx">increment</span><span class="p">();</span> <span class="c1">// retorna 2.</span>
-</code></pre>
-
+</code></pre></div>
 <h2>Componentes na era pré-React</h2>
 
 <p>O tópico &ldquo;componentes&rdquo; não é novo. Há muito tempo o mercado exigia produtividade maior no desenvolvimento de produtos web. Antes mesmo da era dos frameworks, já tínhamos tentativas de resolver esse problema.</p>
@@ -109,7 +109,7 @@ Podemos exemplificar isso através de uma função impura:</p>
 <p>Essa diretiva é stateless. Porém, o controle do estado da aplicação pode ser facilmente violado através do <code>$scope</code> e <code>$rootScope</code> . Ambos os valores dão acesso a outros escopos da aplicação, o que pode ser perigoso se você não tiver um bom controle em seu código.</p>
 
 <p>É recomendado que quando você for escrever um componente usando uma diretiva, sempre deixe o escopo dela isolado através de um objeto literal:</p>
-<pre class="highlight javascript"><code>  <span class="nx">angular</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="nx">angular</span>
     <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'alert'</span><span class="p">,</span> <span class="p">[])</span>
     <span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">'uiAlert'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">return</span> <span class="p">{</span>
@@ -118,8 +118,7 @@ Podemos exemplificar isso através de uma função impura:</p>
         <span class="na">transclude</span><span class="p">:</span> <span class="kc">true</span>
       <span class="p">};</span>
     <span class="p">});</span>
-</code></pre>
-
+</code></pre></div>
 <p>Mesmo assim, você ainda pode emitir eventos ou ler informações para o <code>$rootScope,</code> acessar e mudar o estado de escopo de cima através do <code>$scope.$parent</code> . Essa liberdade existe por causa da natureza do framework, que ficou bastante conhecido pela estrutura MV* e o famoso <em>two-way data binding</em>.</p>
 
 <p>Escolhas e liberdades como essa são as maiores críticas que o Angular recebe. Isso acontence porque a <strong>divisão de responsabilidades</strong> dele é fácilmente burlável. Não é difícil encontrar projetos que possuem lógica de negócio em diretivas, o que muita vezes a torna stateful, quando como boa prática ela deveria <strong>apenas manipular o DOM</strong>.</p>
@@ -186,13 +185,13 @@ Podemos exemplificar isso através de uma função impura:</p>
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>

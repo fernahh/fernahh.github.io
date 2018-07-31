@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/http-passado-presente-e-futuro/"></meta>
     <meta name="twitter:title" content="HTTP - passado, presente e futuro | fernahh."></meta>
     <meta name="twiter:description" content="O principal protocolo para desenvolvedores web irá mudar. Grandes mudanças de performance. Um pouco de história, como ele funciona atualmente e o futuro com o HTTP 2."></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="http-passado-presente-e-futuro http-passado-presente-e-futuro_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -48,7 +50,7 @@
 <p>Em sua representação longa, HTTP é uma abreviação para <em>HyperText Transfer Protocol</em>. Ênfase na paralavra Hyper<strong>Text</strong>.</p>
 
 <p>Vamos a um exemplo de uma request e response HTTP:</p>
-<pre class="highlight http"><code><span class="err">  telnet www.organicadigital.com.br 80
+<div class="highlight"><pre class="highlight http"><code><span class="err">  telnet www.organicadigital.com.br 80
   Trying 107.170.169.4...
   Connected to www.organicadigital.com.br.
   Escape character is '^]'.
@@ -73,8 +75,7 @@
 
   1000
   &lt;!DOCTYPE html&gt;
-</code></pre>
-
+</code></pre></div>
 <p>Só texto, certo?</p>
 
 <p>Deixo a palavra com o criador da web, <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>:</p>
@@ -98,7 +99,7 @@
 <h3>Compressão automática</h3>
 
 <p>A primeira grande mudança do HTTP 1.1 para sua segunda versão, é que ele deixa de ser texto para ser binário. Ou seja, o protocolo que foi projetado para humanos agora foi projeto para máquinas. Uma interação HTTP2 ficaria mais ou menos assim:</p>
-<pre class="highlight http"><code><span class="err">  0010101010101010101
+<div class="highlight"><pre class="highlight http"><code><span class="err">  0010101010101010101
 
   01010101
   010101010100
@@ -109,8 +110,7 @@
   ?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?_?*f0
   ?{{?un?T?%.?JI?;1?R,1?T?.?[mŚ???,1?   Q?
   _?*f0?{{?un,1?T?.?[mŚ?T?%??????????0
-</span></code></pre>
-
+</span></code></pre></div>
 <p>Nesse exemplo também podemos observar que a compressão gzip é <strong>obrigatória</strong> no HTTP2.</p>
 
 <p>Como você deve ter percebido, o essa mudança irá quebrar em navegadores antigos. O fallback nesse caso deverá ser o uso HTTP2, sendo assim, de quebra ganhamos segurança.</p>
@@ -185,13 +185,13 @@
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>

@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/web-workers-ftw/"></meta>
     <meta name="twitter:title" content="Web Workers FTW! | fernahh."></meta>
     <meta name="twiter:description" content="Como todos sabemos, paralelismo sempre foi um problema quando estamos falando de JavaScript. Porém, com a Web Workers API a situação muda. Vamos conhecer essa oitava maravilha do mundo!"></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="web-workers-ftw web-workers-ftw_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -70,30 +72,26 @@
 <p>Para não sair da tradição (risos), vamos à um &ldquo;Hello World&rdquo;.</p>
 
 <p>Como Web Workers executam paralelamente de forma isolada ao processo principal, vamos criar um novo arquivo que receberá a &ldquo;ordem&rdquo; desse processo e executará sua função. No nosso exemplo, chamei de <strong>worker.js</strong> e possui a função abaixo:</p>
-<pre class="highlight javascript"><code>  <span class="c1">// recebe a mensagem do processo principal</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="c1">// recebe a mensagem do processo principal</span>
   <span class="nx">onmessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">message</span> <span class="o">+</span> <span class="s1">' no And After!'</span><span class="p">;</span>
     <span class="nx">postMessage</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Feito isso, vamos criá-lo no processo principal:</p>
-<pre class="highlight javascript"><code>  <span class="kd">var</span> <span class="nx">myWorker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Worker</span><span class="p">(</span><span class="s1">'worker.js'</span><span class="p">);</span>
-</code></pre>
-
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">var</span> <span class="nx">myWorker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Worker</span><span class="p">(</span><span class="s1">'worker.js'</span><span class="p">);</span>
+</code></pre></div>
 <p>Para passar nossa informação, precisamos do método <code>postMessage()</code>:</p>
-<pre class="highlight javascript"><code>  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">'Web Workers'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">'Web Workers'</span><span class="p">;</span>
   <span class="nx">myWorker</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
-</code></pre>
-
+</code></pre></div>
 <p>E para finalizar, precisamos receber a mensagem do Worker:</p>
-<pre class="highlight javascript"><code>  <span class="c1">// Recebe a mensagem do worker</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="c1">// Recebe a mensagem do worker</span>
   <span class="nx">myWorker</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
   <span class="p">};</span>
-</code></pre>
-
+</code></pre></div>
 <p>Se não quiser fazer na mão, é só baixar o <a href="http://www.euescuto.com.br/worker-and-after.zip">exemplo aqui</a>. Ou, você pode ver uns exemplos <a href="http://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted">nesse link</a>.</p>
 
 <p>PS: isso não vai rodar localmente por restrições dos browsers modernos. Então, para aproveitar a trégua, aproveito para explicar que, como workers são arquivos externos, não será possível carregá-lo através de scripts que começaram com http:. Para ver esse exemplo funcionando, clique aqui.</p>
@@ -142,13 +140,13 @@
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>

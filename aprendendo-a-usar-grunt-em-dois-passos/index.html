@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/aprendendo-a-usar-grunt-em-dois-passos/"></meta>
     <meta name="twitter:title" content="Aprendendo a usar Grunt em dois passos | fernahh."></meta>
     <meta name="twiter:description" content="Grunt já uma ferramenta mundialmente conhecida pela comunidade de desenvolvedores. Mesmo assim, conversando com colegas percebo que a maioria só conhece e não usa. Meu objetivo com esse post é intermediar o primeiro contato para que em poucos passos você já possa utilizá-lo sem complicações :)"></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="aprendendo-a-usar-grunt-em-dois-passos aprendendo-a-usar-grunt-em-dois-passos_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -50,21 +52,18 @@
 <h2>Primeiro passo: como instalar</h2>
 
 <p>Como todos devem saber o Grunt roda no <a href="http://nodejs.org/">node.js</a>, sendo assim você precisa ter ele instalado. Feito isso, caso você tenha instalado ele alguma vez, recomendo que desinstale, senão com certeza você vai ter problemas no futuro, então vai lá:</p>
-<pre class="highlight shell"><code>  sudo npm uninstall -g grunt
-</code></pre>
-
+<div class="highlight"><pre class="highlight shell"><code>  <span class="nb">sudo </span>npm uninstall <span class="nt">-g</span> grunt
+</code></pre></div>
 <p>Vamos instalar o grunt-cli, assim podemos rodar diferentes versões do Grunt em diferentes projetos, e o melhor, até simultaneamente!</p>
 
 <p>Agora sim, sem qualquer receio, mete ficha:</p>
-<pre class="highlight shell"><code>  sudo npm install -g grunt-cli
-</code></pre>
-
+<div class="highlight"><pre class="highlight shell"><code>  <span class="nb">sudo </span>npm <span class="nb">install</span> <span class="nt">-g</span> grunt-cli
+</code></pre></div>
 <h2>Segundo passo: iniciando um projeto</h2>
 
 <p>Há duas formas de iniciar um projeto com Grunt. A primeira é com o comando <code>grunt-init</code> passando o template que você deseja, por exemplo, um projeto para um módulo <strong>node.js</strong>:</p>
-<pre class="highlight plaintext"><code>  grunt-init node
-</code></pre>
-
+<div class="highlight"><pre class="highlight plaintext"><code>  grunt-init node
+</code></pre></div>
 <p>Depois disso ele cria um scaffolding a partir do template que você escolheu.</p>
 
 <p>A outra forma é criar sem templates. Você precisará de um arquivo <strong>package.json</strong> e o <strong>Gruntfile.js</strong>.</p>
@@ -72,24 +71,23 @@
 <h3>package.json</h3>
 
 <p>Esse json deve conter informações do seu projeto. Você pode gerar ele através do comando <code>npm init</code>. Segue abaixo um exemplo básico de um <strong>package.json</strong>:</p>
-<pre class="highlight javascript"><code>  <span class="p">{</span>
-    <span class="s2">"name"</span><span class="err">:</span> <span class="s2">"and-after"</span><span class="p">,</span>
-    <span class="s2">"version"</span><span class="err">:</span> <span class="s2">"1.0.0"</span><span class="p">,</span>
-    <span class="s2">"description"</span><span class="err">:</span> <span class="s2">"Design e Tecnologia por sua conta"</span><span class="p">,</span>
-    <span class="s2">"keywords"</span><span class="err">:</span> <span class="p">[</span><span class="s2">"tecnologia, desenvolvimento"</span><span class="p">],</span>
-    <span class="s2">"author"</span><span class="err">:</span> <span class="s2">"And After"</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"and-after"</span><span class="p">,</span>
+    <span class="s2">"version"</span><span class="p">:</span> <span class="s2">"1.0.0"</span><span class="p">,</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Design e Tecnologia por sua conta"</span><span class="p">,</span>
+    <span class="s2">"keywords"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"tecnologia, desenvolvimento"</span><span class="p">],</span>
+    <span class="s2">"author"</span><span class="p">:</span> <span class="s2">"And After"</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <h3>Gruntfile.js</h3>
 
 <p>O <strong>Gruntfile.js</strong> é onde você vai escrever suas tarefas, carregar os plugins e as configurações da sua aplicação. Exemplo:</p>
-<pre class="highlight javascript"><code>  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
       <span class="na">pkg</span><span class="p">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">'package.json'</span><span class="p">),</span>
       <span class="na">uglify</span><span class="p">:</span> <span class="p">{</span>
         <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
-          <span class="na">banner</span><span class="p">:</span> <span class="s1">'/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */\n'</span>
+          <span class="na">banner</span><span class="p">:</span> <span class="s1">'/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */</span><span class="err">\</span><span class="s1">n'</span>
         <span class="p">},</span>
         <span class="na">build</span><span class="p">:</span> <span class="p">{</span>
           <span class="na">src</span><span class="p">:</span> <span class="s1">'src/&lt;%= pkg.name %&gt;.js'</span><span class="p">,</span>
@@ -105,8 +103,7 @@
     <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'uglify'</span><span class="p">]);</span>
     <span class="p">};</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Nesse caso eu tenho uma tarefa, <code>unglify</code>. Para rodar basta passar <code>grunt nomedatarefa</code>.</p>
 
 <p>Moçada, acho que é isso. Não vivo mais sem o <strong>Grunt</strong>. Se curtiu, aproveita e vota nele para <strong>&quot;Projeto Open Source do ano&rdquo;</strong> no <a href="https://thenetawards.com/">.net awards</a>.</p>
@@ -127,13 +124,13 @@
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>

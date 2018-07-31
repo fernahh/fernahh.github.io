@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/acessando-propriedades-de-objetos-javascript/"></meta>
     <meta name="twitter:title" content="Acessando propriedades de objetos JavaScript | fernahh."></meta>
     <meta name="twiter:description" content="Como garantir que uma propriedade de um objeto estará definida quando você precisar dela? Esse artigo mostra as várias formas de fazer isso, através condicionais, bibliotecas e conceitos de programação funcional."></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="acessando-propriedades-de-objetos-javascript acessando-propriedades-de-objetos-javascript_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -50,16 +52,14 @@
 </blockquote>
 
 <p>Uma forma de quebrar a execução, é tentar acessar a propriedade de algum valor que não é definido. Isso irá quebrar o fluxo de execução, e dependendo da posição em que está sendo executado, pode deixar o usuário sem experiência alguma.</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">.</span><span class="nx">y</span> <span class="c1">// TypeError: Cannot read property 'y' of undefined</span>
-</code></pre>
-
+</code></pre></div>
 <p>Parece fácil prever erros como esse, mas é bem comum precisarmos consultar um valor que é definido de forma assíncrona. Além disso, em aplicações complexas não temos garantia sobre todas suas informações. Para evitar erros como esse, geralmente verificamos propriedade a propriedade:</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span> <span class="o">&amp;&amp;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span>
     <span class="k">return</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">.</span><span class="nx">y</span> <span class="c1">// undefined</span>
-</code></pre>
-
+</code></pre></div>
 <p>O problema com esssa abordagem é que dependendo do nível de nesting, mais ilegível nosso código fica.</p>
 
 <h2>Optional Chaining</h2>
@@ -67,10 +67,9 @@
 <p>Existe uma proposta de especificação do ECMAScript para resolver esse problema. Ela se chama <a href="https://claudepache.github.io/es-optional-chaining/">Optional Chaining</a>. Em resumo, a proposta diz que o operador <code>?.</code> pode ser usado para verificar se um valor existe e evitar uma quebra de fluxo.</p>
 
 <p>Usando nosso exemplo, podemos verificar se <code>x</code> existe através do operador <em>optional chaining</em>.</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="k">return</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">?.</span><span class="nx">y</span> <span class="c1">// undefined</span>
-</code></pre>
-
+</code></pre></div>
 <p>É bom lembrar que essa proposta ainda está em <em>state 0</em>, e não é recomendada para uso.</p>
 
 <p>Outras linguagens, como <em>Ruby</em> e <em>C#</em>, já possuem essa feauture. O <em>Ruby on Rails</em>, possui um método chamado <code>try()</code> , que também possui esse objetivo.</p>
@@ -78,27 +77,24 @@
 <h2>Try method</h2>
 
 <p>O <code>try()</code> method, que o Rails dispõe, pode ser usado para consultador valores públicos de um objeto. Caso ele não exista, é retornado <code>nil</code> . Outra característica é que ele pode ser “chained” <em>(quem não lembra da jQuery nesse momento?):</em></p>
-<pre class="highlight ruby"><code>  <span class="vi">@obj</span><span class="p">.</span><span class="nf">try</span><span class="p">(</span><span class="n">x</span><span class="p">).</span><span class="nf">try</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</code></pre>
-
+<div class="highlight"><pre class="highlight ruby"><code>  <span class="vi">@obj</span><span class="p">.</span><span class="nf">try</span><span class="p">(</span><span class="n">x</span><span class="p">).</span><span class="nf">try</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
 <p>Outra feature mais interessante, é que você pode usar bloco e seus parâmetros, passando esses valores para um método que pode existir ou não:</p>
-<pre class="highlight ruby"><code>  <span class="vi">@posts</span><span class="p">.</span><span class="nf">try</span><span class="p">(</span><span class="ss">:each_slice</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span>
-    <span class="p">.</span><span class="nf">.</span><span class="p">.</span>
-  <span class="nf">end</span>
-</code></pre>
-
+<div class="highlight"><pre class="highlight ruby"><code>  <span class="vi">@posts</span><span class="p">.</span><span class="nf">try</span><span class="p">(</span><span class="ss">:each_slice</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span>
+    <span class="o">...</span>
+  <span class="k">end</span>
+</code></pre></div>
 <h3>try.js</h3>
 
 <p>Inspirado por esse método, decidi implementar algo parecido em JavaScript. Publiquei a implementação em uma pequena biblioteca no NPM. Caso queira ver o código, <a href="https://github.com/fernahh/try.js">está no GitHub</a>.</p>
 
 <p>Não há nada de mágico e inovador, a biblioteca serve apenas para momentos em que não podemos garantir o <em>path</em> de um objeto. Seguindo nosso exemplo, ao invés de varrer propriedade a propriedade, podemos passar o <em>path</em> como parâmetro para a função:</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="nx">tryjs</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">'y.x'</span><span class="p">)</span> <span class="c1">// undefined</span>
-</code></pre>
-
+</code></pre></div>
 <p>Também é possível executar uma função e passar parâmetros pra ela:</p>
-<pre class="highlight javascript"><code>  <span class="c1">// sem try.js</span>
-  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="c1">// sem try.js</span>
+  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">sayHello</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="s1">'Hello'</span>
   <span class="p">}</span>
 
@@ -106,63 +102,58 @@
     <span class="k">return</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">()</span> <span class="c1">// 'Hello'</span>
 
   <span class="c1">// com try.js</span>
-  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">sayHello</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="s1">'Hello'</span>
   <span class="p">}</span>
   <span class="nx">tryjs</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">'sayHello'</span><span class="p">)</span> <span class="c1">// 'Hello'</span>
 
   <span class="c1">// com parâmetros</span>
-  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
     <span class="na">add</span><span class="p">:</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
   <span class="p">}</span>
   <span class="nx">tryjs</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">'add'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> <span class="c1">// 3</span>
-</code></pre>
-
+</code></pre></div>
 <p>Quando tive a ideia da biblioteca, fui trocar uma ideia com meu amigo <a href="http://rodrigowillrich">@rodrigowillrich</a>. Na ocasião, ele me mostrou algumas implementações que resolvem esse problema e são elas que vamos ver agora.</p>
 
 <h2>Lodash e Ramda</h2>
 
 <p>A <a href="https://lodash.com/">Lodash</a> possui uma função chamada <code>_.get()</code> , que faz a consulta de um valor e retorna um valor <em>default</em> caso ele não exista.</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
-  <span class="nx">_</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">'x.y'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 1</span>
-</code></pre>
-
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="nx">_</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s1">'x.y'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 1</span>
+</code></pre></div>
 <p>O <a href="http://ramdajs.com">Ramda</a> também possui uma função que pode ser usada pra esse caso. A sintax é o contrário da implementação da Lodash:</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
   <span class="nx">R</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="c1">// undefined</span>
-</code></pre>
-
+</code></pre></div>
 <p>Existem outros milhões de funções do Ramda, outras bem parecidas que podem ser usadas também, dependendo do problema que você precisa resolver.</p>
 
 <h2>Lenses</h2>
 
 <p>Lenses é um conceito da Programação Funcional. De forma simplória, podemos dizer que lenses são <strong>getters/setters</strong> funcionais. Isso tem tudo a ver com o assunto desse artigo, onde tentamos acessar propriedades de objetos. Uma implementação simples, seria algo como:</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">lens</span> <span class="o">=</span> <span class="p">(</span><span class="nx">getter</span><span class="p">,</span> <span class="nx">setter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">lens</span> <span class="o">=</span> <span class="p">(</span><span class="nx">getter</span><span class="p">,</span> <span class="nx">setter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">({</span>
       <span class="na">get</span><span class="p">:</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">getter</span><span class="p">(</span><span class="nx">obj</span><span class="p">),</span>
       <span class="na">set</span><span class="p">:</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">setter</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">),</span>
     <span class="p">})</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Essa função, <code>lens()</code> irá nos retornar um objeto com função de <em>get</em> e <em>set</em>. Feito isso, podemos acessar e mudar valor de objetos sem precisar <strong>&ldquo;mutar&rdquo;</strong> nosso objeto nativo. Isso faz bastante sentido quando lidamos com imutabilidade. No exemplo abaixo, o objeto R representa o <a href="http://ramdajs.com/">ramda</a>.</p>
-<pre class="highlight javascript"><code>  <span class="kr">const</span> <span class="nx">lens</span> <span class="o">=</span> <span class="p">(</span><span class="nx">getter</span><span class="p">,</span> <span class="nx">setter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="kd">const</span> <span class="nx">lens</span> <span class="o">=</span> <span class="p">(</span><span class="nx">getter</span><span class="p">,</span> <span class="nx">setter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">({</span>
       <span class="na">get</span><span class="p">:</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">getter</span><span class="p">(</span><span class="nx">obj</span><span class="p">),</span>
       <span class="na">set</span><span class="p">:</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">setter</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">),</span>
     <span class="p">})</span>
   <span class="p">}</span>
-  <span class="kr">const</span> <span class="nx">view</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lens</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">lens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
-  <span class="kr">const</span> <span class="nx">set</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lens</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">lens</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">view</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lens</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">lens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="kd">set</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lens</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">lens</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span>
 
-  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
-  <span class="kr">const</span> <span class="nx">xLens</span> <span class="o">=</span> <span class="nx">lens</span><span class="p">(</span><span class="nx">R</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'x'</span><span class="p">),</span> <span class="nx">R</span><span class="p">.</span><span class="nx">assoc</span><span class="p">(</span><span class="s1">'x'</span><span class="p">))</span>
+  <span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
+  <span class="kd">const</span> <span class="nx">xLens</span> <span class="o">=</span> <span class="nx">lens</span><span class="p">(</span><span class="nx">R</span><span class="p">.</span><span class="nx">prop</span><span class="p">(</span><span class="s1">'x'</span><span class="p">),</span> <span class="nx">R</span><span class="p">.</span><span class="nx">assoc</span><span class="p">(</span><span class="s1">'x'</span><span class="p">))</span>
 
-  <span class="kr">const</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="nx">set</span><span class="p">(</span><span class="nx">xLens</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="kd">set</span><span class="p">(</span><span class="nx">xLens</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span>
   <span class="nx">newObj</span><span class="p">.</span><span class="nx">x</span> <span class="c1">// return 3</span>
   <span class="nx">obj</span><span class="p">.</span><span class="nx">x</span> <span class="c1">// return 1</span>
-</code></pre>
-
+</code></pre></div>
 <p>Essa explicação é extramamente básica. Sugiro que para se aprofundar no assunto, dê uma lida no artigo do @sharifsbeat, <a href="https://medium.com/javascript-inside/an-introduction-into-lenses-in-javascript-e494948d1ea5">A Introduction into Lenses in JavaScript</a>, onde há outras links e referências.</p>
 
 <h2>Conclusão</h2>
@@ -177,13 +168,13 @@
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>

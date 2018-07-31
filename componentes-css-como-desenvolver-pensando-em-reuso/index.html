@@ -23,7 +23,9 @@
     <meta name="twitter:url" content="https://fernahh.com.br/componentes-css-como-desenvolver-pensando-em-reuso/"></meta>
     <meta name="twitter:title" content="Componentes CSS: como desenvolver pensando em reuso | fernahh."></meta>
     <meta name="twiter:description" content="Cada vez mais precisamos de aplicações dinâmicas e modularizadas. E como criar componentes encapsulados em uma linguagem onde tudo é global? Veremos aqui paradigmas e aprender como desenvolver CSS escalável em tempos de módulos JavaScript e Web Components."></meta>
-    <link href="../assets/stylesheets/application-f11de034.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet" />
+    <link href="../assets/stylesheets/application-4f55d704.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="componentes-css-como-desenvolver-pensando-em-reuso componentes-css-como-desenvolver-pensando-em-reuso_index">
@@ -31,7 +33,7 @@
       <div class="Header_Navigation">
   <header class="Header">
     <h1>
-<a title="fernahh.com.br" href="/">        <strong>fernahh</strong>.
+<a href="/" title="fernahh.com.br">        <strong>fernahh</strong>.
 </a>    </h1>
   </header>
 </div>
@@ -46,14 +48,13 @@
       <p>A palavra <em>&ldquo;componente&rdquo;</em> nunca foi tão usada na web como nos últimos meses. Na era de bem-sucedidos <em>frameworks</em> e bibliotecas como <a href="https://facebook.github.io/react/">React</a> e <a href="https://angular.io/">Angular2</a>, que se baseiam nesse conceito, é cada vez mais necessário investir tempo em como arquitetar nosso CSS. A velha e boa técnica de <em>dividir para conquistar</em> mais do que nunca nos é uma boa opção.</p>
 
 <p>Para definir um componente, ele deve ser <strong>auto-suficiente</strong>, capaz de <strong>encapsular</strong> funcionalidades e permitir uma <strong>API de acesso</strong>. Pensando do ponto de vista de um seletor CSS, vamos exemplificar com um componente de botão:</p>
-<pre class="highlight css"><code>  <span class="nc">.Button</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight css"><code>  <span class="nc">.Button</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
     <span class="nl">max-width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
     <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Levando em conta a definição literal, podemos dizer que esse componente é auto-suficiente, afinal, se usarmos somente ele teremos um estilo de botão. Porém, não temos uma API de acesso bem definida, com entrada e saída. Problemas como esse são comuns e inevitáveis com CSS puro. Eles são ainda mais frequentes quando precisamos lidar com aplicações complexas.</p>
 
 <p>Uma das formas encontradas para contornar nossos problemas com CSS foram <a href="http://tableless.com.br/oocss-smacss-bem-dry-css-afinal-como-escrever-css/">metodologias de escrita</a>, como BEM, OOCSS, SMACSS e DRYCSS. Mesmo assim, elas são facilmente burláveis, afinal não há como controlarmos algo em uma linguagem que não nos lança exceção.</p>
@@ -101,7 +102,7 @@
 <p>Resumidamente, podemos definir essa tecnologia como <strong>folhas de estilo que possuem escopo local</strong>. Aqui já podemos concluir que precisamos de uma tarefa de <em>build</em>, pois CSS Modules não funcionam nativamente.</p>
 
 <p>Na prática, supomos um cenário com nosso mesmo componente de botão:</p>
-<pre class="highlight css"><code>  <span class="c">/* components/button.css */</span>
+<div class="highlight"><pre class="highlight css"><code>  <span class="c">/* components/button.css */</span>
   <span class="nc">.Button</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
     <span class="nl">max-width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
@@ -112,24 +113,21 @@
   <span class="nc">.danger</span> <span class="p">{</span>
     <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Para usar esse componente, precisaremos importar esse módulo em um componente JavaScript:</p>
-<pre class="highlight javascript"><code>  <span class="cm">/* components/button.js */</span>
-  <span class="kr">import</span> <span class="nx">button</span> <span class="nx">from</span> <span class="s1">'./button.css'</span><span class="p">;</span>
+<div class="highlight"><pre class="highlight javascript"><code>  <span class="cm">/* components/button.js */</span>
+  <span class="k">import</span> <span class="nx">button</span> <span class="k">from</span> <span class="s1">'./button.css'</span><span class="p">;</span>
 
-  <span class="nx">buttonElem</span><span class="p">.</span><span class="nx">outerHTML</span> <span class="o">=</span> <span class="err">`</span><span class="o">&lt;</span><span class="nx">button</span> <span class="kr">class</span><span class="o">=</span><span class="nx">$</span><span class="p">{</span><span class="nx">button</span><span class="p">.</span><span class="nx">danger</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Enviar</span><span class="o">&lt;</span><span class="sr">/button&gt;</span><span class="err">`
-</span></code></pre>
-
+  <span class="nx">buttonElem</span><span class="p">.</span><span class="nx">outerHTML</span> <span class="o">=</span> <span class="s2">`&lt;button class=</span><span class="p">${</span><span class="nx">button</span><span class="p">.</span><span class="nx">danger</span><span class="p">}</span><span class="s2">&gt;Enviar&lt;/button&gt;`</span>
+</code></pre></div>
 <p>Nossos <em>output</em> de CSS será como no <em>snippet</em> a seguir:</p>
-<pre class="highlight css"><code>  <span class="nc">.components_Button__danger__abc5436-20WEds96_Ee1ra54</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight css"><code>  <span class="nc">.components_Button__danger__abc5436-20WEds96_Ee1ra54</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
     <span class="nl">max-width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
     <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Através desse breve <em>overview</em> podemos notar que há uma mudança de <em>workflow</em> na forma de desenvolvermos CSS. O nome gerado no <em>output</em> nos leva a conclusão que precisamos de <code>sourcemaps</code> para <em>debugging</em>. Além disso, você deve estar se perguntando:</p>
 
 <blockquote>
@@ -137,20 +135,18 @@
 </blockquote>
 
 <p>Podemos definir regras globais com CSS Modules, através da declaração com a seguinte sintaxe:</p>
-<pre class="highlight css"><code>  <span class="nd">:global</span><span class="o">(</span><span class="nc">.Button</span><span class="o">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight css"><code>  <span class="nd">:global</span><span class="o">(</span><span class="nc">.Button</span><span class="o">)</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
     <span class="nl">max-width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
     <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Isso quer dizer que o módulo <code>.Button</code> estará disponível para todos os módulos de nossa aplicação. Além disso temos a <em>keyword</em> <code>composes</code>, que receberá um módulo. Se você já captou a ideia, deverá ter percebido que funciona parecido com o <code>@extend</code> do Sass.</p>
-<pre class="highlight css"><code>  <span class="nc">.Button_group</span> <span class="p">{</span>
+<div class="highlight"><pre class="highlight css"><code>  <span class="nc">.Button_group</span> <span class="p">{</span>
     <span class="py">composes</span><span class="p">:</span> <span class="n">button</span> <span class="n">from</span> <span class="s2">'../componentes/button.css'</span><span class="p">;</span>
   <span class="p">}</span>
-</code></pre>
-
+</code></pre></div>
 <p>Além disso também podemos gerenciar dependências de componentes através de <a href="http://www.2ality.com/2014/09/es6-modules-final.html">módulos <em>JavaScript</em></a>.</p>
 
 <h2>Conclusão</h2>
@@ -169,13 +165,13 @@
     <nav class="Navigation">
   <ul class="Navigation__List">
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Link para o Twitter" href="https://twitter.com/fernahh">        Twitter
+<a href="https://twitter.com/fernahh" class="Navigation__List__Item__Link" title="Link para o Twitter">        Twitter
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Projetos no Github" href="https://github.com/fernahh">        Github
+<a href="https://github.com/fernahh" class="Navigation__List__Item__Link" title="Projetos no Github">        Github
 </a>    </li>
     <li class="Navigation__List__Item">
-<a class="Navigation__List__Item__Link" title="Perfil no LinkedIn" href="https://www.linkedin.com/in/fernahh">        LinkedIn
+<a href="https://www.linkedin.com/in/fernahh" class="Navigation__List__Item__Link" title="Perfil no LinkedIn">        LinkedIn
 </a>    </li>
   </ul>
 </nav>
