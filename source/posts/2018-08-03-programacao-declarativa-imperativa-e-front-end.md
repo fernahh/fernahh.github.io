@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Programação declarativa, imperativa e front-end"
-summary: Um texto curtinho sobre todas as vezes que minha mãe desafiou minhas visões agnósticas da vida e sempre esteve certa.
+summary: Divagando sobre as curvas de aprendizado que tive no início da minha  carreira, escrevi sobre como o paradigma declarativo foi importante para  me fazer escolher o front-end como especialidade.
 category: "JavaScript"
 ---
 
