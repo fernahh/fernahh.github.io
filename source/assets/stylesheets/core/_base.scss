@@ -8,7 +8,7 @@ body {
 
   color: $text-color;
   font-family: $main-font;
-  font-size: 1em;
+  font-size: .95em;
   line-height: 1.8em;
 }
 
@@ -40,10 +40,15 @@ pre.highlight {
   background-color: lighten($gray-color, 5%);
   border: 1px solid darken($gray-color, 2%);
   border-radius: 3px;
+  font-size: .8em;
+}
+
+pre.highlight {
+  line-height: 1.5em;
 }
 
 p > code {
-  padding: 4px;
+  padding: 2px;
 }
 
 pre.highlight {
@@ -52,9 +57,13 @@ pre.highlight {
 }
 
 blockquote {
-  padding-left: 10px;
+  margin-left: 0;
+  padding-left: 15px;
 
-  font-style: italic;
+  font-size: 1.3em;
+  // font-style: italic;
+  font-weight: $w-bold;
+  line-height: 1.4em;
 
   border-left: 2px solid $gray-colorB;
 }
