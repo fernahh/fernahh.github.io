@@ -8,11 +8,7 @@
     <section>
       <%= current_article.body %>
     </section>
-    <div class="Share_Bar">
-      <a class="Share_Bar__Twitter">
-        <span class="Share_Bar__Twitter__Icon"></span>
-        <span class="Share_Bar__Twitter__Text">Tweet</span>
-      </a>
-    </div>
+    <%= partial "partials/share_bar", locals: { post_title: current_article.title } %>
   </article>
+  <%= partial "partials/description", locals: { hello: false } %>
 <% end %>

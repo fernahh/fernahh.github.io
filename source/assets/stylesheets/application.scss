@@ -14,49 +14,8 @@
 @import "components/post_index";
 @import "components/paginate";
 @import "components/footer";
+@import "components/share_bar";
 
-.Share_Bar {
-  display: flex;
-  margin-top: 50px;
-}
-
-.Share_Bar__Twitter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  padding: 5px 20px;
-
-  text-align: center;
-
-  background-color: #1da1f2;
-  border: 0;
-  border-radius: 3px;
-}
-
-.Share_Bar__Twitter__Text {
-  color: #ffffff;
-  font-weight: $w-bold;
-
-  &:hover, &:focus {
-    color: #ffffff;
-  }
-}
-
-.Share_Bar__Twitter__Icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-
-  background-image: image-url("twitter.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-
-.Share_Bar__Twitter__Text,
-.Share_Bar__Twitter__Icon {
-  line-height: 24px;
 .Articles_List {
   max-width: $medium-width;
   margin-left: auto;
