@@ -1,15 +1,47 @@
 .Description {
-  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  max-width: $medium-width;
+  margin-bottom: 3em;
+  margin-top: 3em;
 
-  font-size: 1.5em;
   font-weight: $w-light;
-  line-height: 1.6em;
-  text-transform: lowercase;
 
-  @include respond-to($mq-medium) {
-    max-width: 750px;
-    margin-bottom: 4em;
-    
-    font-size: 1.8em;
+  img {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+
+    border-radius: 50%;
+  }
+
+  @include respond-to($mq-small) {
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+
+    img {
+      margin-right: 1em;
+    }
+  }
+}
+
+.Description__Content {
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 1.6em;
+    line-height: .5em;
+    text-align: center;
+  }
+
+  @include respond-to($mq-small) {
+    h1 { text-align: left; }
   }
 }

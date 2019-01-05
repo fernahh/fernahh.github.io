@@ -1,12 +1,11 @@
-<article class="Description">
-  <section>
+<section class="Description">
+  <%= image_tag 'profile.jpg' %>
+  <div class="Description__Content">
+    <h1><%= hello ? 'Olá, eu sou o @fernahh.' : '@fernahh' %></h1>
     <p>
-      Trabalho e vivo da web desde 2010. Hoje sou engenheiro de software na
-      <%= link_to "ContaAzul", "http://contaazul.com", title: "Site da ContaAzul" %>.
+      Sou um desenvolvedor de software morando em Joinville, Santa Catarina.
+      Atualmente trabalho construindo ferramentas para aumentar a produtividade
+      do time de engenharia da <%= link_to "Conta Azul", "http://contaazul.com", title: "Site da ContaAzul" %>.
     </p>
-    <p>
-      Fique a vontade para entrar em contato através do meu
-      <%= mail_to "fernahh@gmail.com", "e-mail pessoal" %>.
-    </p>
-  </section>
-</article>
+  </div>
+</section>

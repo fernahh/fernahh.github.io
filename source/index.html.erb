@@ -1,44 +1,19 @@
 <main role="main">
-  <%= partial "partials/description" %>
-  <hr />
-  <div class="Container__flex">
-    <section class="Container__flex__item">
-      <h1 class="lowercase">Artigos</h1>
-      <% page_articles.each do |article| %>
-        <div class="Post_Index">
-          <h2 class="Post_Index__Title">
-            <% if article.data.external_url %>
-              <%= link_to article.title, article.data.external_url, class: "Post_Index__Title__Link" %>
-            <% else %>
-              <%= link_to article.title, article, class: "Post_Index__Title__Link" %>
-            <% end -%>
-          </h2>
-          <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
-            <span><%= article.data.category %></span>, <%= I18n.l(article.date, format: '%b %Y') %>
-          </time>
-        </div>
-      <% end %>
-    </section>
-
-    <section class="Container__flex__item">
-      <h1 class="lowercase">Palestras</h1>
-      <% data.talks.each do |talk| %>
-        <div class="Post_Index">
-          <h2 class="Post_Index__Title"><%= link_to talk.title, talk.link %></h2>
-          <time class="Post_Index__Date" datetime="<%= talk.date.strftime('%Y/%m/%d') %>">
-            <%= talk.event %>, <%= I18n.l(talk.date, format: '%b %Y') %>
-        </div>
-      <% end %>
-    </section>
-
-    <section class="Container__flex__item">
-      <h1 class="lowercase">Projetos</h1>
-      <% data.projects.each do |project| %>
-        <div class="Post_Index">
-          <h2 class="Post_Index__Title"><%= link_to project.title, project.link %></h2>
-          <p class="Post_Index__Date"><%= project.description %></p>
-        </div>
-      <% end %>
-    </section>
-  </div>
+  <%= partial "partials/description", locals: { hello: true } %>
+  <section class="Articles_List">
+    <% page_articles.each do |article| %>
+      <div class="Post_Index">
+        <h2 class="Post_Index__Title">
+          <% if article.data.external_url %>
+            <%= link_to article.title, article.data.external_url, class: "Post_Index__Title__Link" %>
+          <% else %>
+            <%= link_to article.title, article, class: "Post_Index__Title__Link" %>
+          <% end -%>
+        </h2>
+        <time class="Post_Index__Date" datetime="<%= article.date.strftime('%Y/%m/%d') %>">
+          <span><%= article.data.category %></span>, <%= I18n.l(article.date, format: '%b %Y') %>
+        </time>
+      </div>
+    <% end %>
+  </section>
 </main>

@@ -13,14 +13,13 @@ body {
 }
 
 a {
-  color: $text-color;
+  color: $link-color;
   text-decoration: none;
 
-  border-bottom: 1px dashed $text-color;
+  border-bottom: 1px dashed $link-color;
 
   @include attention {
-    color: $link-color;
-    border-color: $link-color;
+    border-bottom-style: solid;
   }
 }
 
