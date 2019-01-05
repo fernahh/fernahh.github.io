@@ -28,8 +28,9 @@ set :images_dir, 'assets/images'
 
 activate :directory_indexes
 
-set :title, 'fernahh. desenvolvedor e de buenas na web.'
-set :description, 'Coisas que eu, Luiz Fernando Rodrigues (fernahh), quero que todos saibam, seja sobre música, código, política ou qualquer outro tópico.'
+set :title, 'Olá, eu sou o @fernahh!'
+set :description, 'Sou um desenvolvedor de software morando em Joinville, Santa Catarina. Atualmente trabalho construindo ferramentas para aumentar a produtividade
+do time de engenharia da Conta Azul.'
 
 set :build_dir, './build'
 
