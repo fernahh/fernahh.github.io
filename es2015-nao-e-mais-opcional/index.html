@@ -37,7 +37,44 @@
       <h1 class="Article__Title">ES2015 não é mais opcional</h1>
     </header>
     <section>
-      
+      <p><img alt="&quot;Choice&quot;, foto do Michael Endy — http://bit.ly/2cAfVoR" src="https://i.imgur.com/RsuVUtn.jpg" /></p>
+
+<p>A adoção a novas tecnologias na web sempre foram um tabu. As APIs do HTML5 ainda são questionadas devido ao suporte dos browsers. Porém, a comunidade sempre buscou caminhos que facilitassem a vida do desenvolvedor sem deixar de suportar browsers mais antigos, afinal, a web nasceu para ser inclusiva. Foi assim que surgiram projetos fantásticos como <a href="https://modernizr.com/">Modernizr</a> e <a href="http://html5please.com/">HTML5Please</a>.</p>
+
+<p>Antes dos primeiros anúncios de novas features do ES2015 surgiram várias ferramentas que tentavam resolver problemas triviais que o JavaScript não resolvia. Podemos citar aqui duas tecnologias que mais se popularizaram com o mesmo propósito, <a href="https://www.typescriptlang.org/">TypeScript</a> e <a href="http://coffeescript.org/">CoffeeScript</a>. Além dessas, também surgiram inúmeros frameworks e bibliotecas que tem o mesmo objetivo: <strong>facilitar a vida do desenvolvedor JavaScript</strong>.</p>
+
+<p>Assim como aquele ditado que diz <em>“há males que vem para o bem”</em>, tenho a impressão que ocorreu o inverso na comunidade web. Novas tecnologias que vieram para “o bem” acabaram criando uma barreira enorme entre a adoção de novas tecnologias e desenvolvedores puristas. Infelizmente, nesse balaio enorme de bibliotecas e frameworks, colocaram junto a nova versão do ECMAScript. O que melhorou absurdamente os valores da linguagem acabou sendo encarado como um luxo. Porém, adotar o novo padrão do JavaScript não é sobre opção, é sobre permitir que seu produto tenha a possibilidade de um código mais legível, menos vulnerável a bugs e livre de hacks para contornar features básicas que qualquer linguagem de programação precise.</p>
+
+<p>Não vou mostrar e ensinar como cada feature da ES2015 funciona. Pra isso existem inúmeros posts e bibliografias ricas sobre o assunto. Mesmo assim, não posso deixar de citar algumas melhorias indispensáveis.</p>
+
+<h2>Hoisting, variáveis e funções</h2>
+
+<p>Simplicidade é uma das melhores características de que um código está bem escrito. Para ser simples, um código deve ser legível. Em contrapartida, a forma de declararmos variáveis em JavaScript sempre foi confusa. No ECMAScript 2015 a <em>keyword</em> <code>var</code> não faz mais sentido e já é considerada obsoleta por muitos autores. Vou explicar resumidamente o porquê.</p>
+
+<p>Como todo desenvolvedor JavaScript deve saber, toda função e variável são elevadas ao topo do escopo na hora da execução. Para corrigir esse comportamento em variáveis, o ES2015 introduziu outras duas formas de trabalharmos com valores, <code>const</code> e <code>let</code> . Ambos não são elevadas ao escopo superior e criam um novo escopo dentro de blocos condicionais ou laços.</p>
+
+<p>No caso de funções, além de ter sua declaração elevada, o seu corpo também é elevado. Mas o maior problema sempre foi o <code>this</code>. Ao usar funções como <em>callback</em>, o <code>this</code> sempre nos causou problema por não executar no contexto que imaginamos. Com <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Functions</a> a função executa no contexto do <code>this</code>, que é geralmente o que queremos. Na prática, podemos evitar hacks como <code>var self = this</code>.</p>
+
+<h2>Modularização</h2>
+
+<p>JavaScript nunca teve um sistema de módulos nativo. Para resolver esse problema foram criados diversos padrões para reutilização e manutenibilidade da nossa base de código. Além de padrões, também surgiram especificações robustas como AMD (popularizado pelo RequireJS) e CommonJS, que foi adotado pelo NodeJS.</p>
+
+<p>No ECMAScript 6 ganhamos um sistema de módulos nativo. Sem dúvidas é o maior ganho da linguagem nessa especificação. Além da sintaxe expressiva, módulos resolveram um dos principais problemas em aplicações JavaScript: gerenciamento de pacotes.</p>
+
+<p>Apesar do NPM ser um gerenciador de pacotes maduro, ele não é bala de prata para aplicações que não usam um sistema de módulos robusto. Para resolver esse problema usamos o Bower por muito tempo para gerenciar dependências front-end. Particularmente nunca vi sentido em usar dois gerenciadores de dependência em uma mesma aplicação, mas essa foi a forma com que resolvemos esse problema antes de 2015.</p>
+
+<p>Hoje em dia, usando um module loader como <a href="https://webpack.github.io/">webpack</a>, conseguimos suprir necessidades de aplicações JavaScript usando apenas NPM. Não é à toa que bibliotecas como <a href="https://lodash.com/">lodash</a> não tem versões oficiais no Bower.</p>
+
+<h2>Transpiladores não são um problema</h2>
+
+<p>Um dos argumentos mais usados por quem não quer aderir ao ES2015 são os transpiladores, em outras palavras, o <a href="https://babeljs.io/">Babel</a>. Porém, poucos devem saber que todas as engines modernas <a href="https://twitter.com/_ericelliott/status/764628991831486465">compilam JavaScript para JavaScript</a>. Ou seja, apesar de estranho, não existe mais JavaScript interpretado.</p>
+
+<p>Outra razão para apostar nossas fichas no Babel é observando repositórios de empresas que possuem grandes aplicações web, como <a href="https://github.com/airbnb">Airbnb</a>, <a href="https://github.com/facebook/">Facebook</a>, <a href="https://github.com/Netflix">Netflix</a> ou <a href="https://github.com/spotify">Spotify</a>. Se os produtos dessas empresas já resolvem seus problemas com ES2015, por que não resolveria o seu?</p>
+
+<h2>Conclusão</h2>
+
+<p>Ainda temos um longo caminho tratando-se de JavaScript. Faça benchmarks com outros desenvolvedores ou empresas que possuem produtos web e você poderá tirar suas próprias conclusões. Diferentemente das inúmeras bibliotecas e frameworks que não passam de <em>hypes</em>, a evolução do JavaScript resolve problemas do mundo real. Se você continuar escrevendo JavaScript como escrevíamos até 2015, você estará escrevendo código novo que será legado logo ali na frente… amanhã.</p>
+
     </section>
     <div class="Share_Bar" data-share-bar data-share-title="ES2015 não é mais opcional">
   <a class="Share_Bar__Button Share_Bar__Button--twitter" data-share-item="twitter">
