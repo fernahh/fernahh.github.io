@@ -2,7 +2,7 @@
 layout: post
 title: "Desenvolva software como os Ramones faziam músicas"
 summary: "Simplicidade no desenvolvimento de software e Ramones tem tudo a ver."
-category: "software"
+category: "Software"
 ---
 
 Quem me conhece sabe que sou fã de Ramones, mas não foi por esse motivo e nem por acaso que escolhi eles para explicar porque simplicidade é algo tão importante quando estamos desenvolvendo software.
