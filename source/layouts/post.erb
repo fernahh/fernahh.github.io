@@ -1,4 +1,11 @@
 <% wrap_layout :layout do %>
+  <header class="Header__Article">
+    <h3>
+      <%- link_to "/", class: "Header__Article__Link", title: "Link para a página inicial" do %>
+        @fernahh
+      <% end -%>
+    </h3>
+  </header>
   <article class="Article" role="article">
     <header>
     <time class="Post_Index__Date" datetime="<%= current_article.date.strftime('%Y/%m/%d') %>">
