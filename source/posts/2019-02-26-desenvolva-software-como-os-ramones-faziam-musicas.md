@@ -13,7 +13,11 @@ Comecei a ouvir Ramones por influência de um tio que morava numa cidade litorâ
 
 Antes das plataformas de streaming, em que você paga uma dezena de reais e tem acesso a discografia de milhares de artistas, quando você deseja conhecer um grupo, as coletâneas eram o caminho com o melhor custo e benefício. Geralmente por uns quinze ou vinte reais você comprava um CD com até trinta músicas.
 
-O Ramones Mania tinha trinta músicas. Mas minha sensação foi diferente de outras coletâneas que eu já tinha ouvido. Isso aconteceu porque ao longo da sua carreira os Ramones nunca perderam a essência. Era a mesma receita: três acordes, guitarra, baixo e bateria. Simples. Fico pensando que em quase dez anos de carreira, os softwares que trabalhei eram muito diferente um dos outros. Mesmo quando usava um framework que eu já conhecia, como Ruby On Rails no back-end ou uma biblioteca como a jQuery no front-end, eles ainda eram diferentes. Apesar de todas as convenções, dificilmente eu poderia categorizá-los como "simples". É bem comum você entrar em uma empresa e passar semanas até conseguir abrir o primeiro pull request com uma feature relevante.
+O Ramones Mania tinha trinta músicas. Mas minha sensação foi diferente de outras coletâneas que eu já tinha ouvido. Isso aconteceu porque ao longo da sua carreira os Ramones nunca perderam a essência. Era a mesma receita: três acordes, guitarra, baixo e bateria. Simples.
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/1zQtd_e_VH0" frameborder="0" allowfullscreen></iframe>
+
+Fico pensando que em quase dez anos de carreira, os softwares que trabalhei eram muito diferente um dos outros. Mesmo quando usava um framework que eu já conhecia, como Ruby On Rails no back-end ou uma biblioteca como a jQuery no front-end, eles ainda eram diferentes. Apesar de todas as convenções, dificilmente eu poderia categorizá-los como "simples". É bem comum você entrar em uma empresa e passar semanas até conseguir abrir o primeiro pull request com uma feature relevante.
 
 ## Simplicidade que permite mudanças
 
@@ -28,5 +32,7 @@ Mas aí você pode pensar: "se o músico for bom, ele topa qualquer uma". Isso n
 Quantas vezes você já ouviu essa frase? Se já ouviu inúmeras vezes porque decide começar, por exemplo, uma aplicação web com uma ferramenta de gerenciamento de estado no front-end se ela ainda nem se faz necessária?
 
 Os Ramones começaram simples e terminaram simples. Eles não sabiam tocar direito, era tosco. Porém, ao longo da carreira eles vão melhorando. Existe um momento da banda que eles contaram com a produção de [Phil Spector](https://en.wikipedia.org/wiki/Phil_Spector), que já tinha trabalhado com Bruce Springsteen e Beatles. Riffs mais elaborados e outros instrumentos começaram a aparecer nas músicas da banda, mas a essência ainda estava lá. É como aquele software que já funciona bem e que mesmo adicionando novas features não quebra o que já estava funcionando.
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/1t8xIZsgDf0" frameborder="0" allowfullscreen></iframe>
 
 Os Ramones só deixaram suas músicas (um pouco) mais complexas quando foi necessário. É isso. Desenvolva software como os Ramones faziam músicas.
