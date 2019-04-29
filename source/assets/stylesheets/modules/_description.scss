@@ -10,14 +10,13 @@
   img {
     width: 60px;
     height: 60px;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 1em;
 
     border-radius: 50%;
   }
 
   @include respond-to($mq-small) {
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     margin-left: auto;
