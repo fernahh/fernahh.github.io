@@ -1,10 +1,13 @@
 .Container {
   max-width: $max-width;
   margin: 0 auto;
-  margin-top: 4em;
   padding-left: 1em;
   padding-right: 1em;
   overflow: hidden;
+
+  @include respond-to($mq-medium) {
+    margin-top: 3em;
+  }
 }
 
 .Container__flex {
