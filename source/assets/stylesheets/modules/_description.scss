@@ -7,6 +7,8 @@
   margin-top: 3em;
 
   font-weight: $w-light;
+  padding-bottom: 2em;
+  border-bottom: 1px solid $gray-color;
 
   img {
     width: 60px;
@@ -39,6 +41,7 @@
     margin-bottom: 0;
 
     font-size: 1.6em;
+    font-weight: $w-bold;
     line-height: .5em;
   }
 
