@@ -1,4 +1,2 @@
-/.bundle
-/build
-/.sass-cache
-/.cache
+node_modules
+.next
