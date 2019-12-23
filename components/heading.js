@@ -14,7 +14,8 @@ export const H1 = ({ children }) => {
             margin-bottom: ${sizes.medium};
             font-weight: 700;
             font-size: 52px;
-            line-height: 1em;
+            letter-spacing: -0.025em;
+            line-height: 1.125em;
           }
 
           @media screen and (min-width: 768px) {

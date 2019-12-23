@@ -2,7 +2,7 @@ export const useTheme = () => ({
   colors: {
     grey: '#999999',
     link: '#316FEA',
-    linkHover: '#0445c5'
+    linkHover: 'rgba(49, 111, 234, 0.75)'
   },
   sizes: {
     extraSmall: '8px',

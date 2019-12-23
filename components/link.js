@@ -19,15 +19,12 @@ export const Link = ({ href, title, children }) => {
       <style jsx>{`
         a {
           color: ${colors.link};
-          text-decoration: none;
-          border-bottom: 1px dashed ${colors.link};
-          transition: all 200ms ease-in-out;
+          text-decoration: underline;
         }
 
-        a:hover {
+        a:hover,
+        &:focus {
           color: ${colors.linkHover};
-          border-bottom-color: ${colors.linkHover};
-          border-bottom-style: solid;
         }
       `}</style>
     </span>

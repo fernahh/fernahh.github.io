@@ -36,7 +36,7 @@ export const Banner = () => {
           p {
             color: ${colors.grey};
             font-size: 19px;
-            line-height: 30px;
+            line-height: 1.5em;
           }
 
           img {
