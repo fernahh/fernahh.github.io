@@ -1,8 +1,6 @@
 import { Fragment } from 'react'
-import { useTheme } from '../hooks/useTheme'
 
 export const H1 = ({ children }) => {
-  const { sizes } = useTheme()
   return (
     <Fragment>
       <h1>
@@ -10,8 +8,7 @@ export const H1 = ({ children }) => {
 
         <style jsx>{`
           h1 {
-            margin-top: ${sizes.medium};
-            margin-bottom: ${sizes.medium};
+            margin: 0;
             font-weight: 700;
             font-size: 52px;
             letter-spacing: -0.025em;
@@ -25,6 +22,26 @@ export const H1 = ({ children }) => {
           }
         `}</style>
       </h1>
+    </Fragment>
+  )
+}
+
+export const H3 = ({ children }) => {
+  return (
+    <Fragment>
+      <h3>
+        {children}
+
+        <style jsx>{`
+          h3 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.025em;
+            line-height: 1.125em;
+          }
+        `}</style>
+      </h3>
     </Fragment>
   )
 }
