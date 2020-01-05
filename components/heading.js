@@ -35,7 +35,7 @@ export const H3 = ({ children }) => {
         <style jsx>{`
           h3 {
             margin: 0;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 20px;
             letter-spacing: -0.025em;
             line-height: 1.125em;
