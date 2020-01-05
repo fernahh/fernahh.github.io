@@ -29,14 +29,17 @@ export const Banner = () => {
       <style jsx>
         {`
           section {
+            display: flex;
+            align-items: center;
             margin: 0;
             max-width: 970px;
+            height: 100vh;
           }
 
           p {
             color: ${colors.grey};
             font-size: 19px;
-            line-height: 30px;
+            line-height: 1.5em;
           }
 
           img {
@@ -45,10 +48,12 @@ export const Banner = () => {
 
           @media screen and (min-width: 768px) {
             section {
-              display: flex;
-              align-items: center;
-              margin: auto;
-              height: 100vh;
+              align-items: flex-end;
+              height: 40vh;
+              margin-left: auto;
+              margin-right: auto;
+              padding-top: 10%;
+              padding-bottom: 10%;
             }
 
             div {
