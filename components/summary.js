@@ -1,38 +1,32 @@
-import { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import { useTheme } from '../hooks/useTheme'
-import { H3 } from './heading'
-import { Link } from './link'
-import { Time } from './time'
+import { Link } from 'components/link'
+import { Time } from 'components/time'
+import { useTheme } from 'hooks/useTheme'
 
-export const Summary = ({ category, date, title }) => {
-  const { colors, sizes } = useTheme()
+export const Summary = ({ category, date, href, title }) => {
+  const { fontSizes, sizes } = useTheme()
 
   const { className, styles } = css.resolve`
     a {
+      display: block;
       margin: 0;
+      font-size: ${fontSizes.base};
+      text-decoration: none;
       box-sizing: border-box;
-      color: ${colors.black};
-      text-decoration: underline;
-      text-decoration-color: ${colors.white};
-    }
-
-    a:hover {
-      color: ${colors.black};
     }
   `
 
   return (
-    <Fragment>
+    <>
       <div>
         <Link
           className={className}
-          href="http://www.google.com"
+          href={href || 'http://www.google.com'}
           title={`Link para ${title}`}
         >
-          <H3>{title}</H3>
-          <Time category={category} date={date} />
+          {title}
         </Link>
+        <Time category={category} date={date} />
         {styles}
       </div>
       <style jsx>{`
@@ -40,6 +34,6 @@ export const Summary = ({ category, date, title }) => {
           margin-bottom: ${sizes.small};
         }
       `}</style>
-    </Fragment>
+    </>
   )
 }
