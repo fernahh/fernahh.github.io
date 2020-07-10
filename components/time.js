@@ -1,27 +1,26 @@
-import { Fragment } from 'react'
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from 'hooks/useTheme'
 
 export const Time = ({ date, category }) => {
-  const { colors } = useTheme()
+  const { colors, fontSizes } = useTheme()
 
   return (
-    <Fragment>
+    <>
       <time dateTime={date}>
-        <span>{category}</span>, {buildDate(date)}
+        {category && <span>{category},</span>} {buildDate(date)}
       </time>
       <style jsx>
         {`
           time,
           span {
             color: ${colors.grey};
-            font-size: 14px;
+            font-size: ${fontSizes.extraSmall};
             text-decoration: underline;
             text-decoration-color: ${colors.white};
             text-transform: capitalize;
           }
         `}
       </style>
-    </Fragment>
+    </>
   )
 }
 
