@@ -1,18 +1,19 @@
 import { Fragment } from 'react'
-import { Link } from '../components/link'
-import { H1 } from '../components/heading'
-import { useTheme } from '../hooks/useTheme'
+import { Link } from 'components/link'
+import { H1 } from 'components/heading'
+import { P } from 'components/paragraph'
+import { useTheme } from 'hooks/useTheme'
 
 export const Banner = () => {
-  const { colors, sizes } = useTheme()
+  const { mediaQueries, sizes, viewport } = useTheme()
 
   return (
     <Fragment>
       <section>
         <div>
           <H1>Fernando Rodrigues</H1>
-          <p>
-            Desenvolvedor de Software na{' '}
+          <P>
+            Sou desenvolvedor de software no{' '}
             <Link
               href="https://www.quintoandar.com.br/"
               title="Site da QuintoAndar"
@@ -20,11 +21,11 @@ export const Banner = () => {
               QuintoAndar
             </Link>
             . Busco desenvolver aplicações que tenham impacto através de
-            tecnologias web. Compartilho conteúdo via palestras, posts e open
-            source. Obrigado pela visita! 👋
-          </p>
+            tecnologias web. Compartilho conteúdo via palestras, posts e
+            open-source. Obrigado pela visita! 👋
+          </P>
         </div>
-        <img src="/profile-400x400.png" alt="Foto de perfil" />
+        <img src="/profile.jpg" alt="Foto de perfil" />
       </section>
       <style jsx>
         {`
@@ -32,21 +33,15 @@ export const Banner = () => {
             display: flex;
             align-items: center;
             margin: 0;
-            max-width: 970px;
+            max-width: ${viewport.maxWidth};
             height: 100vh;
-          }
-
-          p {
-            color: ${colors.grey};
-            font-size: 19px;
-            line-height: 1.5em;
           }
 
           img {
             display: none;
           }
 
-          @media screen and (min-width: 768px) {
+          @media screen and (min-width: ${mediaQueries.medium}) {
             section {
               align-items: flex-end;
               height: 40vh;
@@ -68,7 +63,7 @@ export const Banner = () => {
             }
           }
 
-          @media screen and (min-width: 940px) {
+          @media screen and (min-width: ${mediaQueries.large}) {
             div {
               margin-right: ${sizes.extraLarge};
             }
