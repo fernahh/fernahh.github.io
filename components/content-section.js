@@ -1,21 +1,21 @@
-import { Fragment } from 'react'
-import { useTheme } from '../hooks/useTheme'
-import { Summary } from './summary'
+import { useTheme } from 'hooks/useTheme'
+import { Summary } from 'components/summary'
 
-export const ContentSection = ({ title, list }) => {
-  const { colors } = useTheme()
+export const ContentSection = ({ list, title }) => {
+  const { fontSizes, fontWeights, mediaQueries, viewport } = useTheme()
 
   return (
-    <Fragment>
+    <>
       <section>
         <h2>{title}</h2>
         <ul>
-          {list.map(list => (
-            <li key={list.id}>
+          {list.map(item => (
+            <li key={item.id}>
               <Summary
-                category={list.category}
-                date={list.date}
-                title={list.title}
+                category={item.category}
+                date={item.date}
+                href={item.href}
+                title={item.title}
               />
             </li>
           ))}
@@ -25,13 +25,12 @@ export const ContentSection = ({ title, list }) => {
         {`
           section {
             margin: auto;
-            max-width: 970px;
+            max-width: ${viewport.maxWidth};
           }
 
           h2 {
-            color: ${colors.primary};
-            font-size: 16px;
-            font-weight: 700;
+            font-size: ${fontSizes.small};
+            font-weight: ${fontWeights.bold};
             letter-spacing: 0.01em;
             text-transform: uppercase;
           }
@@ -44,13 +43,17 @@ export const ContentSection = ({ title, list }) => {
             list-style-type: none;
           }
 
-          @media screen and (min-width: 768px) {
+          @media screen and (min-width: ${mediaQueries.medium}) {
             li {
-              width: 50%;
+              width: 48%;
+            }
+
+            li:nth-child(odd) {
+              margin-right: 4%;
             }
           }
         `}
       </style>
-    </Fragment>
+    </>
   )
 }
