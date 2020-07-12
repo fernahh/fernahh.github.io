@@ -2,7 +2,7 @@ import { useTheme } from 'hooks/useTheme'
 import { Summary } from 'components/summary'
 
 export const ContentSection = ({ list, title }) => {
-  const { fontSizes, fontWeights, mediaQueries, viewport } = useTheme()
+  const { fontSizes, fontWeights, mediaQueries, sizes, viewport } = useTheme()
 
   return (
     <>
@@ -25,6 +25,7 @@ export const ContentSection = ({ list, title }) => {
         {`
           section {
             margin: auto;
+            margin-bottom: ${sizes.extraLarge};
             max-width: ${viewport.maxWidth};
           }
 
