@@ -1,0 +1,17 @@
+.page {
+  margin-left: var(--size-small);
+  margin-right: var(--size-small);
+}
+
+.page-list {
+  position: fixed;
+  right: var(--size-small);
+  bottom: var(--size-small);
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+}
+
+.page-item:first-child {
+  margin-right: var(--size-extra-small);
+}

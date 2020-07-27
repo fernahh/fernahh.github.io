@@ -1,0 +1,33 @@
+:root {
+  --color-black: #000000;
+  --color-grey: #999999;
+  --color-grey-semi-light: #e4e4e4;
+  --color-grey-light: #f4f4f4;
+  --color-link: #316fea;
+  --color-link-hover: rgba(49, 111, 234, 0.75);
+  --color-primary: #00a699;
+  --color-white: #ffffff;
+
+  --font-size-xs: 14px;
+  --font-size-small: 16px;
+  --font-size-base: 20px;
+
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+
+  --size-extra-small: 8px;
+  --size-small: 16px;
+  --size-medium: 24px;
+  --size-large: 32px;
+  --size-extra-large: 40px;
+  --size-duble-extra-large: 80px;
+
+  --viewport-max-width: 970px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+}
