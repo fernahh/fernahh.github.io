@@ -1,0 +1,26 @@
+.hamburguer-button {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: var(--size-small);
+  background-color: var(--color-black);
+  border: none;
+}
+
+.hamburguer-button:before,
+.hamburguer-button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: var(--base-background-color);
+}
+
+.hamburguer-button:before {
+  top: 10%;
+}
+
+.hamburguer-button:after {
+  bottom: 10%;
+}
