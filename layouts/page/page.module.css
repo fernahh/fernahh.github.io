@@ -1,6 +1,13 @@
 .page {
+  padding-top: 44px;
   margin-left: var(--size-small);
   margin-right: var(--size-small);
+}
+
+.page-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--viewport-max-width);
 }
 
 .page-list {
