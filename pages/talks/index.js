@@ -1,4 +1,4 @@
-import { Page } from 'layouts/page'
+import { Page } from 'components/page'
 
 const Talks = () => (
   <Page>

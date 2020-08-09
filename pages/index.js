@@ -1,5 +1,5 @@
 import { Banner } from 'components/banner'
-import { Page } from 'layouts/page'
+import { Page } from 'components/page'
 
 const Index = () => (
   <Page>
