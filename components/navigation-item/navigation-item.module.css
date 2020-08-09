@@ -1,0 +1,7 @@
+.navigation-item {
+  display: flex;
+  padding: 0;
+  margin-right: calc(var(--size-extra-small) / 4);
+  margin-left: calc(var(--size-extra-small) / 4);
+  font-weight: var(--font-weight-semi-bold);
+}

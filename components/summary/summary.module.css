@@ -1,0 +1,11 @@
+.summary {
+  margin-bottom: var(--size-small);
+}
+
+.summary-link {
+  display: block;
+  margin: 0;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  box-sizing: border-box;
+}
