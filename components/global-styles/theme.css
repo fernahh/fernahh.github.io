@@ -1,15 +1,20 @@
 :root {
-  --color-black: #000000;
+  --color-primary: #0066cc;
+  --color-black: #202723;
   --color-grey: #999999;
   --color-grey-semi-light: #e4e4e4;
   --color-grey-light: #f4f4f4;
-  --color-link: #316fea;
-  --color-link-hover: rgba(49, 111, 234, 0.75);
-  --color-primary: #00a699;
+  --color-link: var(--color-primary);
+  --color-link-hover: #0066ccb8;
   --color-white: #ffffff;
 
-  --font-size-xs: 14px;
-  --font-size-small: 16px;
+  --base-background-color: #fdfdfd;
+  --base-border-color: var(--color-grey-semi-light);
+  --base-border-radius: 4px;
+  --base-color: var(--color-black);
+
+  --font-size-xs: 15px;
+  --font-size-small: 18px;
   --font-size-base: 20px;
 
   --font-weight-regular: 400;
@@ -29,5 +34,8 @@
 
 body {
   margin: 0;
+  color: var(--base-color);
   font-family: 'Assistant', sans-serif;
+  font-size: var(--font-size-small);
+  background-color: var(--base-background-color);
 }
