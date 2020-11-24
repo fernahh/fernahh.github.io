@@ -10,7 +10,8 @@
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    max-width: 540px;
+    /* max-width: 540px; */
+    max-width: calc(var(--viewport-middle-width) + 5%);
     margin-top: 0;
   }
 }

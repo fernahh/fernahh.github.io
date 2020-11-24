@@ -10,8 +10,8 @@ export const Navigation = () => (
         <NavigationLink href="/">Página inicial</NavigationLink>
       </NavigationItem>
       <NavigationItem>
-        <NavigationLink as="/historias" href="/stories">
-          Histórias
+        <NavigationLink as="/ensaios" href="/stories">
+          Ensaios
         </NavigationLink>
       </NavigationItem>
       <NavigationItem>

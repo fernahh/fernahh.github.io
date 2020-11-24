@@ -1,10 +1,13 @@
 .summary {
+  display: flex;
+  flex-direction: column;
   margin-bottom: var(--size-small);
 }
 
 .summary-link {
-  display: block;
+  display: inline-block;
   margin: 0;
+  color: var(--color-link);
   font-size: var(--font-size-base);
   text-decoration: none;
   box-sizing: border-box;

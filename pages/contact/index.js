@@ -1,8 +1,9 @@
 import { Page } from 'components/page'
+import { H2 } from 'components/heading'
 
 const Contact = () => (
   <Page>
-    <h1>Contato</h1>
+    <H2>Contato</H2>
   </Page>
 )
 

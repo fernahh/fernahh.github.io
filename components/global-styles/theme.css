@@ -2,6 +2,7 @@
   --color-primary: #0066cc;
   --color-black: #202723;
   --color-grey: #999999;
+  --color-grey-black: #615c5c;
   --color-grey-semi-light: #e4e4e4;
   --color-grey-light: #f4f4f4;
   --color-link: var(--color-primary);
@@ -11,9 +12,9 @@
   --base-background-color: #fdfdfd;
   --base-border-color: var(--color-grey-semi-light);
   --base-border-radius: 4px;
-  --base-color: var(--color-black);
+  --base-color: var(--color-grey-black);
 
-  --font-size-xs: 15px;
+  --font-size-extra-small: 15px;
   --font-size-small: 18px;
   --font-size-base: 20px;
 
@@ -29,6 +30,7 @@
   --size-extra-large: 40px;
   --size-duble-extra-large: 80px;
 
+  --viewport-middle-width: 640px;
   --viewport-max-width: 970px;
 }
 

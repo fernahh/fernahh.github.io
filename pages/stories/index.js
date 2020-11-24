@@ -1,8 +1,9 @@
 import { Page } from 'components/page'
+import { PostContentSection } from 'components/post-content-section'
 
 const Stories = () => (
   <Page>
-    <h1>Histórias</h1>
+    <PostContentSection />
   </Page>
 )
 

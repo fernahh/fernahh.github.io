@@ -4,11 +4,11 @@
   max-width: var(--viewport-max-width);
 }
 
-.content-section-title {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+.content-section-resume {
+  /* color: var(--color-grey); */
+  /* font-size: var(--font-size-base); */
+  color: #615c5c;
+  font-size: 24px;
 }
 
 .content-section-list {
@@ -19,12 +19,6 @@
   list-style-type: none;
 }
 
-@media screen and (min-width: 768px) {
-  .content-section-list {
-    width: 48%;
-  }
-
-  .content-section-list:nth-child(odd) {
-    margin-right: 4%;
-  }
+.content-section-item {
+  width: 100%;
 }

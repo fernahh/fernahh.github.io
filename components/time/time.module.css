@@ -1,6 +1,6 @@
 .time {
   color: var(--color-grey);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-extra-small);
   text-decoration: underline;
   text-decoration-color: var(--color-white);
   text-transform: capitalize;

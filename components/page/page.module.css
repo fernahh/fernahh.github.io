@@ -1,5 +1,5 @@
 .page {
-  padding-top: 44px;
+  padding-top: 88px;
   margin-left: var(--size-small);
   margin-right: var(--size-small);
 }
@@ -8,6 +8,15 @@
   width: 100%;
   margin: 0 auto;
   max-width: var(--viewport-max-width);
+}
+
+.page-content-children {
+  max-width: var(--viewport-middle-width);
+  margin: 0 auto;
+}
+
+.page-content-children.is-full-width {
+  max-width: 100%;
 }
 
 .page-list {

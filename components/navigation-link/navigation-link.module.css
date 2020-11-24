@@ -23,7 +23,7 @@
   .navigation-link {
     padding-top: var(--size-extra-small);
     padding-bottom: var(--size-extra-small);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-extra-small);
     text-align: center;
   }
 }

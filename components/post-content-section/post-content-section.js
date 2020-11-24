@@ -1,6 +1,10 @@
 import { ContentSection } from 'components/content-section'
-import posts from 'data/posts'
+import stories from 'data/stories'
 
 export const PostContentSection = () => (
-  <ContentSection title="Histórias e teorias" list={posts} />
+  <ContentSection
+    title="Ensaios"
+    list={stories}
+    resume="Breves reflexões sobre software através de pensamentos livres de um desenvolvedor."
+  />
 )
