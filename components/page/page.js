@@ -1,17 +1,13 @@
-import { HeaderNavigation } from 'components/header-navigation'
-import { Logo } from 'components/logo'
 import { Meta } from 'components/meta'
+import { AppBar } from 'components/app-bar'
 import styles from './page.module.css'
 
 export const Page = ({ children, fullWidth }) => (
   <>
     <Meta />
     <div className={styles.page}>
-      <div className={styles.header}>
-        <Logo />
-        <HeaderNavigation />
-      </div>
       <main className={styles['page-content']}>
+        <AppBar />
         <div
           className={`${styles['page-content-children']} ${
             fullWidth ? styles['is-full-width'] : ''

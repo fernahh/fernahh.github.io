@@ -33,11 +33,6 @@
   margin-right: var(--size-extra-small);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-}
-
 @media screen and (min-width: 768px) {
   .page {
     padding-top: var(--size-extra-large);
