@@ -7,8 +7,8 @@ export const HamburgerButton = ({ onClick }) => (
       width="24"
       height="24"
       xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
     >
       <path
         d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z"
