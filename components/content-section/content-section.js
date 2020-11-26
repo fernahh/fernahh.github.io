@@ -8,7 +8,7 @@ export const ContentSection = ({ list, resume, title }) => (
     <H2>{title}</H2>
     <p className={styles['content-section-resume']}>{resume}</p>
     <ul className={styles['content-section-list']}>
-      {list.map(item => (
+      {list.map((item) => (
         <li key={item.id} className={styles['content-section-item']}>
           <Summary
             category={item.category}
