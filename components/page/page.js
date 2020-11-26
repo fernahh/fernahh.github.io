@@ -1,4 +1,4 @@
-import { Header } from 'components/header'
+import { HeaderNavigation } from 'components/header-navigation'
 import { Logo } from 'components/logo'
 import { Meta } from 'components/meta'
 import styles from './page.module.css'
@@ -9,7 +9,7 @@ export const Page = ({ children, fullWidth }) => (
     <div className={styles.page}>
       <div className={styles.header}>
         <Logo />
-        <Header />
+        <HeaderNavigation />
       </div>
       <main className={styles['page-content']}>
         <div

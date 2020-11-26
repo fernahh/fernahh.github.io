@@ -1,4 +1,4 @@
-.header {
+.header-navigation {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,20 +9,19 @@
   box-sizing: border-box;
 }
 
-.header-navigation {
+.navigation {
   display: none;
 }
 
-.header-navigation.is-opened {
+.navigation.is-opened {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .header-navigation {
     position: relative;
     display: flex;
     justify-content: center;
-    /* padding: calc(var(--size-extra-small) / 2); */
     padding: 0;
     border: 0;
   }
@@ -31,7 +30,7 @@
     display: none;
   }
 
-  .header-navigation {
+  .navigation {
     display: block;
     width: calc(var(--viewport-max-width) + 5%);
   }

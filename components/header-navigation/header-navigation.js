@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { HamburgerButton } from 'components/hamburger-button'
 import { Navigation } from 'components/navigation'
-import styles from './header.module.css'
+import styles from './header-navigation.module.css'
 
-export const Header = () => {
+export const HeaderNavigation = () => {
   const [isNavigationOpened, setIsNavigationOpened] = useState(false)
 
   const toggleNavigation = () => {
@@ -11,12 +11,12 @@ export const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={styles['header-navigation']}>
       <div className={styles['hamburguer-button']}>
         <HamburgerButton onClick={toggleNavigation} />
       </div>
       <div
-        className={`${styles['header-navigation']} ${
+        className={`${styles['navigation']} ${
           isNavigationOpened ? styles['is-opened'] : ''
         }`}
       >
