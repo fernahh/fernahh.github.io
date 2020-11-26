@@ -6,6 +6,10 @@
   padding-right: var(--size-small);
 }
 
+.page-app-bar {
+  margin-bottom: var(--size-small);
+}
+
 .page-content {
   width: 100%;
   margin: 0 auto;
@@ -36,5 +40,9 @@
 @media screen and (min-width: 768px) {
   .page {
     padding-top: var(--size-extra-large);
+  }
+
+  .page-app-bar {
+    margin-bottom: var(--size-extra-large);
   }
 }

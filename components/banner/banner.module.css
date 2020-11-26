@@ -11,15 +11,4 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .banner-content {
-    width: 80%;
-    margin-right: var(--size-medium);
-  }
-}
-
-@media screen and (min-width: 940px) {
-  .banner-content {
-    margin-right: var(--size-extra-large);
-  }
 }

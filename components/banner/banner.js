@@ -5,8 +5,8 @@ import styles from './banner.module.css'
 export const Banner = () => (
   <section className={styles.banner}>
     <div className={styles['banner-content']}>
+      <P>Olá! 👋</P>
       <P>
-        Olá! 👋 <br />
         Me chamo Fernando Rodrigues. Sou desenvolvedor e atualmente moro em São
         Paulo, SP. Atualmente trabalho no time design system no{' '}
         <Link

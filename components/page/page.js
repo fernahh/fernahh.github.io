@@ -7,7 +7,9 @@ export const Page = ({ children, fullWidth }) => (
     <Meta />
     <div className={styles.page}>
       <main className={styles['page-content']}>
-        <AppBar />
+        <div className={styles['page-app-bar']}>
+          <AppBar />
+        </div>
         <div
           className={`${styles['page-content-children']} ${
             fullWidth ? styles['is-full-width'] : ''
