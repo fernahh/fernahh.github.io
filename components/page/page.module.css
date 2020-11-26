@@ -1,13 +1,14 @@
 .page {
-  padding-top: 88px;
-  margin-left: var(--size-small);
-  margin-right: var(--size-small);
+  max-width: var(--viewport-max-width);
+  margin: auto;
+  padding-top: var(--size-duble-extra-large);
+  padding-left: var(--size-small);
+  padding-right: var(--size-small);
 }
 
 .page-content {
   width: 100%;
   margin: 0 auto;
-  max-width: var(--viewport-max-width);
 }
 
 .page-content-children {
@@ -15,9 +16,9 @@
   margin: 0 auto;
 }
 
-.page-content-children.is-full-width {
+/* .page-content-children.is-full-width {
   max-width: 100%;
-}
+} */
 
 .page-list {
   position: fixed;
@@ -30,4 +31,15 @@
 
 .page-item:first-child {
   margin-right: var(--size-extra-small);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .page {
+    padding-top: var(--size-extra-large);
+  }
 }

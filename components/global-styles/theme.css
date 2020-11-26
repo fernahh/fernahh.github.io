@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #0066cc;
+  --color-primary: #378d65;
   --color-black: #202723;
   --color-grey: #999999;
   --color-grey-black: #615c5c;
@@ -9,10 +9,15 @@
   --color-link-hover: #0066ccb8;
   --color-white: #ffffff;
 
+  --color-base: #44484a;
+
   --base-background-color: #fdfdfd;
   --base-border-color: var(--color-grey-semi-light);
   --base-border-radius: 4px;
   --base-color: var(--color-grey-black);
+
+  --font-family-primary: 'Assistant', sans-serif;
+  --font-family-secondary: 'DM Serif Display', serif;
 
   --font-size-extra-small: 15px;
   --font-size-small: 18px;
@@ -37,7 +42,17 @@
 body {
   margin: 0;
   color: var(--base-color);
-  font-family: 'Assistant', sans-serif;
-  font-size: var(--font-size-small);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   background-color: var(--base-background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-secondary);
 }

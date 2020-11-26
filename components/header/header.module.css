@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   padding: var(--size-small);
-  /* background-color: var(--color-white); */
   backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--base-border-color);
   box-sizing: border-box;
@@ -20,9 +19,12 @@
 
 @media screen and (min-width: 768px) {
   .header {
+    position: relative;
     display: flex;
     justify-content: center;
-    padding: calc(var(--size-extra-small) / 2);
+    /* padding: calc(var(--size-extra-small) / 2); */
+    padding: 0;
+    border: 0;
   }
 
   .hamburguer-button {

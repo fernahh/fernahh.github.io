@@ -1,5 +1,6 @@
 .navigation-list {
   width: 100%;
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -7,11 +8,7 @@
 
 @media screen and (min-width: 768px) {
   .navigation-list {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* max-width: 540px; */
-    max-width: calc(var(--viewport-middle-width) + 5%);
-    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
   }
 }
