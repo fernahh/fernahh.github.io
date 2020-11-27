@@ -1,4 +1,4 @@
-import { Link as NextLink } from 'next/link'
+import NextLink from 'next/link'
 import styles from './link.module.css'
 
 export const Link = ({ href, title, children, ...props }) => (

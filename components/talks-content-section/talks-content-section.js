@@ -6,7 +6,7 @@ export const TalksContentSection = () => (
     title="Palestras"
     list={talks}
     readMore={{
-      href: 'https://google.com',
+      href: '/palestras',
       text: 'Acesse todas as palestras',
     }}
   />

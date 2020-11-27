@@ -6,7 +6,7 @@ export const PostContentSection = () => (
     title="Textos"
     list={posts}
     readMore={{
-      href: 'https://google.com',
+      href: '/textos',
       text: 'Acesse todos os textos',
     }}
   />

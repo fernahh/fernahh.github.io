@@ -1,5 +1,4 @@
 import { ArrowLink } from 'components/arrow-link'
-import { Link } from 'components/link'
 import { P } from 'components/paragraph'
 import styles from './banner.module.css'
 
@@ -14,7 +13,7 @@ export const Banner = () => (
       <div className={styles['banner-links']}>
         <P>
           <ArrowLink
-            href="http://google.com"
+            href="/sobre"
             title="Link para a página com detalhes sobre mim"
           >
             Leia mais sobre mim

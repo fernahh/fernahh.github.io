@@ -1,10 +1,10 @@
 import { Page } from 'components/page'
 import { PostContentSection } from 'components/post-content-section'
 
-const Stories = () => (
+const Posts = () => (
   <Page>
     <PostContentSection />
   </Page>
 )
 
-export default Stories
+export default Posts

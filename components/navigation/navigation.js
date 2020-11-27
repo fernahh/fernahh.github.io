@@ -7,10 +7,10 @@ export const Navigation = () => (
   <nav className={styles.navigation}>
     <NavigationList>
       <NavigationItem>
-        <NavigationLink href="/">experiência</NavigationLink>
+        <NavigationLink href="/experiencia">experiência</NavigationLink>
       </NavigationItem>
       <NavigationItem>
-        <NavigationLink as="/textos" href="/stories">
+        <NavigationLink as="/textos" href="/posts">
           textos
         </NavigationLink>
       </NavigationItem>
