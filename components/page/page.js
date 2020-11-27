@@ -1,10 +1,10 @@
-import { Meta } from 'components/meta'
+import { Head } from 'components/head'
 import { AppBar } from 'components/app-bar'
 import styles from './page.module.css'
 
 export const Page = ({ children, fullWidth }) => (
   <>
-    <Meta />
+    <Head />
     <div className={styles.page}>
       <main className={styles['page-content']}>
         <div className={styles['page-app-bar']}>

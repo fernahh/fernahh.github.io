@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import NextHead from 'next/head'
 
-export const Meta = () => (
-  <Head>
+export const Head = () => (
+  <NextHead>
     <title>Fernando Rodrigues</title>
     <link
       rel="icon"
@@ -12,5 +12,5 @@ export const Meta = () => (
       href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=DM+Serif+Display&display=swap"
       rel="stylesheet"
     />
-  </Head>
+  </NextHead>
 )
