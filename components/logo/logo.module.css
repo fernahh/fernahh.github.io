@@ -5,6 +5,10 @@
   font-weight: var(--font-weight-regular);
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .logo h1 > span {
   color: #202723;
 }
