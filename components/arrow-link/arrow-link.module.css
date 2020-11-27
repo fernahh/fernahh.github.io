@@ -1,0 +1,5 @@
+.arrow-link a {
+  color: var(--color-base);
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+}
