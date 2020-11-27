@@ -5,6 +5,14 @@
   max-width: var(--viewport-max-width);
 }
 
+.banner-links p {
+  margin: 0;
+}
+
+.banner-links p:first-child {
+  font-size: var(--font-size-small);
+}
+
 @media screen and (min-width: 768px) {
   .banner {
     align-items: flex-end;
