@@ -17,12 +17,12 @@ export const Banner = () => (
             href="http://google.com"
             title="Link para a página com detalhes sobre mim"
           >
-            leia mais sobre mim →
+            Leia mais sobre mim
           </ArrowLink>
         </P>
         <P>
           <ArrowLink href="https://twitter.com/fernahh">
-            @fernahh no twitter →
+            @fernahh no twitter
           </ArrowLink>
         </P>
       </div>

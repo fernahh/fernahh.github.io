@@ -1,14 +1,13 @@
 import { Summary } from 'components/summary'
 import { H2 } from 'components/heading'
+import { ArrowLink } from 'components/arrow-link'
 import styles from './content-section.module.css'
 
-// DIVIDIR posts em outra coluna
-export const ContentSection = ({ list, resume, title }) => (
+export const ContentSection = ({ list, title, readMore }) => (
   <section className={styles['content-section']}>
     <H2>{title}</H2>
-    <p className={styles['content-section-resume']}>{resume}</p>
     <ul className={styles['content-section-list']}>
-      {list.map((item) => (
+      {list.slice(0, 3).map((item) => (
         <li key={item.id} className={styles['content-section-item']}>
           <Summary
             category={item.category}
@@ -19,5 +18,6 @@ export const ContentSection = ({ list, resume, title }) => (
         </li>
       ))}
     </ul>
+    <ArrowLink href={readMore.href}>{readMore.text}</ArrowLink>
   </section>
 )

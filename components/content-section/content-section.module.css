@@ -1,14 +1,16 @@
 .content-section {
   margin: auto;
+  margin-top: var(--size-extra-large);
   margin-bottom: var(--sizes-extra-large);
   max-width: var(--viewport-max-width);
 }
 
-.content-section-resume {
-  /* color: var(--color-grey); */
-  /* font-size: var(--font-size-base); */
-  color: #615c5c;
-  font-size: 24px;
+.content-section h2 {
+  text-transform: lowercase;
+}
+
+.content-section h2:after {
+  content: '.';
 }
 
 .content-section-list {

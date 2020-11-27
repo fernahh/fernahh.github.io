@@ -2,5 +2,12 @@ import talks from 'data/talks'
 import { ContentSection } from 'components/content-section'
 
 export const TalksContentSection = () => (
-  <ContentSection title="Palestras" list={talks} />
+  <ContentSection
+    title="Palestras"
+    list={talks}
+    readMore={{
+      href: 'https://google.com',
+      text: 'Acesse todas as palestras',
+    }}
+  />
 )
