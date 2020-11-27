@@ -1,4 +1,5 @@
 :root {
+  --color-base: #44484a;
   --color-primary: #378d65;
   --color-black: #202723;
   --color-grey: #999999;
@@ -6,10 +7,8 @@
   --color-grey-semi-light: #e4e4e4;
   --color-grey-light: #f4f4f4;
   --color-link: var(--color-primary);
-  --color-link-hover: #0066ccb8;
+  --color-link-hover: var(--color-primary);
   --color-white: #ffffff;
-
-  --color-base: #44484a;
 
   --base-background-color: #fdfdfd;
   --base-border-color: var(--color-grey-semi-light);

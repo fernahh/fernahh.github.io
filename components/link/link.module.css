@@ -1,7 +1,8 @@
 .link {
   display: inline-block;
   color: var(--color-link);
-  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 .link:hover,

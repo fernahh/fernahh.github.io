@@ -9,7 +9,7 @@ export const Meta = () => (
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=DM+Serif+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=DM+Serif+Display&display=swap"
       rel="stylesheet"
     />
   </Head>
