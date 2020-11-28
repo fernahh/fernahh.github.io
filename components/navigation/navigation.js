@@ -7,9 +7,6 @@ export const Navigation = () => (
   <nav className={styles.navigation}>
     <NavigationList>
       <NavigationItem>
-        <NavigationLink href="/experiencia">experiência</NavigationLink>
-      </NavigationItem>
-      <NavigationItem>
         <NavigationLink as="/textos" href="/posts">
           textos
         </NavigationLink>
@@ -18,6 +15,9 @@ export const Navigation = () => (
         <NavigationLink as="/palestras" href="/talks">
           Palestras
         </NavigationLink>
+      </NavigationItem>
+      <NavigationItem>
+        <NavigationLink href="/experiencia">experiência</NavigationLink>
       </NavigationItem>
       <NavigationItem>
         <NavigationLink as="/sobre" href="/about">
