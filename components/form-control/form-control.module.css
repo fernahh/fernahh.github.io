@@ -1,0 +1,7 @@
+.form-control {
+  display: flex;
+}
+
+.form-control + .form-control {
+  margin-top: var(--size-small);
+}
