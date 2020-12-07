@@ -2,6 +2,7 @@
   max-width: var(--viewport-max-width);
   margin: auto;
   padding-top: var(--size-duble-extra-large);
+  padding-bottom: var(--size-duble-extra-large);
   padding-left: var(--size-small);
   padding-right: var(--size-small);
 }
