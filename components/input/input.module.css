@@ -1,0 +1,19 @@
+.input {
+  display: flex;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: var(--size-small);
+  padding-left: var(--size-small);
+  color: var(--base-color);
+  border: 1px solid var(--color-grey-semi-light);
+  border-radius: var(--base-border-radius);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--color-grey);
+  font-size: var(--font-size-extra-small);
+  text-transform: lowercase;
+}

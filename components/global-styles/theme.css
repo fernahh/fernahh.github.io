@@ -5,7 +5,7 @@
   --color-grey: #999999;
   --color-grey-black: #615c5c;
   --color-grey-semi-light: #e4e4e4;
-  --color-grey-light: #f4f4f4;
+  --color-grey-light: #f2f2f2;
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-primary);
   --color-white: #ffffff;
@@ -20,7 +20,7 @@
 
   --font-size-extra-small: 15px;
   --font-size-small: 18px;
-  --font-size-base: 20px;
+  --font-size-base: 18px;
   --font-size-medium: 24px;
 
   --font-weight-regular: 400;
@@ -43,7 +43,7 @@ body {
   margin: 0;
   color: var(--base-color);
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   background-color: var(--base-background-color);
 }
