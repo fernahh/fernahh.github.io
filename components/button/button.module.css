@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  width: 100%;
+  padding-top: var(--size-extra-small);
+  padding-bottom: var(--size-extra-small);
+  padding-right: var(--size-small);
+  padding-left: var(--size-small);
+  color: var(--color-white);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
+  text-transform: lowercase;
+  justify-content: center;
+  background-color: var(--color-base);
+  border: 0;
+  border-radius: var(--base-border-radius);
+}
+
+.button:disabled {
+  background-color: var(--color-base);
+  opacity: 0.75;
+}
