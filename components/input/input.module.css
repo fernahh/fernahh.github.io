@@ -6,14 +6,20 @@
   padding-right: var(--size-small);
   padding-left: var(--size-small);
   color: var(--base-color);
-  border: 1px solid var(--color-grey-semi-light);
+  font-size: var(--font-size-base);
+  outline-width: 2px;
+  outline-color: var(--color-grey-semi-light);
+  border: 0;
   border-radius: var(--base-border-radius);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
+}
+
+.input:focus {
+  outline-color: var(--color-primary);
 }
 
 .input::placeholder {
   color: var(--color-grey);
-  font-size: var(--font-size-extra-small);
   text-transform: lowercase;
 }

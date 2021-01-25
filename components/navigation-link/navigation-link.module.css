@@ -2,11 +2,12 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  padding-top: var(--size-extra-small);
-  padding-bottom: var(--size-extra-small);
-  color: var(--color-base);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: var(--color-link);
   font-family: var(--font-family-secondary);
-  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semi-bold);
   text-decoration: none;
   text-transform: lowercase;
   border-radius: var(--base-border-radius);
@@ -29,7 +30,7 @@
     padding-bottom: 0;
     padding-right: var(--size-extra-small);
     padding-left: var(--size-extra-small);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-base);
     text-align: center;
   }
 }

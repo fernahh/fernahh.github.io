@@ -1,6 +1,6 @@
 :root {
   --color-base: #44484a;
-  --color-primary: #378d65;
+  --color-primary: #1a73e8;
   --color-black: #202723;
   --color-grey: #999999;
   --color-grey-black: #615c5c;
@@ -15,15 +15,17 @@
   --base-border-radius: 4px;
   --base-color: var(--color-grey-black);
 
-  --font-family-primary: 'Assistant', sans-serif;
-  --font-family-secondary: 'DM Serif Display', serif;
+  --font-family-primary: 'Inter var', sans-serif;
+  --font-family-secondary: 'Inter var', sans-serif;
 
-  --font-size-extra-small: 15px;
-  --font-size-small: 18px;
-  --font-size-base: 18px;
-  --font-size-medium: 24px;
+  --font-size-extra-small: 12px;
+  --font-size-small: 14px;
+  --font-size-base: 16px;
+  --font-size-medium: 20px;
 
+  --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;

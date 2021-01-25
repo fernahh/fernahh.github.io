@@ -2,36 +2,42 @@
   {
     "id": "desenvolva-software-como-os-ramones-faziam-musicas",
     "title": "Desenvolva software como os Ramones faziam músicas",
+    "description": "O que a simplicidade do grupo punk de Nova York pode nos ensinar sobre construir software.",
     "date": "2019-02-26",
     "category": "Software"
   },
   {
     "id": "programacao-declarativa-imperativa-e-front-end",
     "title": "Programação declarativa, imperativa e front-end",
+    "description": "O que esses dois paradigmas podem nos dizer sobre fazer front-end.",
     "date": "2019-08-03",
     "category": "JavaScript"
   },
   {
     "id": "o-santo-graal-da-arquitetura-de-software-nao-existe",
     "title": "O Santo Graal da arquitetura de software não existe",
+    "description": "Chega de se iludir, perfeição não existe em desenvolvimento de software.",
     "date": "2018-01-15",
     "category": "Software"
   },
   {
     "id": "versionamento-de-software-na-era-agil",
     "title": "Versionamento de software na Era Ágil",
+    "description": "Como podemos versionar bibliotecas para fazer entregas mais rápidas?",
     "date": "2017-04-24",
     "category": "Software"
   },
   {
     "id": "acessando-propriedades-de-objetos-javascript",
     "title": "Acessando propriedades de objetos JavaScript",
+    "description": "Explorando um pouco sobre como podemos lidar com objetos em JavaScript.",
     "date": "2017-02-20",
     "category": "JavaScript"
   },
   {
     "id": "estado-em-componentes-web",
     "title": "Estado em componentes web",
+    "description": "Nesse texto irei aprofundar como lidar com estado em componentes web.",
     "date": "2016-06-26",
     "category": "Front-end"
   }

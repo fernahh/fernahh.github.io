@@ -1,8 +1,8 @@
 .button {
   display: flex;
   width: 100%;
-  padding-top: var(--size-extra-small);
-  padding-bottom: var(--size-extra-small);
+  padding-top: 11px;
+  padding-bottom: 11px;
   padding-right: var(--size-small);
   padding-left: var(--size-small);
   color: var(--color-white);
@@ -10,12 +10,12 @@
   font-size: var(--font-size-base);
   text-transform: lowercase;
   justify-content: center;
-  background-color: var(--color-base);
+  background-color: var(--color-primary);
   border: 0;
   border-radius: var(--base-border-radius);
 }
 
 .button:disabled {
-  background-color: var(--color-base);
-  opacity: 0.75;
+  background-color: var(--color-primary);
+  opacity: 0.5;
 }

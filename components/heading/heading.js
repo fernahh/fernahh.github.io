@@ -13,13 +13,13 @@ export const H3 = ({ children }) => (
 )
 
 export const H4 = ({ children }) => (
-  <h3 className={styles['heading-h4']}>{children}</h3>
+  <h4 className={styles['heading-h4']}>{children}</h4>
 )
 
 export const H5 = ({ children }) => (
-  <h3 className={styles['heading-h5']}>{children}</h3>
+  <h5 className={styles['heading-h5']}>{children}</h5>
 )
 
 export const H6 = ({ children }) => (
-  <h3 className={styles['heading-h6']}>{children}</h3>
+  <h6 className={styles['heading-h6']}>{children}</h6>
 )

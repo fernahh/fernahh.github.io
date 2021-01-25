@@ -1,8 +1,12 @@
 .logo h1 {
   margin: 0;
   color: #44484a;
-  font-size: 24px;
-  font-weight: var(--font-weight-regular);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+}
+
+.logo h1::after {
+  content: '.';
 }
 
 .logo a {

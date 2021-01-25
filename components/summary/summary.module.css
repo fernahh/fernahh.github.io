@@ -1,20 +1,26 @@
 .summary {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--size-small);
+  margin-bottom: var(--size-medium);
 }
 
 .summary-link {
   display: inline-block;
-  margin: 0;
-  color: var(--color-base);
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  color: var(--color-link);
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5em;
   text-decoration: none;
   box-sizing: border-box;
 }
 
 .summary-link:hover {
   color: var(--color-primary);
+}
+
+.summary p {
+  margin-top: 0;
 }

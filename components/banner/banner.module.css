@@ -1,16 +1,23 @@
 .banner {
   display: flex;
   align-items: center;
-  margin: 0;
   max-width: var(--viewport-max-width);
-}
-
-.banner-links p {
+  padding: var(--size-medium);
   margin: 0;
+  text-align: center;
 }
 
-.banner-links p:first-child {
-  font-size: var(--font-size-small);
+.banner p:first-child {
+  margin-bottom: 0;
+  color: var(--color-black);
+  font-size: 40px;
+  font-weight: var(--font-weight-bold);
+}
+
+.banner p:last-child {
+  margin: 0;
+  font-size: 24px;
+  font-weight: var(--font-weight-light);
 }
 
 @media screen and (min-width: 768px) {

@@ -1,8 +1,9 @@
 import styles from './time.module.css'
 
-export const Time = ({ date, category }) => (
+export const Time = ({ date }) => (
   <time className={styles.time} dateTime={date}>
-    {category && <span>{category},</span>} {buildDate(date)}
+    Updated at{' '}
+    <span style={{ textTransform: 'capitalize' }}>{buildDate(date)}</span>
   </time>
 )
 

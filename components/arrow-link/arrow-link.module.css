@@ -1,5 +1,5 @@
 .arrow-link a {
-  color: var(--color-base);
+  color: var(--color-link);
   font-weight: var(--font-weight-semi-bold);
   text-decoration: none;
   text-transform: lowercase;
