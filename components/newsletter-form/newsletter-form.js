@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Form } from 'components/form'
+import toast, { Toaster } from 'react-hot-toast'
 import { FormControl } from 'components/form-control'
 import { Input } from 'components/input'
 import { Button } from 'components/button'
@@ -8,24 +8,30 @@ import { P } from 'components/paragraph'
 import { Label } from 'components/label'
 import styles from './newsletter-form.module.css'
 
+const notify = (message, method) => {
+  toast[method](message, {
+    style: {
+      borderRadius: '4px',
+    },
+  })
+}
+
 export const NewsletterForm = () => {
   const [email, setEmail] = React.useState('')
-  const [status, setStatus] = React.useState('pending')
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true)
+  const [buttonIsDisabled, setButtonIsDisabled] = useState(true)
 
   useEffect(() => {
     const isValidEmail = emailIsValid(email)
-    setIsButtonDisabled(!isValidEmail)
+    setButtonIsDisabled(!isValidEmail)
   }, [email])
 
   const onChange = (e) => {
-    if (status !== 'pending') setStatus('pending')
     setEmail(e.target.value.trim())
   }
 
   const submit = async (e) => {
     e.preventDefault()
-    setIsButtonDisabled(true)
+    setButtonIsDisabled(true)
 
     const res = await fetch('/api/newsletter', {
       body: JSON.stringify({ email }),
@@ -36,18 +42,13 @@ export const NewsletterForm = () => {
     const { error } = await res.json()
 
     if (error) {
-      setStatus('error')
-      // setErrorMessage(error)
+      notify(error, 'error')
       return
     }
 
-    // TODO
-    // Toaster sucesso
-    // Toaster de erro
-
-    setIsButtonDisabled(false)
+    notify('E-mail cadastrado com sucesso! Obrigado!', 'success')
+    setButtonIsDisabled(false)
     setEmail('')
-    setStatus('succeeded')
   }
 
   return (
@@ -76,7 +77,7 @@ export const NewsletterForm = () => {
             <FormControl>
               <Button
                 type="submit"
-                disabled={isButtonDisabled}
+                disabled={buttonIsDisabled}
                 onClick={submit}
               >
                 Assinar
@@ -85,6 +86,7 @@ export const NewsletterForm = () => {
           </div>
         </div>
       </form>
+      <Toaster position="bottom-right" />
     </div>
   )
 }

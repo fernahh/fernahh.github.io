@@ -1,8 +1,17 @@
+.navigation {
+  width: 100%;
+  padding-top: var(--size-small);
+  padding-bottom: var(--size-small);
+  /* backdrop-filter: saturate(180%) blur(20px); */
+  /* border-bottom: 1px solid var(--base-border-color); */
+}
+
 @media screen and (min-width: 768px) {
   .navigation {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 0;
   }
 }

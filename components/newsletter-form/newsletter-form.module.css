@@ -3,9 +3,16 @@
   flex-direction: column;
   margin-top: var(--size-extra-large);
   margin-bottom: var(--sizes-extra-large);
-  padding: var(--size-small);
+  padding: var(--size-medium);
   background-color: var(--color-grey-light);
+  border: 1px solid var(--color-grey-semi-light);
   border-radius: var(--base-border-radius);
+}
+
+.newsletter-form h4 {
+  margin-bottom: 0;
+  font-weight: var(--font-weight-bold);
+  text-transform: lowercase;
 }
 
 .newsletter-form-label {
@@ -21,7 +28,15 @@
   content: '.';
 }
 
+.newsletter-form input {
+  margin-bottom: var(--size-small);
+}
+
 @media screen and (min-width: 768px) {
+  .newsletter-form input {
+    margin-bottom: 0;
+  }
+
   .newsletter-form-fields {
     display: flex;
     width: 100%;

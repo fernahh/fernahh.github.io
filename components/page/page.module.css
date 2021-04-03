@@ -7,23 +7,20 @@
   padding-right: var(--size-small);
 }
 
-.page-app-bar {
-  margin-bottom: var(--size-small);
-}
-
 .page-content {
+  position: relative;
   width: 100%;
-  margin: 0 auto;
-}
-
-.page-content-children {
   max-width: var(--viewport-middle-width);
   margin: 0 auto;
 }
 
-/* .page-content-children.is-full-width {
-  max-width: 100%;
-} */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
 
 .page-list {
   position: fixed;
@@ -43,7 +40,8 @@
     padding-top: var(--size-extra-large);
   }
 
-  .page-app-bar {
-    margin-bottom: var(--size-extra-large);
+  .page-content {
+    /* 57px === header size */
+    padding-top: 57px;
   }
 }

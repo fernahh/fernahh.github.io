@@ -1,6 +1,6 @@
 .navigation-list {
   width: 100%;
-  margin-top: var(--size-extra-small);
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
