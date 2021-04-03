@@ -29,8 +29,8 @@ export default async function handler(req, res) {
   ).then((res) => res.json())
 
   if (response.status >= 400) {
-    return res.status(400).json({
-      error: response,
+    return res.status(response.status).json({
+      error: 'Não foi possível cadastrar seu e-mail',
     })
   }
 
