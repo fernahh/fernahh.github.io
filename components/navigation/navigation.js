@@ -7,8 +7,8 @@ export const Navigation = () => (
   <nav className={styles.navigation}>
     <NavigationList>
       <NavigationItem>
-        <NavigationLink as="/textos" href="/posts">
-          textos
+        <NavigationLink as="/posts" href="/posts">
+          posts
         </NavigationLink>
       </NavigationItem>
       <NavigationItem>

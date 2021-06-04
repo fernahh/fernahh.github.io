@@ -1,9 +1,17 @@
+import posts from 'data/posts'
+import { ContentSectionList } from 'components/content-section-list'
 import { Page } from 'components/page'
-import { PostContentSection } from 'components/post-content-section'
+import { PageHeader } from 'components/page-header'
 
 const Posts = () => (
   <Page>
-    <PostContentSection />
+    <PageHeader
+      title="Posts"
+      description="Relatos, ideias e opiniões do que penso sobre desenvolvimento de software."
+    />
+    <section>
+      <ContentSectionList list={posts} />
+    </section>
   </Page>
 )
 

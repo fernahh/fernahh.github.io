@@ -3,11 +3,11 @@ import posts from 'data/posts'
 
 export const PostContentSection = () => (
   <ContentSection
-    title="Textos"
+    title="posts"
     list={posts}
     readMore={{
-      href: '/textos',
-      text: 'Acesse todos os textos',
+      href: '/posts',
+      text: 'Acesse todos os posts',
     }}
   />
 )
