@@ -6,8 +6,8 @@ export const Banner = () => (
     <div className={styles['banner-content']}>
       <P>Olá! Me chamo Fernando. 👋</P>
       <P>
-        Sou desenvolvedor e atualmente trabalho no time design system no
-        QuintoAndar.
+        Sou gerente de engenharia de software e atualmente trabalho no time
+        design system do QuintoAndar.
       </P>
     </div>
   </section>
