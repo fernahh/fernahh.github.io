@@ -22,15 +22,3 @@
   margin-left: var(--size-medium);
   background-color: var(--color-grey-semi-light);
 }
-
-.content-section-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.content-section-item {
-  width: 100%;
-}
