@@ -1,0 +1,18 @@
+.page-header {
+  margin-bottom: var(--size-extra-large);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
+
+.page-header p {
+  font-size: var(--font-size-medium);
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    margin-bottom: calc(var(--size-extra-large) * 2);
+  }
+}
